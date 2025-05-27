@@ -9,7 +9,7 @@ from datetime import datetime
 from typing import Dict, Any, List, Optional, Tuple
 from abc import ABC, abstractmethod
 import logging
-
+from core.gemini_service import GeminiService, GeminiModel, GeminiConfig, GeminiRequest, GeminiResponse, gemini_service
 logger = logging.getLogger(__name__)
 
 
@@ -53,11 +53,21 @@ class ResearchAgent(BaseAgent):
         self.specialization = specialization
         self.confidence_threshold = 0.8
         
-    def process(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
+    async def process(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
         """Perform research analysis"""
         query = input_data.get("query", input_data.get("user_query", ""))
         
         self.log_trace("research_start", {"query": query, "specialization": self.specialization})
+
+        gemini_request = GeminiRequest(
+            prompt=query,
+            model=GeminiModel.GEMINI_FLASH,
+            persona=self.persona,
+            context=context 
+        )
+        gemini_response = await gemini_service.generate_async(gemini_request)
+
+        
         
         # Simulated research process based on persona and specialization
         if self.persona == "domain_expert":
@@ -88,12 +98,12 @@ class ResearchAgent(BaseAgent):
         result = {
             "agent_id": self.agent_id,
             "persona": self.persona,
-            "answer": answer,
-            "confidence": confidence,
-            "reasoning": reasoning,
+            "answer": gemini_response.content,
+            "confidence": gemini_response.confidence,
+            "reasoning": gemini_response.reasoning_trace,
             "specialization": self.specialization
         }
-        
+
         self.log_trace("research_complete", result)
         return result
     
@@ -120,14 +130,32 @@ class POVAgent(BaseAgent):
         super().__init__(agent_id, persona, "pov_analyst", axes)
         self.stakeholder_type = stakeholder_type
         
-    def process(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
+    async def process(self, input_data: Dict[str, Any], context: dict) -> dict:
         """Analyze from specific stakeholder perspective"""
         query = input_data.get("query", "")
-        
         self.log_trace("pov_analysis_start", {
             "stakeholder_type": self.stakeholder_type,
             "persona": self.persona
         })
+
+        prompt = (
+            f"As a {self.stakeholder_type} ({self.persona}), analyze the following issue:\n"
+            f"\"{query}\"n"
+            "List:\n"
+            "- Key concerns\n"
+            "- Top Priorities\n"
+            "- A brief perspective analysis"
+        )
+
+        gemini_request = GeminiRequest(
+            prompt=prompt,
+            model=GeminiModel.GEMINI_FLASH,
+            persona=self.persona,
+            context=context 
+        )
+        gemini_response = await gemini_service.generate_async(gemini_request)
+        
+        
         
         # Generate perspective-specific analysis
         perspective_analysis = self._generate_perspective_analysis(query)
@@ -136,10 +164,10 @@ class POVAgent(BaseAgent):
             "agent_id": self.agent_id,
             "persona": self.persona,
             "stakeholder_type": self.stakeholder_type,
-            "perspective_analysis": perspective_analysis,
+            "perspective_analysis": gemini_response.content or perspective_analysis,
             "concerns": self._identify_stakeholder_concerns(query),
             "priorities": self._identify_stakeholder_priorities(query),
-            "confidence": 0.8
+            "confidence": gemini_response.confidence
         }
         
         self.log_trace("pov_analysis_complete", result)

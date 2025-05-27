@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from typing import Dict, List, Any # Added List & Any for type hinting agent_db value
-from models.agent import AgentCreateRequest, AgentStatus
+from models.agent import AgentCreateRequest
+from models.agent import AgentStatus
 
 router = APIRouter(prefix="/agent", tags=["agent"])
 

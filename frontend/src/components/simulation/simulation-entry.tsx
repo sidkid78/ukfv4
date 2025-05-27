@@ -6,11 +6,10 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Play, Settings, History } from 'lucide-react';
-import { toast } from 'sonner';
+import { simulationAPI } from '@/lib/api-client';
 import { useSimulationStore } from '@/state/useSimulationStore';
-import { SimulationRequest, StartSimulationResponse } from '@/types/simulation';
-import { apiRequest } from '@/lib/api-client';
-    
+import { SimulationQuery } from '@/types/simulation';
+
 export function SimulationEntry() {
   const router = useRouter();
   const { setCurrentSession, setLoading, sessions } = useSimulationStore();
@@ -18,41 +17,29 @@ export function SimulationEntry() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleStartSimulation = async () => {
-    if (!query.trim()) {
-      toast.info("Please enter a query to start the simulation.");
-      return;
-    }
-
+    if (!query.trim()) return;
+    
     setIsSubmitting(true);
     setLoading(true);
-
-    const requestData: SimulationRequest = {
-      prompt: query.trim(),
-      model: 'gemini-2.0-flash',
-      temperature: 0.7,
-      max_tokens: 1000,      
-    };
-
+    
     try {
-      const response = await apiRequest<StartSimulationResponse>('/api/simulation/start', {
-        method: 'POST',
-        body: JSON.stringify(requestData),
-      });
+      const simulationQuery: SimulationQuery = {
+        session_id: '',
+        user_query: query.trim(),
+        context: {
+          timestamp: new Date().toISOString(),
+          source: 'web_ui',
+        },
+        axes: Array(13).fill(0), // Default 13D coordinate
+      };
       
-      if (!response || typeof response.content !== 'string' || !response.session || typeof response.session.id !== 'string' || !response.session.created_at) {
-        console.error("Invalid or incomplete response from server:", response);
-        throw new Error("Received an invalid or incomplete response from the server.");
-      }
-
-      console.log("Simulation started successfully. AI Content:", response.content);
+      const response = await simulationAPI.run(simulationQuery);
+      
       setCurrentSession(response.session);
       router.push(`/simulation/${response.session.id}`);
-
     } catch (error) {
-      console.error("Error starting simulation:", error);
-      toast.error("Failed to start simulation", {
-        description: error instanceof Error ? error.message : "An unknown error occurred",
-      });
+      console.error('Failed to start simulation:', error);
+      // TODO: Add toast notification
     } finally {
       setIsSubmitting(false);
       setLoading(false);
@@ -80,7 +67,7 @@ export function SimulationEntry() {
           <Textarea
             placeholder="Enter your simulation query here... (e.g., 'Analyze the implications of quantum computing on cybersecurity')"
             value={query}
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setQuery(e.target.value)}
+            onChange={(e) => setQuery(e.target.value)}
             className="min-h-[120px] resize-none"
             disabled={isSubmitting}
           />

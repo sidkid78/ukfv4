@@ -11,6 +11,7 @@ from datetime import datetime
 from enum import Enum
 import json
 
+
 import google.generativeai as genai
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from google.api_core import exceptions as google_exceptions
@@ -23,9 +24,9 @@ logger = logging.getLogger(__name__)
 
 class GeminiModel(str, Enum):
     """Available Gemini models"""
-    GEMINI_PRO = "gemini-2.0-pro"
+    GEMINI_PRO_25_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
     GEMINI_FLASH = "gemini-2.0-flash"
-    GEMINI_PRO_VISION = "gemini-2.0-pro-vision"
+    GEMINI_PRO_25_FLASH = "gemini-2.5-flash-preview"
 
 class GeminiConfig(BaseSettings):
     """Gemini API configuration"""

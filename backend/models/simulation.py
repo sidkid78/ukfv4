@@ -82,19 +82,3 @@ class LayerStepResponse(BaseModel):
     escalation_triggered: bool = False
     patches_applied: List[Any] = Field(default_factory=list)
     agents_spawned: List[str] = Field(default_factory=list)
-
-class SimulationStatus(BaseModel):
-    status: SimulationStatus
-    layers: List[LayerState]
-    final_output: Optional[Any] = None
-    state: Dict[str, Any] = Field(default_factory=dict)
-
-class LayerStatus(BaseModel):
-    layer: SimulationLayer
-    status: LayerStatus
-    trace: List[TraceStep]
-    confidence: ConfidenceScore
-    escalation_triggered: bool = False
-    patches_applied: List[Any] = Field(default_factory=list)
-
-

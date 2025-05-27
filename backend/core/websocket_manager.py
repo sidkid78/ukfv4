@@ -16,6 +16,8 @@ import uuid
 
 logger = logging.getLogger(__name__)
 
+
+
 class MessageType(str, Enum):
     """WebSocket message types for the simulation system"""
     # Simulation Events

@@ -86,7 +86,7 @@ import {
         params.append('session_id', sessionId);
       }
       
-      return apiRequest<AIResponse>(`/api/ai/generate${params.toString() ? `?${params.toString()}` : ''}`, {
+      return aiRequest<AIResponse>(`/api/ai/generate${params.toString() ? `?${params.toString()}` : ''}`, {
         method: 'POST',
         body: JSON.stringify(request),
       });
@@ -132,7 +132,6 @@ import {
           buffer += decoder.decode(value, { stream: true });
           const lines = buffer.split('\n');
           buffer = lines.pop() || '';
-  
           for (const line of lines) {
             if (line.trim()) {
               onChunk(line);

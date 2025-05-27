@@ -9,8 +9,8 @@ import json
 from requests import session
 
 from core.simulation_engine import SimulationEngine as simulation_engine
-from models.query import SimulationQuery
-from core.gemini_service import gemini_service, GeminiRequest as BackendGeminiRequest, GeminiResponse as BackendGeminiResponse
+from models.simulation import SimulationQuery, SimulationSession, LayerState, TraceStep, SimulationStatus, LayerStatus, ConfidenceScore
+from core.gemini_service import gemini_service, GeminiRequest as BackendGeminiRequest, GeminiResponse as BackendGeminiResponse, GeminiResponse, GeminiRequest
 
 logger = logging.getLogger(__name__)
 # Pydantic equivalent for frontend's SimulationQuery
@@ -57,7 +57,7 @@ class BackendSimulationSession(BaseModel):
     status: str # SimulationStatus type (e.g., "READY")
     layers_active: List[int] # List of SimulationLayer
     current_layer: int # SimulationLayer
-    input_query: BackendSimulationQuery
+    input_query: SimulationQuery
     layers: List[BackendLayerState] # List of BackendLayerState
     state: Dict[str, Any]
     final_output: Optional[Any] = None
@@ -195,6 +195,7 @@ async def get_simulation_session(session_id: str):
     # ... some other attempts to find session_data if not found directly
     if not session_data:
         raise HTTPException(status_code=404, detail=f"Simulation session with ID '{session_id}' not found.")
+    return session_data
     # ...
 
 # Add other endpoints from Subtask 7 blueprint (step, replay, async_start, get_result) later as needed.

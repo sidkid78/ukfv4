@@ -7,7 +7,7 @@ import { SimulationLayer, EventType } from './simulation';
 export type GeminiModel = 
   | 'gemini-2.0-pro' 
   | 'gemini-2.0-flash' 
-  | 'gemini-2.0-pro-vision';
+  | 'gemini-2.0-flash-lite';
 
 // AI Request/Response Types
 export interface AIRequest {
@@ -224,3 +224,5 @@ export default {
   AIEnhancedTraceStep,
   AIQuerySuggestion,
 };
+`
+}

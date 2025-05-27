@@ -69,7 +69,7 @@ export function ConfidenceMeter() {
             </span>
           </div>
           
-          {confidence.entropy != null && (
+          {confidence.entropy !== undefined && (
             <div className="flex justify-between">
               <span>Entropy:</span>
               <span className="font-mono">{confidence.entropy.toFixed(4)}</span>

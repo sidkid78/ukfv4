@@ -16,6 +16,7 @@ interface SimulationSessionProps {
 }
 
 export function SimulationSession({ sessionId }: SimulationSessionProps) {
+  console.log(`SimulationSession RENDER for sessionId: ${sessionId}`);
   const {
     currentSession,
     setCurrentSession,
@@ -34,6 +35,7 @@ export function SimulationSession({ sessionId }: SimulationSessionProps) {
 
   // Load session data on mount
   useEffect(() => {
+    console.log(`SimulationSession MOUNT/sessionId CHANGE: Current sessionId prop: ${sessionId}`);
     const loadSession = async () => {
       try {
         const session = await simulationAPI.getSession(sessionId);
@@ -47,33 +49,38 @@ export function SimulationSession({ sessionId }: SimulationSessionProps) {
     loadSession();
   }, [sessionId, setCurrentSession, setLayers]);
 
-  // Setup WebSocket connection
+  // WebSocket connection management
   useEffect(() => {
-    if (!sessionId) return;
+    if (!sessionId) {
+      console.log(`WebSocket Setup useEffect: NO sessionId for WebSocket. Current prop: ${sessionId}`);
+      return;
+    }
+    console.log(`WebSocket Setup useEffect: INITIATING for sessionId: ${sessionId}`);
 
     const websocket = new SimulationWebSocket(sessionId);
     websocket.connect({
+      onOpen: () => {
+        console.log(`WebSocket onOpen callback in component for session: ${sessionId}`);
+        setWsConnected(true);
+      },
       onMessage: (data) => {
-        // Handle real-time updates
         console.log('WebSocket message:', data);
-        // Update store based on message type
       },
-      onError: (error) => {
-        console.error('WebSocket error:', error);
-        setWsConnected(false);
+      onError: (errorEvent: Event) => {
+        console.error(`WebSocket onError callback in component for session ${sessionId}. Event:`, errorEvent);
       },
-      onClose: () => {
+      onClose: (closeEvent: CloseEvent) => {
+        console.log(`WebSocket onClose callback in component for session ${sessionId}. Code: ${closeEvent.code}, Reason: "${closeEvent.reason}"`);
         setWsConnected(false);
       },
     });
 
     setWs(websocket);
-    setWsConnected(true);
 
     return () => {
+      console.log(`WebSocket Setup useEffect: CLEANUP. Disconnecting for former sessionId: ${websocket.sessionId}`);
       websocket.disconnect();
       setWs(null);
-      setWsConnected(false);
     };
   }, [sessionId, setWsConnected]);
 

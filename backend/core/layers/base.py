@@ -1,3 +1,4 @@
+# backend/core/layers/base.py
 """
 Base layer interface and utilities for UKG/USKD simulation engine
 Provides the foundation for all 10 simulation layers
@@ -13,7 +14,7 @@ import logging
 from models.simulation import ConfidenceScore, TraceStep, EventType, SimulationLayer
 from core.memory import InMemoryKnowledgeGraph
 from core.audit import audit_logger, make_patch_certificate
-# from core.compliance import compliance_engine
+from core.compliance import compliance_engine
 
 logger = logging.getLogger(__name__)
 

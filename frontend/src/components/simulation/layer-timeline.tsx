@@ -1,3 +1,4 @@
+// frontend/src/components/simulation/layer-timeline.tsx
 'use client';
 
 import React from 'react';
@@ -45,7 +46,7 @@ export function LayerTimeline() {
               </span>
             </div>
           </button>
-        ))} 
+        ))}
       </div>
     </div>
   );

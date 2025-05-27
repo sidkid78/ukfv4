@@ -2,14 +2,14 @@
 """Memory and knowledge graph models"""
 
 from pydantic import BaseModel, Field
-from typing import List, Optional, Any, Literal, Dict
+from typing import List, Optional, Any, Literal
 from datetime import datetime
 
 class MemoryCell(BaseModel):
     coordinate: List[float] = Field(..., min_items=13, max_items=13)
     value: Any
     version: int = 1
-    metadata: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    metadata: Optional[dict[str, Any]] = Field(default_factory=dict)
     created_at: datetime
     last_modified: datetime
 

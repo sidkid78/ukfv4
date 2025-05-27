@@ -1,21 +1,20 @@
 """
-Layer 3: Research Agents Layer (Enhanced with Gemini AI)
-Handles multi-agent reasoning, research coordination, and consensus building with AI-powered agents
+Layer 3: Research Agents Layer
+Handles multi-agent reasoning, research coordination, and consensus building
 """
 
 import uuid
-import asyncio
 from datetime import datetime
-from typing import Dict, Any, List, Optional, Tuple
+from typing import Dict, Any, List, Optional
 
 from .base import BaseLayer, LayerResult, register_layer
 from core.memory import InMemoryKnowledgeGraph
-from core.gemini_service import gemini_service, GeminiRequest, GeminiModel
+
 
 @register_layer(3)
 class Layer3ResearchAgents(BaseLayer):
     """
-    Multi-agent research layer. Spawns and coordinates AI-powered research agents
+    Multi-agent research layer. Spawns and coordinates research agents
     for complex reasoning, hypothesis generation, and consensus building.
     """
     
@@ -26,7 +25,6 @@ class Layer3ResearchAgents(BaseLayer):
         self.confidence_threshold = 0.995
         self.requires_agents = True
         self.requires_memory = True
-        self.requires_ai = True
         
     def process(
         self, 
@@ -35,12 +33,11 @@ class Layer3ResearchAgents(BaseLayer):
         memory: InMemoryKnowledgeGraph,
         agents: Optional[List[Any]] = None
     ) -> LayerResult:
-        """Process multi-agent research and reasoning with AI-powered agents"""
+        """Process multi-agent research and reasoning"""
         
         query = input_data.get("normalized_query", input_data.get("query", ""))
         complexity = input_data.get("complexity", 0.5)
         knowledge_available = input_data.get("knowledge_available", False)
-        session_id = state.get("session_id")
         
         # Determine research strategy based on available knowledge and complexity
         research_strategy = self._determine_research_strategy(
@@ -50,10 +47,10 @@ class Layer3ResearchAgents(BaseLayer):
         # Spawn appropriate research agents
         research_agents = self._spawn_research_agents(research_strategy, query, state)
         
-        # Coordinate AI-powered agent research
-        agent_results = asyncio.run(self._coordinate_ai_agent_research(
-            research_agents, input_data, memory, session_id
-        ))
+        # Coordinate agent research
+        agent_results = self._coordinate_agent_research(
+            research_agents, input_data, memory
+        )
         
         # Analyze agent consensus and conflicts
         consensus_analysis = self._analyze_agent_consensus(agent_results)
@@ -61,10 +58,10 @@ class Layer3ResearchAgents(BaseLayer):
         # Detect and handle forks if agents significantly disagree
         forks = self._detect_reasoning_forks(agent_results, consensus_analysis)
         
-        # Generate final research output using AI synthesis
-        research_output = asyncio.run(self._ai_synthesize_results(
-            agent_results, consensus_analysis, input_data, session_id
-        ))
+        # Generate final research output
+        research_output = self._synthesize_agent_results(
+            agent_results, consensus_analysis, input_data
+        )
         
         # Calculate confidence based on agent agreement and result quality
         confidence = self._calculate_research_confidence(
@@ -87,8 +84,7 @@ class Layer3ResearchAgents(BaseLayer):
             "research_answer": research_output.get("answer"),
             "research_confidence": research_output.get("confidence"),
             "alternative_hypotheses": research_output.get("alternatives", []),
-            "evidence_quality": research_output.get("evidence_quality", "medium"),
-            "ai_synthesis": research_output.get("synthesis_reasoning", "")
+            "evidence_quality": research_output.get("evidence_quality", "medium")
         }
         
         trace = {
@@ -97,7 +93,6 @@ class Layer3ResearchAgents(BaseLayer):
             "consensus_reached": consensus_analysis["consensus_strength"] > 0.7,
             "major_disagreements": consensus_analysis["major_disagreement"],
             "forks_detected": len(forks),
-            "ai_enhanced": True,
             "persona_reasonings": {
                 agent["persona"]: agent["reasoning"]
                 for agent in agent_results
@@ -112,11 +107,7 @@ class Layer3ResearchAgents(BaseLayer):
             trace=trace,
             forks=forks,
             agents_spawned=[agent["id"] for agent in research_agents],
-            metadata={
-                "research_layer": True, 
-                "agent_count": len(research_agents),
-                "ai_enhanced": True
-            }
+            metadata={"research_layer": True, "agent_count": len(research_agents)}
         )
     
     def _determine_research_strategy(
@@ -128,17 +119,13 @@ class Layer3ResearchAgents(BaseLayer):
         """Determine the research strategy based on query characteristics"""
         
         query_type = input_data.get("query_type", "general")
-        domain = input_data.get("domain", "general")
-        safety_level = input_data.get("safety_level", "safe")
         
         strategy = {
             "approach": "collaborative",
             "agent_count": 3,
             "research_depth": "medium",
             "consensus_requirement": 0.7,
-            "specialization_needed": False,
-            "ai_temperature": 0.7,
-            "parallel_processing": True
+            "specialization_needed": False
         }
         
         # Adjust based on complexity
@@ -146,24 +133,23 @@ class Layer3ResearchAgents(BaseLayer):
             strategy["agent_count"] = 5
             strategy["research_depth"] = "deep"
             strategy["consensus_requirement"] = 0.8
-            strategy["ai_temperature"] = 0.6  # More focused for complex queries
         elif complexity < 0.3:
             strategy["agent_count"] = 2
             strategy["research_depth"] = "shallow"
-            strategy["ai_temperature"] = 0.8  # More creative for simple queries
         
         # Adjust based on query type
         if query_type == "risk_assessment":
             strategy["specialization_needed"] = True
             strategy["agent_count"] += 1  # Add safety specialist
             strategy["consensus_requirement"] = 0.9
-            strategy["ai_temperature"] = 0.4  # Conservative for safety
         elif query_type == "analysis":
             strategy["approach"] = "multi_perspective"
             strategy["agent_count"] = 4
-        elif query_type == "creative":
-            strategy["ai_temperature"] = 0.9  # High creativity
-            strategy["consensus_requirement"] = 0.6  # Allow more divergence
+        
+        # Adjust based on knowledge availability
+        if not knowledge_available:
+            strategy["research_depth"] = "deep"
+            strategy["agent_count"] += 1
         
         return strategy
     
@@ -173,47 +159,29 @@ class Layer3ResearchAgents(BaseLayer):
         query: str, 
         state: Dict[str, Any]
     ) -> List[Dict[str, Any]]:
-        """Spawn AI-powered research agents based on strategy"""
+        """Spawn research agents based on strategy"""
         
         agents = []
         agent_count = strategy["agent_count"]
         
-        # Enhanced agent personas with AI specializations
+        # Define agent personas based on research needs
         base_personas = [
-            {
-                "persona": "domain_expert", 
-                "role": "Expert analysis and fact-checking",
-                "ai_prompt_style": "analytical and precise",
-                "temperature": 0.5
-            },
-            {
-                "persona": "critical_thinker", 
-                "role": "Challenge assumptions and find flaws",
-                "ai_prompt_style": "skeptical and probing",
-                "temperature": 0.6
-            },
-            {
-                "persona": "creative_reasoner", 
-                "role": "Generate alternative perspectives",
-                "ai_prompt_style": "innovative and divergent",
-                "temperature": 0.9
-            },
-            {
-                "persona": "synthesizer", 
-                "role": "Combine insights and build consensus",
-                "ai_prompt_style": "integrative and balanced",
-                "temperature": 0.7
-            },
-            {
-                "persona": "safety_analyst", 
-                "role": "Identify risks and safety concerns",
-                "ai_prompt_style": "cautious and thorough",
-                "temperature": 0.3
-            }
+            {"persona": "domain_expert", "role": "Expert analysis and fact-checking"},
+            {"persona": "critical_thinker", "role": "Challenge assumptions and find flaws"},
+            {"persona": "creative_reasoner", "role": "Generate alternative perspectives"},
+            {"persona": "synthesizer", "role": "Combine insights and build consensus"},
+            {"persona": "safety_analyst", "role": "Identify risks and safety concerns"}
         ]
         
         # Select appropriate personas
         selected_personas = base_personas[:agent_count]
+        
+        # Add specialized agents if needed
+        if strategy.get("specialization_needed", False):
+            selected_personas.append({
+                "persona": "risk_specialist", 
+                "role": "Deep risk analysis and mitigation"
+            })
         
         # Create agent instances
         for i, persona_info in enumerate(selected_personas):
@@ -221,8 +189,6 @@ class Layer3ResearchAgents(BaseLayer):
                 "id": f"research_agent_{uuid.uuid4().hex[:8]}",
                 "persona": persona_info["persona"],
                 "role": persona_info["role"],
-                "ai_prompt_style": persona_info["ai_prompt_style"],
-                "temperature": persona_info["temperature"],
                 "query_focus": query,
                 "strategy": strategy,
                 "spawned_at": datetime.now().isoformat(),
@@ -232,362 +198,134 @@ class Layer3ResearchAgents(BaseLayer):
         
         return agents
     
-    async def _coordinate_ai_agent_research(
+    def _coordinate_agent_research(
         self, 
         agents: List[Dict[str, Any]], 
         input_data: Dict[str, Any], 
-        memory: InMemoryKnowledgeGraph,
-        session_id: Optional[str] = None
+        memory: InMemoryKnowledgeGraph
     ) -> List[Dict[str, Any]]:
-        """Coordinate AI-powered research across all agents"""
+        """Coordinate research across all agents"""
         
-        # Create tasks for parallel processing
-        tasks = []
+        results = []
+        
         for agent in agents:
-            task = self._ai_agent_research(agent, input_data, memory, session_id)
-            tasks.append(task)
+            # Simulate agent research process
+            agent_result = self._simulate_agent_research(agent, input_data, memory)
+            results.append(agent_result)
         
-        # Execute all agent research in parallel
-        results = await asyncio.gather(*tasks, return_exceptions=True)
-        
-        # Filter out exceptions and return valid results
-        valid_results = []
-        for i, result in enumerate(results):
-            if isinstance(result, Exception):
-                # Create fallback result for failed agents
-                valid_results.append({
-                    "agent_id": agents[i]["id"],
-                    "persona": agents[i]["persona"],
-                    "answer": f"Agent processing failed: {str(result)}",
-                    "confidence": 0.1,
-                    "reasoning": "AI agent encountered an error",
-                    "error": True
-                })
-            else:
-                valid_results.append(result)
-        
-        return valid_results
+        return results
     
-    async def _ai_agent_research(
+    def _simulate_agent_research(
         self, 
         agent: Dict[str, Any], 
         input_data: Dict[str, Any], 
-        memory: InMemoryKnowledgeGraph,
-        session_id: Optional[str] = None
+        memory: InMemoryKnowledgeGraph
     ) -> Dict[str, Any]:
-        """Perform AI-powered research for individual agent"""
+        """Simulate individual agent research process"""
         
         persona = agent["persona"]
         query = input_data.get("normalized_query", "")
-        context = input_data.get("context", {})
         
-        # Build persona-specific system prompt
-        system_prompt = self._build_agent_system_prompt(agent, input_data)
-        
-        # Build research prompt
-        research_prompt = self._build_research_prompt(agent, query, input_data, context)
-        
-        try:
-            # Make AI request with persona-specific parameters
-            request = GeminiRequest(
-                prompt=research_prompt,
-                system_prompt=system_prompt,
-                model=GeminiModel.GEMINI_PRO,  # Use more powerful model for research
-                temperature=agent.get("temperature", 0.7),
-                persona=persona
-            )
-            
-            response = await gemini_service.generate_async(
-                request, 
-                session_id=session_id, 
-                layer=3
-            )
-            
-            # Parse AI response
-            analysis = self._parse_agent_response(response.content, agent)
-            
-            return {
-                "agent_id": agent["id"],
-                "persona": persona,
-                "answer": analysis.get("answer", response.content),
-                "confidence": analysis.get("confidence", response.confidence),
-                "reasoning": analysis.get("reasoning", "AI reasoning provided"),
-                "evidence": analysis.get("evidence", []),
-                "alternatives": analysis.get("alternatives", []),
-                "ai_response": response.content,
-                "processing_time": response.processing_time
-            }
-            
-        except Exception as e:
-            # Fallback for failed AI requests
-            return {
-                "agent_id": agent["id"],
-                "persona": persona,
-                "answer": f"Research failed: {str(e)}",
-                "confidence": 0.1,
-                "reasoning": "AI agent failed to process request",
-                "error": True,
-                "error_message": str(e)
-            }
-    
-    def _build_agent_system_prompt(self, agent: Dict[str, Any], input_data: Dict[str, Any]) -> str:
-        """Build system prompt for specific agent persona"""
-        
-        persona = agent["persona"]
-        role = agent["role"]
-        style = agent.get("ai_prompt_style", "analytical")
-        
-        base_prompt = f"""
-        You are a research agent in a multi-layered AI simulation system.
-        
-        PERSONA: {persona}
-        ROLE: {role}
-        STYLE: {style}
-        
-        Your task is to analyze the given query from your specific perspective.
-        Provide thorough, accurate analysis while maintaining your persona characteristics.
-        
-        IMPORTANT: Provide your response in JSON format with these fields:
-        - answer: Your main response/analysis
-        - confidence: Your confidence level (0.0-1.0)
-        - reasoning: Explanation of your analytical process
-        - evidence: List of key evidence points
-        - alternatives: Alternative viewpoints or solutions
-        - concerns: Any concerns or limitations from your perspective
-        """
-        
-        # Add persona-specific instructions
+        # Persona-specific research approach
         if persona == "domain_expert":
-            base_prompt += "\nFocus on accuracy, facts, and domain-specific knowledge."
+            answer, confidence, reasoning = self._expert_analysis(query, input_data, memory)
         elif persona == "critical_thinker":
-            base_prompt += "\nChallenge assumptions, identify weaknesses, and ask probing questions."
+            answer, confidence, reasoning = self._critical_analysis(query, input_data, memory)
         elif persona == "creative_reasoner":
-            base_prompt += "\nExplore unconventional approaches and generate innovative solutions."
+            answer, confidence, reasoning = self._creative_analysis(query, input_data, memory)
         elif persona == "synthesizer":
-            base_prompt += "\nIntegrate different viewpoints and find common ground."
-        elif persona == "safety_analyst":
-            base_prompt += "\nPrioritize safety, risk assessment, and potential negative consequences."
-        
-        return base_prompt
-    
-    def _build_research_prompt(
-        self, 
-        agent: Dict[str, Any], 
-        query: str, 
-        input_data: Dict[str, Any], 
-        context: Dict[str, Any]
-    ) -> str:
-        """Build research prompt for agent"""
-        
-        prompt = f"""
-        RESEARCH QUERY: {query}
-        
-        CONTEXT INFORMATION:
-        - Query Type: {input_data.get('query_type', 'unknown')}
-        - Complexity: {input_data.get('complexity', 0.5)}
-        - Domain: {input_data.get('domain', 'general')}
-        - Safety Level: {input_data.get('safety_level', 'safe')}
-        
-        ADDITIONAL CONTEXT:
-        {context}
-        
-        Please analyze this query thoroughly from your perspective as a {agent['persona']}.
-        Consider all relevant factors and provide comprehensive analysis.
-        
-        Remember to format your response as valid JSON with all required fields.
-        """
-        
-        return prompt
-    
-    def _parse_agent_response(self, response_text: str, agent: Dict[str, Any]) -> Dict[str, Any]:
-        """Parse AI agent response, with fallback for non-JSON responses"""
-        
-        try:
-            import json
-            return json.loads(response_text)
-        except json.JSONDecodeError:
-            # Fallback parsing for non-JSON responses
-            return {
-                "answer": response_text,
-                "confidence": 0.8,
-                "reasoning": f"Response from {agent['persona']} agent",
-                "evidence": [],
-                "alternatives": [],
-                "concerns": []
-            }
-    
-    async def _ai_synthesize_results(
-        self,
-        agent_results: List[Dict[str, Any]],
-        consensus_analysis: Dict[str, Any],
-        input_data: Dict[str, Any],
-        session_id: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Use AI to synthesize all agent results into final research output"""
-        
-        # Prepare synthesis prompt
-        synthesis_prompt = self._build_synthesis_prompt(agent_results, consensus_analysis, input_data)
-        
-        try:
-            request = GeminiRequest(
-                prompt=synthesis_prompt,
-                system_prompt="""
-                You are a research synthesis expert. Your job is to analyze multiple agent perspectives
-                and create a comprehensive, balanced final answer. Consider all viewpoints, identify
-                areas of agreement and disagreement, and provide a well-reasoned conclusion.
-                
-                Respond in JSON format with:
-                - answer: Final synthesized answer
-                - confidence: Overall confidence level
-                - evidence_quality: Assessment of evidence strength
-                - alternatives: Alternative viewpoints to consider
-                - synthesis_reasoning: Your reasoning process
-                - requires_expert_review: Boolean if human expert review is needed
-                """,
-                model=GeminiModel.GEMINI_PRO,
-                temperature=0.6  # Balanced temperature for synthesis
-            )
-            
-            response = await gemini_service.generate_async(
-                request, 
-                session_id=session_id, 
-                layer=3
-            )
-            
-            # Parse synthesis response
-            try:
-                import json
-                synthesis = json.loads(response.content)
-                return synthesis
-            except json.JSONDecodeError:
-                # Fallback if JSON parsing fails
-                return {
-                    "answer": response.content,
-                    "confidence": response.confidence,
-                    "evidence_quality": "medium",
-                    "alternatives": [],
-                    "synthesis_reasoning": "AI synthesis provided",
-                    "requires_expert_review": False
-                }
-                
-        except Exception as e:
-            # Fallback synthesis
-            return self._fallback_synthesis(agent_results, consensus_analysis)
-    
-    def _build_synthesis_prompt(
-        self,
-        agent_results: List[Dict[str, Any]],
-        consensus_analysis: Dict[str, Any],
-        input_data: Dict[str, Any]
-    ) -> str:
-        """Build prompt for AI synthesis of agent results"""
-        
-        query = input_data.get("normalized_query", "")
-        
-        # Format agent results for synthesis
-        agent_summaries = []
-        for result in agent_results:
-            if not result.get("error", False):
-                summary = f"""
-                AGENT: {result['persona']}
-                ANSWER: {result['answer']}
-                CONFIDENCE: {result['confidence']}
-                REASONING: {result['reasoning']}
-                """
-                agent_summaries.append(summary)
-        
-        consensus_info = f"""
-        CONSENSUS ANALYSIS:
-        - Consensus Strength: {consensus_analysis.get('consensus_strength', 0.0)}
-        - Major Disagreement: {consensus_analysis.get('major_disagreement', False)}
-        - Agreement Areas: {consensus_analysis.get('agreement_areas', [])}
-        - Disagreement Areas: {consensus_analysis.get('disagreement_areas', [])}
-        """
-        
-        prompt = f"""
-        ORIGINAL QUERY: {query}
-        
-        AGENT RESEARCH RESULTS:
-        {chr(10).join(agent_summaries)}
-        
-        {consensus_info}
-        
-        Please synthesize these multiple agent perspectives into a comprehensive final answer.
-        Consider the strengths and weaknesses of each perspective, areas of agreement and disagreement,
-        and provide a balanced, well-reasoned conclusion.
-        
-        Format your response as valid JSON with all required fields.
-        """
-        
-        return prompt
-    
-    def _fallback_synthesis(
-        self,
-        agent_results: List[Dict[str, Any]],
-        consensus_analysis: Dict[str, Any]
-    ) -> Dict[str, Any]:
-        """Fallback synthesis when AI fails"""
-        
-        # Simple majority voting
-        answers = [r["answer"] for r in agent_results if not r.get("error", False)]
-        confidences = [r["confidence"] for r in agent_results if not r.get("error", False)]
-        
-        if not answers:
-            return {
-                "answer": "No valid agent results available",
-                "confidence": 0.1,
-                "evidence_quality": "poor",
-                "alternatives": [],
-                "synthesis_reasoning": "Fallback synthesis - no valid results",
-                "requires_expert_review": True
-            }
-        
-        # Use highest confidence answer as primary
-        best_idx = confidences.index(max(confidences))
-        primary_answer = answers[best_idx]
-        avg_confidence = sum(confidences) / len(confidences)
+            answer, confidence, reasoning = self._synthesis_analysis(query, input_data, memory)
+        elif persona in ["safety_analyst", "risk_specialist"]:
+            answer, confidence, reasoning = self._safety_analysis(query, input_data, memory)
+        else:
+            answer, confidence, reasoning = self._general_analysis(query, input_data, memory)
         
         return {
-            "answer": primary_answer,
-            "confidence": avg_confidence,
-            "evidence_quality": "medium",
-            "alternatives": [a for a in answers if a != primary_answer],
-            "synthesis_reasoning": "Rule-based synthesis using highest confidence result",
-            "requires_expert_review": avg_confidence < 0.8
+            "agent_id": agent["id"],
+            "persona": persona,
+            "answer": answer,
+            "confidence": confidence,
+            "reasoning": reasoning,
+            "research_time": 0.5,  # Simulated processing time
+            "evidence_strength": "medium",
+            "alternative_considered": True
         }
     
+    def _expert_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """Domain expert analysis approach"""
+        knowledge_available = input_data.get("knowledge_available", False)
+        
+        if knowledge_available and input_data.get("memory_answer"):
+            answer = f"Expert analysis confirms: {input_data['memory_answer']}"
+            confidence = 0.92
+            reasoning = "Based on domain expertise and available knowledge base"
+        else:
+            answer = f"Expert assessment of '{query}' requires additional research and validation"
+            confidence = 0.75
+            reasoning = "Limited domain knowledge available, requires deeper investigation"
+        
+        return answer, confidence, reasoning
+    
+    def _critical_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """Critical thinking analysis approach"""
+        answer = f"Critical analysis of '{query}' reveals multiple assumptions that need validation"
+        confidence = 0.70
+        reasoning = "Identified potential biases and unvalidated assumptions in the query premise"
+        return answer, confidence, reasoning
+    
+    def _creative_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """Creative reasoning analysis approach"""
+        answer = f"Alternative perspective on '{query}': Consider unconventional approaches and paradigm shifts"
+        confidence = 0.68
+        reasoning = "Generated alternative viewpoints and creative solutions not typically considered"
+        return answer, confidence, reasoning
+    
+    def _synthesis_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """Synthesis analysis approach"""
+        answer = f"Synthesized understanding of '{query}' integrating multiple perspectives and evidence sources"
+        confidence = 0.85
+        reasoning = "Combined insights from available evidence and multiple analytical approaches"
+        return answer, confidence, reasoning
+    
+    def _safety_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """Safety and risk analysis approach"""
+        answer = f"Safety analysis of '{query}' identifies potential risks and mitigation strategies"
+        confidence = 0.88
+        reasoning = "Comprehensive risk assessment with focus on harm prevention and safety protocols"
+        return answer, confidence, reasoning
+    
+    def _general_analysis(self, query: str, input_data: Dict[str, Any], memory) -> tuple:
+        """General analysis approach"""
+        answer = f"General analysis of '{query}' provides balanced perspective"
+        confidence = 0.80
+        reasoning = "Balanced analysis considering multiple factors and perspectives"
+        return answer, confidence, reasoning
+    
     def _analyze_agent_consensus(self, agent_results: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Analyze consensus and disagreements among agents"""
+        """Analyze consensus and disagreement among agents"""
         
-        valid_results = [r for r in agent_results if not r.get("error", False)]
+        if not agent_results:
+            return {"consensus_strength": 0.0, "major_disagreement": True}
         
-        if len(valid_results) < 2:
-            return {
-                "consensus_strength": 0.0,
-                "major_disagreement": True,
-                "agreement_areas": [],
-                "disagreement_areas": ["Insufficient valid agent results"],
-                "confidence_spread": 1.0
-            }
+        confidences = [r["confidence"] for r in agent_results]
+        avg_confidence = sum(confidences) / len(confidences)
+        confidence_variance = sum((c - avg_confidence) ** 2 for c in confidences) / len(confidences)
         
-        # Calculate confidence spread
-        confidences = [r["confidence"] for r in valid_results]
-        confidence_spread = max(confidences) - min(confidences)
+        # Simple consensus analysis (would be more sophisticated in production)
+        consensus_strength = max(0.0, 1.0 - confidence_variance * 2)
+        major_disagreement = confidence_variance > 0.15
         
-        # Simple consensus analysis (could be enhanced with semantic similarity)
-        answers = [str(r["answer"]).lower() for r in valid_results]
-        unique_answers = len(set(answers))
-        consensus_strength = 1.0 - (unique_answers - 1) / len(answers)
-        
-        major_disagreement = confidence_spread > 0.3 or consensus_strength < 0.5
+        # Find most confident agent
+        best_agent_idx = confidences.index(max(confidences))
+        best_agent = agent_results[best_agent_idx]
         
         return {
             "consensus_strength": consensus_strength,
             "major_disagreement": major_disagreement,
-            "agreement_areas": ["Basic analysis"] if consensus_strength > 0.7 else [],
-            "disagreement_areas": ["Specific conclusions"] if major_disagreement else [],
-            "confidence_spread": confidence_spread,
-            "valid_agents": len(valid_results)
+            "avg_confidence": avg_confidence,
+            "confidence_variance": confidence_variance,
+            "best_agent": best_agent,
+            "agreement_level": "high" if consensus_strength > 0.8 else "medium" if consensus_strength > 0.5 else "low"
         }
     
     def _detect_reasoning_forks(
@@ -595,69 +333,104 @@ class Layer3ResearchAgents(BaseLayer):
         agent_results: List[Dict[str, Any]], 
         consensus_analysis: Dict[str, Any]
     ) -> List[Dict[str, Any]]:
-        """Detect reasoning forks based on agent disagreements"""
+        """Detect significant disagreements that warrant forking"""
         
         forks = []
         
         if consensus_analysis["major_disagreement"]:
-            # Group agents by similar answers (simplified)
-            answer_groups = {}
-            for result in agent_results:
-                if result.get("error", False):
-                    continue
-                    
-                answer_key = str(result["answer"])[:100]  # First 100 chars as key
-                if answer_key not in answer_groups:
-                    answer_groups[answer_key] = []
-                answer_groups[answer_key].append(result)
+            # Group agents by similar confidence levels
+            high_conf_agents = [r for r in agent_results if r["confidence"] > 0.8]
+            low_conf_agents = [r for r in agent_results if r["confidence"] < 0.6]
             
-            # Create forks for significant disagreements
-            if len(answer_groups) > 1:
-                for answer_key, group in answer_groups.items():
-                    if len(group) >= 1:  # At least one agent supports this view
-                        fork = {
-                            "id": str(uuid.uuid4()),
-                            "type": "agent_disagreement",
-                            "reason": f"Agent reasoning divergence: {len(group)} agents support this view",
-                            "supporting_agents": [r["agent_id"] for r in group],
-                            "alternative_answer": group[0]["answer"],
-                            "confidence": sum(r["confidence"] for r in group) / len(group)
-                        }
-                        forks.append(fork)
+            if len(high_conf_agents) > 0 and len(low_conf_agents) > 0:
+                fork_info = {
+                    "id": str(uuid.uuid4()),
+                    "layer": self.layer_number,
+                    "type": "confidence_disagreement",
+                    "high_confidence_path": {
+                        "agents": [a["agent_id"] for a in high_conf_agents],
+                        "consensus": high_conf_agents[0]["answer"],
+                        "confidence": max(a["confidence"] for a in high_conf_agents)
+                    },
+                    "low_confidence_path": {
+                        "agents": [a["agent_id"] for a in low_conf_agents],
+                        "concerns": [a["reasoning"] for a in low_conf_agents],
+                        "avg_confidence": sum(a["confidence"] for a in low_conf_agents) / len(low_conf_agents)
+                    },
+                    "reason": "Significant disagreement in agent confidence levels",
+                    "requires_resolution": True
+                }
+                forks.append(fork_info)
         
         return forks
     
+    def _synthesize_agent_results(
+        self, 
+        agent_results: List[Dict[str, Any]], 
+        consensus_analysis: Dict[str, Any], 
+        input_data: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        """Synthesize final research output from agent results"""
+        
+        if not agent_results:
+            return {
+                "answer": "Unable to conduct research - no agents available",
+                "confidence": 0.1,
+                "requires_expert_review": True
+            }
+        
+        best_agent = consensus_analysis["best_agent"]
+        
+        # Create synthesized answer
+        if consensus_analysis["agreement_level"] == "high":
+            answer = best_agent["answer"]
+            confidence = min(0.99, best_agent["confidence"] * 1.1)  # Boost for consensus
+            requires_review = False
+        else:
+            answer = f"Research indicates: {best_agent['answer']} (Note: Agents showed disagreement)"
+            confidence = best_agent["confidence"] * 0.9  # Reduce for disagreement
+            requires_review = True
+        
+        # Collect alternative hypotheses
+        alternatives = []
+        for agent in agent_results:
+            if agent["agent_id"] != best_agent["agent_id"] and agent["confidence"] > 0.6:
+                alternatives.append({
+                    "hypothesis": agent["answer"],
+                    "confidence": agent["confidence"],
+                    "persona": agent["persona"]
+                })
+        
+        return {
+            "answer": answer,
+            "confidence": confidence,
+            "alternatives": alternatives,
+            "evidence_quality": "high" if consensus_analysis["agreement_level"] == "high" else "medium",
+            "requires_expert_review": requires_review
+        }
+    
     def _calculate_research_confidence(
-        self,
-        agent_results: List[Dict[str, Any]],
-        consensus_analysis: Dict[str, Any],
+        self, 
+        agent_results: List[Dict[str, Any]], 
+        consensus_analysis: Dict[str, Any], 
         research_output: Dict[str, Any]
     ) -> float:
-        """Calculate overall research confidence"""
+        """Calculate overall confidence for research layer"""
         
-        valid_results = [r for r in agent_results if not r.get("error", False)]
-        
-        if not valid_results:
+        if not agent_results:
             return 0.1
         
-        # Base confidence from agents
-        agent_confidences = [r["confidence"] for r in valid_results]
-        avg_agent_confidence = sum(agent_confidences) / len(agent_confidences)
+        base_confidence = consensus_analysis["avg_confidence"]
         
-        # Adjust based on consensus
-        consensus_bonus = consensus_analysis["consensus_strength"] * 0.1
+        # Boost for high consensus
+        if consensus_analysis["agreement_level"] == "high":
+            base_confidence *= 1.1
+        elif consensus_analysis["agreement_level"] == "low":
+            base_confidence *= 0.8
         
-        # Adjust based on synthesis quality
-        synthesis_confidence = research_output.get("confidence", avg_agent_confidence)
+        # Boost for multiple high-confidence agents
+        high_conf_count = sum(1 for r in agent_results if r["confidence"] > 0.8)
+        if high_conf_count >= 3:
+            base_confidence *= 1.05
         
-        # Penalize for errors
-        error_penalty = len([r for r in agent_results if r.get("error", False)]) * 0.05
-        
-        final_confidence = (
-            avg_agent_confidence * 0.4 +
-            synthesis_confidence * 0.4 +
-            consensus_bonus * 0.2 -
-            error_penalty
-        )
-        
-        return max(0.1, min(1.0, final_confidence))
+        return min(1.0, max(0.1, base_confidence))
