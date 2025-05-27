@@ -1,5 +1,3 @@
-# start-servers.ps1
-
 Write-Host "Starting Backend Server..." -ForegroundColor Green
 
 # Start Backend

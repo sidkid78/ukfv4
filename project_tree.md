@@ -1,5 +1,7 @@
 ```
 └── 📁ukfv4
+    └── 📁__pycache__
+        └── gemini_config.cpython-310.pyc
         └── COMMIT_EDITMSG
         └── config
         └── description
@@ -27,7 +29,11 @@
             └── HEAD
             └── 📁refs
                 └── 📁heads
-                    └── master
+                    └── main
+                └── 📁remotes
+                    └── 📁origin
+                        └── HEAD
+                        └── main
         └── 📁objects
             └── 📁00
                 └── 4145cddf3f9db91b57b9cb596683c8eb420862
@@ -39,6 +45,7 @@
             └── 📁03
                 └── 03be2f1a67ebf399f59ac44d29836cd9221cca
                 └── 25910318ac51cfb72d989d9b1d3849e7f4737b
+                └── 330a9e0b5953034f0a595efd4aab0ee9712e5e
                 └── 368b1ab47ff261014ec29582ce6198c2dc53d8
             └── 📁04
                 └── c02cefe2737d8a21d512043c44cb434da3b2d5
@@ -57,13 +64,25 @@
             └── 📁0d
                 └── 2b89909c996d07e17af0e8ee78ed5f4262b63c
                 └── 6e83929d758f1b066de754aeb5668f83d53fef
+            └── 📁10
+                └── 8c95475536ff5f397d205bf3f345e92be0d49f
             └── 📁11
                 └── 26ee151a85f76d3b84766ed7892899c50ef8cd
+                └── b800adf8c7a3ccc12835187d3217759bead01c
+            └── 📁14
+                └── b6611936feca5659a684ed72fd19a8ed3c5f82
             └── 📁15
                 └── f8d7b2cb1c160f586de36be049981d3d558ce8
+            └── 📁16
+                └── 41a53e8d6983f20da0c64dbf8df29cf1a08f42
+                └── a8b0d5e5e9cd358834d9ac97bf0839936e9503
+                └── e2d3d7caddf881e1d9e1e6478a6545f6f8e7de
             └── 📁17
                 └── ab507fe69de0d68e73fdf57d17a9d530b398a0
+            └── 📁18
+                └── 49b0d6a9783788cde19881eb6369e01f002b04
             └── 📁19
+                └── 20ab95d8647e579ff9b3ae35cf49e05bb68ad2
                 └── 9d1cc4be6943a42eb0602f2ba3c6e5e34111e1
             └── 📁1a
                 └── 4f4a211f918de2232b2cf942ecdab0b84ae573
@@ -71,12 +90,20 @@
                 └── 082e1a650c93defe74e5d3877c72b264a2f242
             └── 📁1c
                 └── 675dffb7b014793df551bce2bc163fd023b98e
+            └── 📁1e
+                └── cbcf5ce9ba8de27d8bf868491097e292b669f8
             └── 📁21
                 └── 39cad55bdc916d0bd55d14f5fe9547adc48bb4
+            └── 📁22
+                └── af4d379b4d3ad224d3d8d5224fe79d2b7f8b62
             └── 📁25
+                └── 8f2053bc400063c51d55609740edf692fbf300
                 └── 9afca9bf544ca058754cfa73cf444016b1764e
             └── 📁27
                 └── 511775cd259745402df53fedcee89aee187057
+                └── f0389f1362cbe99cb8614225d721c1bcb6edf8
+            └── 📁2a
+                └── 0a9f888bdfce1ea9e15131d4dadb5d9e8f0ea9
             └── 📁2c
                 └── aff4a218a5d09cf5a0ae57271b28ae7b85c903
                 └── b839bdc1059ec039181d2a15415568a97bee1b
@@ -88,22 +115,31 @@
             └── 📁2f
                 └── 3256f6ce57e43143999ad0017058011904bf2a
             └── 📁30
+                └── 29d999c190929f5f60ff3561f3d6b4a1096f77
                 └── ce60d8aad55541b9696c5811d499f752d3840f
             └── 📁31
                 └── 6b0f568d56e03b96a089b4cf75cdbb7ce25d7c
+            └── 📁34
+                └── 7a43296952964d1ff148366639f6ab881c40c8
             └── 📁37
                 └── f581eb45bb57dc65f9f1893158793ec61dc442
             └── 📁39
                 └── 387bc555fb8773bfe165f8cec9746a78cb1d1c
             └── 📁3d
+                └── 073f9a57a7ddfb230dd3fdf24b74dc253117f6
                 └── 62490e566201f760352ae043bb3a1bd1f6b49b
             └── 📁40
+                └── 17c691fac04ad7a7e5b1fd2b53b8ac10170034
+                └── 188d461e8c761d416a004891ea2e4b9ae1856a
                 └── b2d0c0e0c7bc859b85f52df875d9f2aeac0b4d
             └── 📁41
                 └── 307efc13aa36cba665ebac63f72d8fe20298fa
             └── 📁42
                 └── 5935085b5eaf408a8367b9486a971db1c8a091
+                └── 7ea6b207d0b76c7a083b01b465040c865b073c
                 └── a3a5a7618f4d6acbd543c2eb240f6f760a0182
+            └── 📁44
+                └── 95cd234173a0ce4fa377ddd70ba587dd10d02c
             └── 📁45
                 └── ec8eb15ea669b5e6e5f9cf74d2e6572e0c5833
             └── 📁47
@@ -113,26 +149,50 @@
             └── 📁49
                 └── 7ba5ea34247f6843e0c58ccd7da61b7c8edb46
                 └── a120733ef9c255070f10f4d48b41e9af883a46
+                └── a845e04ec625dcc4db29304d49c633b486fb17
             └── 📁4a
                 └── 24d9dc06b39ead61f9b0ef18b56fe3963e9046
             └── 📁4b
+                └── 2261fb0c4e493ca1cd2caa645cb8c6ab398375
+                └── 3122d1bf710250af6c6ef4e88a2eaae230ecae
                 └── 91e0dc80fb8849cda56f58bf67ba104ef0f2ca
+                └── eac755c8c2bd8995bcb0bc746193b756ac873b
+            └── 📁4c
+                └── 8d8097ae97789802e1da0f95db039f96974db4
+            └── 📁4d
+                └── 23584a17cf4da14c1d236f02f8c0b1f6969f50
             └── 📁4f
                 └── 36604241c969e8b26ca1423decca2021afbba6
+            └── 📁50
+                └── 62e6517eda771c8f62866517cd4c7f126586b8
             └── 📁51
                 └── 74b28c565c285e3e312ec5178be64fbeca8398
+            └── 📁52
+                └── 7837f0fbc193654b5ddbea264899c87df75117
             └── 📁53
                 └── 40083a7928318ece08eff300077a13314d4392
                 └── 85d1431f7b5336c956eb3948748ece9f5f8632
+                └── d38df844d9b4c5c3dfbaa849c554cd213a0981
+                └── f831ccb06c5b2f2e887be8c180fc8db2cbc24f
             └── 📁54
                 └── 7729784dd14270f498974aa23d777f16e5cdf3
+                └── a2642bfa32e4fcb2b6b3c8fa2d08d1dbbc0563
                 └── e87396edf03199915f9d321d4882c1f2a9c908
             └── 📁56
                 └── 7f17b0d7c7fb662c16d4357dd74830caf2dccb
+            └── 📁57
+                └── 61985fc7ef2067cd28508096ab167e2f9976ee
+                └── c332a0a46a7b0b2045d35703aa0bd7e88bf8af
+            └── 📁58
+                └── 9870649c2729a126dca241ab28a5632459acab
+            └── 📁5b
+                └── 6cb3c67f3439fbc7e5e6294bcd637be58adcb1
             └── 📁5c
                 └── 6a061f5692113819c96359ddad3843ddd16012
             └── 📁5e
                 └── f6a520780202a1d6addd833d800ccb1ecac0bb
+            └── 📁5f
+                └── 13d411d84d564a6b1efc626c1221e9f1a97b94
             └── 📁60
                 └── a349f539da6a97e61da280f576eb21c9a523ac
             └── 📁62
@@ -142,6 +202,12 @@
                 └── 49b51dedebc95441d11aa0dfaff2d65e9a6f08
             └── 📁65
                 └── 677a371842609f8eefd49a527a6c64200b8f84
+            └── 📁66
+                └── 72d66604a2bfae5a5b25a40d0e5f8d62a357bf
+            └── 📁67
+                └── 1a69f920763647db1ff07f75081ec8ebf4db6f
+            └── 📁6b
+                └── ab38449de7718cb570e05b1878857f1ddbbb8b
             └── 📁6d
                 └── bb994c31129f6923999287f1192f5e143c9098
             └── 📁6f
@@ -158,13 +224,19 @@
             └── 📁77
                 └── 053960334e2e34dc584dea8019925c3b4ccca9
                 └── dabd5189a1a1735e63191d99e6cab030664835
+            └── 📁7a
+                └── 71ec27b41e9d5e4f20cf7df1cd0530754ab756
+                └── ea72a4db47e01ed5d7f9ccdf0634760b244f71
             └── 📁7b
+                └── 2cdb9ffb883396bb0070d114ef58661c7a4940
                 └── d35cf038e089e639c3cf3044a4e19ca5c8d159
             └── 📁7d
                 └── fa5bfb0fe33b884e02b8a064e88e6b28fe367c
             └── 📁7f
                 └── 21b5e78a4c1c23bf41b6be206f3f81dc84fe99
                 └── a323b6274bbeb736c55c1e7229c7a5f095798e
+            └── 📁81
+                └── c0fb1c65d7d106135a0f544320dd4356139402
             └── 📁82
                 └── c5beabb6e6d31bac0edfddd2950a9e78cc0ddc
             └── 📁83
@@ -193,6 +265,7 @@
                 └── 32acef901dbba687ee7e2a39e85cfd195cb237
                 └── d3a2e0a1a517fd1cae67b49e75065a746aad18
             └── 📁92
+                └── 171ff2247dc6e9cfb991030e53d7dc8c345e04
                 └── f6bf534a52c9e28ff57e17e1b138630146881b
             └── 📁93
                 └── 90f3372a95e095697a5e2e15966bbd4eeaca4a
@@ -211,72 +284,109 @@
                 └── 7a4adb76740cadf95e592f7ca6df33c8751092
             └── 📁9d
                 └── 0d77b3e1801bb4a4722b450817cb4433e07af2
+            └── 📁9e
+                └── 12393c4bc47f4dbed7af7e7e25e8a6a64ea9cb
             └── 📁a0
                 └── 954bf1880d018e9b5599f4fcf788f87e12b6f1
             └── 📁a1
                 └── db3fadbb38da120ee4e9cf2ee8ca0ec5107fb2
             └── 📁a2
                 └── df8dce675fed0712d021fa45245289ecd26c88
+            └── 📁a4
+                └── a3d4331408d2c3f119e1175ee92539f97ea2a2
             └── 📁ac
                 └── 3c86f7efddf1c66a5e5e897ed60bf36eadb722
             └── 📁ad
                 └── f3a2e290a40eaf2918f53bf3772b7f7591379d
+                └── f82cc6d6c50056febc954d386bae18ee7de00f
             └── 📁b0
                 └── e0d6f2c8f9e8dc4c436b07d316558933f38681
             └── 📁b2
                 └── 9f53cec5b67db926924044a9f93874e9a43616
                 └── b2a44f6ebc70c450043c05a002e7a93ba5d651
             └── 📁b4
+                └── 18ae010f952bf39b674abf65339233bd1b9b31
                 └── f81326ff0315af696917c63bb11cd449a22aa9
+            └── 📁b6
+                └── 434f56d26b9d9d3cd34ca1f1c1a415135f60df
+            └── 📁b7
+                └── 619412b43d76c98b38fbd54b6d627be39bad55
             └── 📁b8
                 └── 24dd6bca800b8077bdc4d5bd9d9ed2520b3ab1
+                └── ef7de71ad2cd9a5b2f83878c4ce7024e54ac24
             └── 📁b9
                 └── d4c1e2e563ded21bb99d3a13b30c71c5e1ec2c
+            └── 📁ba
+                └── a5f3b3340e894ca29d41c2c30507c32c3e0d06
             └── 📁bc
                 └── 5fdfc6048bbc353da7d96e938522d1fe742d2d
+            └── 📁be
+                └── c56cb1f3baa9489a6266f3b59ee51ef86b8733
+            └── 📁bf
+                └── 5b9949541012e11dd25e0c1d9c41a142c4ce01
+                └── cc046fbd08cbfa47948cf28375f46b161995d1
+            └── 📁c0
+                └── 49156f20ae252a4f83cd7ccd971dfd1703e546
             └── 📁c1
                 └── 334095f876a408c10f2357faaced969ec090ab
+                └── 752093e870e41083a6da1434c8d075c3bf0b4b
             └── 📁c2
                 └── 3099d1258fe849d3c3210fa740bf6f3a72ec48
                 └── 93aaf2f5925af5506dd21414761fa80b2308a2
             └── 📁c4
+                └── 3c5b3e76e5387dc2777844092fd754f41a9cdf
                 └── 710af8bd340ab189114ce237fa134fc2069a04
             └── 📁c7
                 └── ed3e3e2bc8649d9c50d1967fb7786dbfa362b6
             └── 📁c8
+                └── 35b283f77bdcdebf328b48979fa7fb624eded1
                 └── 5fb67c463f20d1ee449b0ffee725a61dfb9259
                 └── 8f389de09f418da376598c42e8788d4fb6d172
                 └── cfe3959183f8e9a50f83f54cd723f2dc9c252d
             └── 📁c9
                 └── 22f56a8253b435e75a0de50af8eb74d5e24e9c
                 └── 7d13c66c557ad78723dd35e498a412ae758c6e
+                └── b510cd752d4fbff3e864f41d418fc3a0542246
                 └── b72a7bc054692e93f3588e25e61b6b6eafbead
             └── 📁ca
                 └── f31c96b0b85db670eb94d133a9665f74c80f60
             └── 📁cc
                 └── 1c53984f034faa5457b8a9d5e1ccf7aa901a2f
                 └── 32c5a1b3ff9cd8bddbd143383c0afe020d5dbb
+                └── 8ead395dc8e5b169aa0aaaf95ad835d3ed91b9
             └── 📁cd
                 └── 13c0c15f6c4efc874207ca8557945616bf96c3
             └── 📁ce
                 └── 46043168a3df38de8314fdfa2a17a1e5e37321
+            └── 📁cf
+                └── b3f950c42bffa31404b52d997a4ae4979c1fdf
             └── 📁d0
                 └── 5bbc6c74cd8dbc699562cef917bb4267865aed
                 └── 6aa9590776e7d3f8b9df445f3ce5dde3761f8b
                 └── 6d946c606ebc8e0b5c496f0effbd5260b15fec
+            └── 📁d1
+                └── 76e473eb9e966183d1ca0b8d0f09a5e5c94efc
             └── 📁d6
                 └── 4e4360244aec3c7284ad3dbd7620fb78be0b45
+                └── eabf1e61dbea95797f180f5da1a72a795de983
             └── 📁d7
                 └── cddc1e74e1134a387a2f6e9b0957444e1caf53
+            └── 📁d9
+                └── 99451f30e481fbd9bd08b358790bbd13df7aee
             └── 📁db
                 └── 8a3d0ad6c0822fbd7e7a9197da8fea0edc8144
             └── 📁dd
                 └── 2b03d6e2ac89b49e3fb4963c9e35d07596f388
+            └── 📁de
+                └── 46aa1f1aef68b197881c3da7173380b4f4b52b
+            └── 📁e0
+                └── e7dea431a6890cbc13ceca5482b8da61da8fbb
             └── 📁e2
                 └── 15bc4ccf138bbc38ad58ad57e92135484b3c0f
                 └── c73caf1ecbe34c6cfce61787eaf38d5e8f23b8
             └── 📁e4
                 └── 39acdcec75db4d014446bb625454ab795eb05d
+                └── e7f6ce43bd484fa34f29051ffe2ce5016dcc2a
             └── 📁e5
                 └── baae2be8b1e6f090ddf996e52d6950dc995557
             └── 📁e6
@@ -284,20 +394,34 @@
                 └── 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
             └── 📁e7
                 └── 1580fde06d805d8a6ebf3c9535860023553291
+                └── 44c984248549d0c18df6a899b8683cb9054ce6
             └── 📁e8
                 └── 21dd60ff2076dd0c442350022c0d0b4ff09b2f
             └── 📁e9
                 └── ffa3083ad279ecf95fd8eae59cb253e9a539c4
+            └── 📁ea
+                └── 96f43f083ac4e1deb3f951339c3576bf030291
+                └── d2680b569ebcec2680e8b9a4ffa186d652160b
             └── 📁ec
                 └── 58a2ab4255574a11928282c181d9022675c301
                 └── a948f024484777584e94d4526d2bc13970e380
             └── 📁ed
                 └── 2be7975df6f41054c9c6f831a5b84c442e36a4
                 └── ebc317723a4465706764a78443912375e022c2
+            └── 📁f0
+                └── bc0fa689638e9d66eba51e73b6827e06b172cc
             └── 📁f1
                 └── 01d7aae19279f1aeaa37d3f5077c8fe3b9666d
+            └── 📁f2
+                └── cf06885ea86ad263367909c6a5b10a4edd3434
+            └── 📁f3
+                └── 81a8853ab275d5f709d51cc72989c897db3171
+                └── c20084209b4548a6adc4128cce66a8456ceb6d
             └── 📁f6
                 └── 0d60c3a105597969b28233dc661f978e9d064f
+            └── 📁f7
+                └── 215d0ff44ea98210785387c8a8d0d5dc08e7f9
+                └── 2d215058b0af60423b0a0f4a35f0ff668c6b03
             └── 📁f8
                 └── 7c5c2739a6d32c1b05891b2cb35dab9097be93
             └── 📁f9
@@ -306,17 +430,25 @@
                 └── 2a3359abbb96cfac9d54913ff297fa20c1bcb6
                 └── b92dc415e83c818e26d8a2918ca2d1e65b0622
             └── 📁fb
+                └── 05dafb1474724de238be1b23c6431df795a05a
                 └── f02f880e01109834490e2ef64f40769fb93a05
             └── 📁fc
                 └── 3c52adf7092f28737fcffe7b7f96cbb7ee6b33
             └── 📁fd
                 └── 0c322ef9dbc0438e9da194f52c4bf648f1c2e2
                 └── f5d84bcb8837bde76697c379bd05f9bac9d2f3
+                └── ff3452888985f8aa0ac510e1ae8213d16782c5
+            └── 📁fe
+                └── 3b801c89c1d40700e303828394b2dde94a3893
             └── 📁info
             └── 📁pack
         └── 📁refs
             └── 📁heads
-                └── master
+                └── main
+            └── 📁remotes
+                └── 📁origin
+                    └── HEAD
+                    └── main
             └── 📁tags
     └── 📁backend
         └── __init__.py
@@ -332,10 +464,251 @@
                         └── _virtualenv.cpython-310.pyc
                         └── google_auth_httplib2.cpython-310.pyc
                         └── typing_extensions.cpython-310.pyc
+                    └── 📁_griffe
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── c3linear.cpython-310.pyc
+                            └── cli.cpython-310.pyc
+                            └── collections.cpython-310.pyc
+                            └── debug.cpython-310.pyc
+                            └── diff.cpython-310.pyc
+                            └── encoders.cpython-310.pyc
+                            └── enumerations.cpython-310.pyc
+                            └── exceptions.cpython-310.pyc
+                            └── expressions.cpython-310.pyc
+                            └── finder.cpython-310.pyc
+                            └── git.cpython-310.pyc
+                            └── importer.cpython-310.pyc
+                            └── loader.cpython-310.pyc
+                            └── logger.cpython-310.pyc
+                            └── merger.cpython-310.pyc
+                            └── mixins.cpython-310.pyc
+                            └── models.cpython-310.pyc
+                            └── stats.cpython-310.pyc
+                            └── tests.cpython-310.pyc
+                        └── 📁agents
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── inspector.cpython-310.pyc
+                                └── visitor.cpython-310.pyc
+                            └── inspector.py
+                            └── 📁nodes
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── assignments.cpython-310.pyc
+                                    └── ast.cpython-310.pyc
+                                    └── docstrings.cpython-310.pyc
+                                    └── exports.cpython-310.pyc
+                                    └── imports.cpython-310.pyc
+                                    └── parameters.cpython-310.pyc
+                                    └── runtime.cpython-310.pyc
+                                    └── values.cpython-310.pyc
+                                └── assignments.py
+                                └── ast.py
+                                └── docstrings.py
+                                └── exports.py
+                                └── imports.py
+                                └── parameters.py
+                                └── runtime.py
+                                └── values.py
+                            └── visitor.py
+                        └── c3linear.py
+                        └── cli.py
+                        └── collections.py
+                        └── debug.py
+                        └── diff.py
+                        └── 📁docstrings
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── google.cpython-310.pyc
+                                └── models.cpython-310.pyc
+                                └── numpy.cpython-310.pyc
+                                └── parsers.cpython-310.pyc
+                                └── sphinx.cpython-310.pyc
+                                └── utils.cpython-310.pyc
+                            └── google.py
+                            └── models.py
+                            └── numpy.py
+                            └── parsers.py
+                            └── sphinx.py
+                            └── utils.py
+                        └── encoders.py
+                        └── enumerations.py
+                        └── exceptions.py
+                        └── expressions.py
+                        └── 📁extensions
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── base.cpython-310.pyc
+                                └── dataclasses.cpython-310.pyc
+                            └── base.py
+                            └── dataclasses.py
+                        └── finder.py
+                        └── git.py
+                        └── importer.py
+                        └── loader.py
+                        └── logger.py
+                        └── merger.py
+                        └── mixins.py
+                        └── models.py
+                        └── py.typed
+                        └── stats.py
+                        └── tests.py
                     └── _virtualenv.pth
                     └── _virtualenv.py
                     └── 📁_yaml
                         └── __init__.py
+                    └── 📁agents
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── _config.cpython-310.pyc
+                            └── _debug.cpython-310.pyc
+                            └── _run_impl.cpython-310.pyc
+                            └── agent_output.cpython-310.pyc
+                            └── agent.cpython-310.pyc
+                            └── computer.cpython-310.pyc
+                            └── exceptions.cpython-310.pyc
+                            └── function_schema.cpython-310.pyc
+                            └── guardrail.cpython-310.pyc
+                            └── handoffs.cpython-310.pyc
+                            └── items.cpython-310.pyc
+                            └── lifecycle.cpython-310.pyc
+                            └── logger.cpython-310.pyc
+                            └── model_settings.cpython-310.pyc
+                            └── result.cpython-310.pyc
+                            └── run_context.cpython-310.pyc
+                            └── run.cpython-310.pyc
+                            └── stream_events.cpython-310.pyc
+                            └── strict_schema.cpython-310.pyc
+                            └── tool.cpython-310.pyc
+                            └── usage.cpython-310.pyc
+                            └── version.cpython-310.pyc
+                        └── _config.py
+                        └── _debug.py
+                        └── _run_impl.py
+                        └── agent_output.py
+                        └── agent.py
+                        └── computer.py
+                        └── exceptions.py
+                        └── 📁extensions
+                            └── __init__.py
+                            └── handoff_filters.py
+                            └── handoff_prompt.py
+                            └── 📁models
+                                └── __init__.py
+                                └── litellm_model.py
+                                └── litellm_provider.py
+                            └── visualization.py
+                        └── function_schema.py
+                        └── guardrail.py
+                        └── handoffs.py
+                        └── items.py
+                        └── lifecycle.py
+                        └── logger.py
+                        └── 📁mcp
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── server.cpython-310.pyc
+                                └── util.cpython-310.pyc
+                            └── server.py
+                            └── util.py
+                        └── model_settings.py
+                        └── 📁models
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _openai_shared.cpython-310.pyc
+                                └── chatcmpl_converter.cpython-310.pyc
+                                └── chatcmpl_helpers.cpython-310.pyc
+                                └── chatcmpl_stream_handler.cpython-310.pyc
+                                └── fake_id.cpython-310.pyc
+                                └── interface.cpython-310.pyc
+                                └── multi_provider.cpython-310.pyc
+                                └── openai_chatcompletions.cpython-310.pyc
+                                └── openai_provider.cpython-310.pyc
+                                └── openai_responses.cpython-310.pyc
+                            └── _openai_shared.py
+                            └── chatcmpl_converter.py
+                            └── chatcmpl_helpers.py
+                            └── chatcmpl_stream_handler.py
+                            └── fake_id.py
+                            └── interface.py
+                            └── multi_provider.py
+                            └── openai_chatcompletions.py
+                            └── openai_provider.py
+                            └── openai_responses.py
+                        └── py.typed
+                        └── result.py
+                        └── run_context.py
+                        └── run.py
+                        └── stream_events.py
+                        └── strict_schema.py
+                        └── tool.py
+                        └── 📁tracing
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── create.cpython-310.pyc
+                                └── processor_interface.cpython-310.pyc
+                                └── processors.cpython-310.pyc
+                                └── scope.cpython-310.pyc
+                                └── setup.cpython-310.pyc
+                                └── span_data.cpython-310.pyc
+                                └── spans.cpython-310.pyc
+                                └── traces.cpython-310.pyc
+                                └── util.cpython-310.pyc
+                            └── create.py
+                            └── logger.py
+                            └── processor_interface.py
+                            └── processors.py
+                            └── scope.py
+                            └── setup.py
+                            └── span_data.py
+                            └── spans.py
+                            └── traces.py
+                            └── util.py
+                        └── usage.py
+                        └── 📁util
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _coro.cpython-310.pyc
+                                └── _error_tracing.cpython-310.pyc
+                                └── _json.cpython-310.pyc
+                                └── _pretty_print.cpython-310.pyc
+                                └── _transforms.cpython-310.pyc
+                                └── _types.cpython-310.pyc
+                            └── _coro.py
+                            └── _error_tracing.py
+                            └── _json.py
+                            └── _pretty_print.py
+                            └── _transforms.py
+                            └── _types.py
+                        └── version.py
+                        └── 📁voice
+                            └── __init__.py
+                            └── events.py
+                            └── exceptions.py
+                            └── imports.py
+                            └── input.py
+                            └── model.py
+                            └── 📁models
+                                └── __init__.py
+                                └── openai_model_provider.py
+                                └── openai_stt.py
+                                └── openai_tts.py
+                            └── pipeline_config.py
+                            └── pipeline.py
+                            └── result.py
+                            └── utils.py
+                            └── workflow.py
                     └── 📁annotated_types
                     └── 📁annotated_types-0.7.0.dist-info
                         └── INSTALLER
@@ -368,6 +741,9 @@
                             └── to_thread.cpython-310.pyc
                         └── 📁_backends
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _asyncio.cpython-310.pyc
                             └── _asyncio.py
                             └── _trio.py
                         └── 📁_core
@@ -429,6 +805,7 @@
                                 └── __init__.cpython-310.pyc
                                 └── memory.cpython-310.pyc
                                 └── stapled.cpython-310.pyc
+                                └── text.cpython-310.pyc
                                 └── tls.cpython-310.pyc
                             └── buffered.py
                             └── file.py
@@ -581,6 +958,23 @@
                             └── winterm_test.py
                         └── win32.py
                         └── winterm.py
+                    └── 📁distro
+                    └── 📁distro-1.9.0.dist-info
+                        └── entry_points.txt
+                        └── INSTALLER
+                        └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── top_level.txt
+                        └── WHEEL
+                        └── __init__.py
+                        └── __main__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── distro.cpython-310.pyc
+                        └── distro.py
+                        └── py.typed
                     └── 📁dotenv
                         └── __init__.py
                         └── __main__.py
@@ -1675,6 +2069,34 @@
                                 └── gapic_metadata.proto
                         └── 📁genai
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _adapters.cpython-310.pyc
+                                └── _api_client.cpython-310.pyc
+                                └── _api_module.cpython-310.pyc
+                                └── _base_url.cpython-310.pyc
+                                └── _common.cpython-310.pyc
+                                └── _extra_utils.cpython-310.pyc
+                                └── _live_converters.cpython-310.pyc
+                                └── _mcp_utils.cpython-310.pyc
+                                └── _replay_api_client.cpython-310.pyc
+                                └── _tokens_converters.cpython-310.pyc
+                                └── _transformers.cpython-310.pyc
+                                └── batches.cpython-310.pyc
+                                └── caches.cpython-310.pyc
+                                └── chats.cpython-310.pyc
+                                └── client.cpython-310.pyc
+                                └── errors.cpython-310.pyc
+                                └── files.cpython-310.pyc
+                                └── live_music.cpython-310.pyc
+                                └── live.cpython-310.pyc
+                                └── models.cpython-310.pyc
+                                └── operations.cpython-310.pyc
+                                └── pagers.cpython-310.pyc
+                                └── tokens.cpython-310.pyc
+                                └── tunings.cpython-310.pyc
+                                └── types.cpython-310.pyc
+                                └── version.cpython-310.pyc
                             └── _adapters.py
                             └── _api_client.py
                             └── _api_module.py
@@ -2612,6 +3034,21 @@
                         └── REQUESTED
                         └── top_level.txt
                         └── WHEEL
+                    └── 📁griffe
+                    └── 📁griffe-1.7.3.dist-info
+                        └── entry_points.txt
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                        └── __init__.py
+                        └── __main__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                        └── py.typed
                     └── 📁grpc
                     └── 📁grpc_status
                         └── __init__.py
@@ -2751,6 +3188,18 @@
                         └── top_level.txt
                         └── WHEEL
                         └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── _abnf.cpython-310.pyc
+                            └── _connection.cpython-310.pyc
+                            └── _events.cpython-310.pyc
+                            └── _headers.cpython-310.pyc
+                            └── _readers.cpython-310.pyc
+                            └── _receivebuffer.cpython-310.pyc
+                            └── _state.cpython-310.pyc
+                            └── _util.cpython-310.pyc
+                            └── _version.cpython-310.pyc
+                            └── _writers.cpython-310.pyc
                         └── _abnf.py
                         └── _connection.py
                         └── _events.py
@@ -2772,9 +3221,27 @@
                         └── REQUESTED
                         └── WHEEL
                         └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── _api.cpython-310.pyc
+                            └── _exceptions.cpython-310.pyc
+                            └── _models.cpython-310.pyc
+                            └── _ssl.cpython-310.pyc
+                            └── _synchronization.cpython-310.pyc
+                            └── _trace.cpython-310.pyc
+                            └── _utils.cpython-310.pyc
                         └── _api.py
                         └── 📁_async
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── connection_pool.cpython-310.pyc
+                                └── connection.cpython-310.pyc
+                                └── http_proxy.cpython-310.pyc
+                                └── http11.cpython-310.pyc
+                                └── http2.cpython-310.pyc
+                                └── interfaces.cpython-310.pyc
+                                └── socks_proxy.cpython-310.pyc
                             └── connection_pool.py
                             └── connection.py
                             └── http_proxy.py
@@ -2784,6 +3251,14 @@
                             └── socks_proxy.py
                         └── 📁_backends
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── anyio.cpython-310.pyc
+                                └── auto.cpython-310.pyc
+                                └── base.cpython-310.pyc
+                                └── mock.cpython-310.pyc
+                                └── sync.cpython-310.pyc
+                                └── trio.cpython-310.pyc
                             └── anyio.py
                             └── auto.py
                             └── base.py
@@ -2795,6 +3270,15 @@
                         └── _ssl.py
                         └── 📁_sync
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── connection_pool.cpython-310.pyc
+                                └── connection.cpython-310.pyc
+                                └── http_proxy.cpython-310.pyc
+                                └── http11.cpython-310.pyc
+                                └── http2.cpython-310.pyc
+                                └── interfaces.cpython-310.pyc
+                                └── socks_proxy.cpython-310.pyc
                             └── connection_pool.py
                             └── connection.py
                             └── http_proxy.py
@@ -2857,6 +3341,27 @@
                             └── url_parser.cp310-win_amd64.pyd
                             └── url_parser.pyx
                     └── 📁httpx
+                    └── 📁httpx_sse
+                    └── 📁httpx_sse-0.4.0.dist-info
+                        └── INSTALLER
+                        └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── top_level.txt
+                        └── WHEEL
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── _api.cpython-310.pyc
+                            └── _decoders.cpython-310.pyc
+                            └── _exceptions.cpython-310.pyc
+                            └── _models.cpython-310.pyc
+                        └── _api.py
+                        └── _decoders.py
+                        └── _exceptions.py
+                        └── _models.py
+                        └── py.typed
                     └── 📁httpx-0.28.1.dist-info
                         └── entry_points.txt
                         └── INSTALLER
@@ -2867,6 +3372,24 @@
                         └── REQUESTED
                         └── WHEEL
                         └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── __version__.cpython-310.pyc
+                            └── _api.cpython-310.pyc
+                            └── _auth.cpython-310.pyc
+                            └── _client.cpython-310.pyc
+                            └── _config.cpython-310.pyc
+                            └── _content.cpython-310.pyc
+                            └── _decoders.cpython-310.pyc
+                            └── _exceptions.cpython-310.pyc
+                            └── _main.cpython-310.pyc
+                            └── _models.cpython-310.pyc
+                            └── _multipart.cpython-310.pyc
+                            └── _status_codes.cpython-310.pyc
+                            └── _types.cpython-310.pyc
+                            └── _urlparse.cpython-310.pyc
+                            └── _urls.cpython-310.pyc
+                            └── _utils.cpython-310.pyc
                         └── __version__.py
                         └── _api.py
                         └── _auth.py
@@ -2881,6 +3404,13 @@
                         └── _status_codes.py
                         └── 📁_transports
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── asgi.cpython-310.pyc
+                                └── base.cpython-310.pyc
+                                └── default.cpython-310.pyc
+                                └── mock.cpython-310.pyc
+                                └── wsgi.cpython-310.pyc
                             └── asgi.py
                             └── base.py
                             └── default.py
@@ -2914,6 +3444,1348 @@
                         └── package_data.py
                         └── py.typed
                         └── uts46data.py
+                    └── 📁jiter
+                    └── 📁jiter-0.10.0.dist-info
+                        └── INSTALLER
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                        └── __init__.py
+                        └── __init__.pyi
+                        └── jiter.cp310-win_amd64.pyd
+                        └── py.typed
+                    └── 📁mcp
+                    └── 📁mcp-1.9.1.dist-info
+                        └── entry_points.txt
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── types.cpython-310.pyc
+                        └── 📁cli
+                            └── __init__.py
+                            └── claude.py
+                            └── cli.py
+                        └── 📁client
+                            └── __init__.py
+                            └── __main__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── session_group.cpython-310.pyc
+                                └── session.cpython-310.pyc
+                                └── sse.cpython-310.pyc
+                                └── streamable_http.cpython-310.pyc
+                            └── auth.py
+                            └── session_group.py
+                            └── session.py
+                            └── sse.py
+                            └── 📁stdio
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── win32.cpython-310.pyc
+                                └── win32.py
+                            └── streamable_http.py
+                            └── websocket.py
+                        └── py.typed
+                        └── 📁server
+                            └── __init__.py
+                            └── __main__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── models.cpython-310.pyc
+                                └── session.cpython-310.pyc
+                                └── sse.cpython-310.pyc
+                                └── stdio.cpython-310.pyc
+                                └── streamable_http_manager.cpython-310.pyc
+                                └── streamable_http.cpython-310.pyc
+                            └── 📁auth
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── provider.cpython-310.pyc
+                                    └── settings.cpython-310.pyc
+                                └── errors.py
+                                └── 📁handlers
+                                    └── __init__.py
+                                    └── authorize.py
+                                    └── metadata.py
+                                    └── register.py
+                                    └── revoke.py
+                                    └── token.py
+                                └── json_response.py
+                                └── 📁middleware
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── auth_context.cpython-310.pyc
+                                        └── bearer_auth.cpython-310.pyc
+                                    └── auth_context.py
+                                    └── bearer_auth.py
+                                    └── client_auth.py
+                                └── provider.py
+                                └── routes.py
+                                └── settings.py
+                            └── 📁fastmcp
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── exceptions.cpython-310.pyc
+                                    └── server.cpython-310.pyc
+                                └── exceptions.py
+                                └── 📁prompts
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── base.cpython-310.pyc
+                                        └── manager.cpython-310.pyc
+                                    └── base.py
+                                    └── manager.py
+                                    └── prompt_manager.py
+                                └── 📁resources
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── base.cpython-310.pyc
+                                        └── resource_manager.cpython-310.pyc
+                                        └── templates.cpython-310.pyc
+                                        └── types.cpython-310.pyc
+                                    └── base.py
+                                    └── resource_manager.py
+                                    └── templates.py
+                                    └── types.py
+                                └── server.py
+                                └── 📁tools
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── base.cpython-310.pyc
+                                        └── tool_manager.cpython-310.pyc
+                                    └── base.py
+                                    └── tool_manager.py
+                                └── 📁utilities
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── func_metadata.cpython-310.pyc
+                                        └── logging.cpython-310.pyc
+                                        └── types.cpython-310.pyc
+                                    └── func_metadata.py
+                                    └── logging.py
+                                    └── types.py
+                            └── 📁lowlevel
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── helper_types.cpython-310.pyc
+                                    └── server.cpython-310.pyc
+                                └── helper_types.py
+                                └── server.py
+                            └── models.py
+                            └── session.py
+                            └── sse.py
+                            └── stdio.py
+                            └── streamable_http_manager.py
+                            └── streamable_http.py
+                            └── streaming_asgi_transport.py
+                            └── websocket.py
+                        └── 📁shared
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _httpx_utils.cpython-310.pyc
+                                └── auth.cpython-310.pyc
+                                └── context.cpython-310.pyc
+                                └── exceptions.cpython-310.pyc
+                                └── message.cpython-310.pyc
+                                └── session.cpython-310.pyc
+                                └── version.cpython-310.pyc
+                            └── _httpx_utils.py
+                            └── auth.py
+                            └── context.py
+                            └── exceptions.py
+                            └── memory.py
+                            └── message.py
+                            └── progress.py
+                            └── session.py
+                            └── version.py
+                        └── types.py
+                    └── 📁multipart
+                        └── __init__.py
+                        └── decoders.py
+                        └── exceptions.py
+                        └── multipart.py
+                    └── 📁openai
+                    └── 📁openai_agents-0.0.16.dist-info
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                    └── 📁openai-1.82.0.dist-info
+                        └── entry_points.txt
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                        └── __init__.py
+                        └── __main__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── _base_client.cpython-310.pyc
+                            └── _client.cpython-310.pyc
+                            └── _compat.cpython-310.pyc
+                            └── _constants.cpython-310.pyc
+                            └── _exceptions.cpython-310.pyc
+                            └── _files.cpython-310.pyc
+                            └── _legacy_response.cpython-310.pyc
+                            └── _models.cpython-310.pyc
+                            └── _module_client.cpython-310.pyc
+                            └── _qs.cpython-310.pyc
+                            └── _response.cpython-310.pyc
+                            └── _streaming.cpython-310.pyc
+                            └── _types.cpython-310.pyc
+                            └── _version.cpython-310.pyc
+                            └── version.cpython-310.pyc
+                        └── _base_client.py
+                        └── _client.py
+                        └── _compat.py
+                        └── _constants.py
+                        └── _exceptions.py
+                        └── 📁_extras
+                            └── __init__.py
+                            └── _common.py
+                            └── numpy_proxy.py
+                            └── pandas_proxy.py
+                            └── sounddevice_proxy.py
+                        └── _files.py
+                        └── _legacy_response.py
+                        └── _models.py
+                        └── _module_client.py
+                        └── _qs.py
+                        └── _resource.py
+                        └── _response.py
+                        └── _streaming.py
+                        └── _types.py
+                        └── 📁_utils
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _logs.cpython-310.pyc
+                                └── _proxy.cpython-310.pyc
+                                └── _reflection.cpython-310.pyc
+                                └── _resources_proxy.cpython-310.pyc
+                                └── _streams.cpython-310.pyc
+                                └── _sync.cpython-310.pyc
+                                └── _transform.cpython-310.pyc
+                                └── _typing.cpython-310.pyc
+                                └── _utils.cpython-310.pyc
+                            └── _logs.py
+                            └── _proxy.py
+                            └── _reflection.py
+                            └── _resources_proxy.py
+                            └── _streams.py
+                            └── _sync.py
+                            └── _transform.py
+                            └── _typing.py
+                            └── _utils.py
+                        └── _version.py
+                        └── 📁cli
+                            └── __init__.py
+                            └── 📁_api
+                                └── __init__.py
+                                └── _main.py
+                                └── audio.py
+                                └── 📁chat
+                                    └── __init__.py
+                                    └── completions.py
+                                └── completions.py
+                                └── files.py
+                                └── image.py
+                                └── models.py
+                            └── _cli.py
+                            └── _errors.py
+                            └── _models.py
+                            └── _progress.py
+                            └── 📁_tools
+                                └── __init__.py
+                                └── _main.py
+                                └── fine_tunes.py
+                                └── migrate.py
+                            └── _utils.py
+                        └── 📁helpers
+                            └── __init__.py
+                            └── local_audio_player.py
+                            └── microphone.py
+                        └── 📁lib
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── _old_api.cpython-310.pyc
+                                └── _pydantic.cpython-310.pyc
+                                └── _tools.cpython-310.pyc
+                                └── azure.cpython-310.pyc
+                            └── _old_api.py
+                            └── 📁_parsing
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── _completions.cpython-310.pyc
+                                └── _completions.py
+                                └── _responses.py
+                            └── _pydantic.py
+                            └── _tools.py
+                            └── _validators.py
+                            └── .keep
+                            └── azure.py
+                            └── 📁streaming
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── _assistants.cpython-310.pyc
+                                └── _assistants.py
+                                └── _deltas.py
+                                └── 📁chat
+                                    └── __init__.py
+                                    └── _completions.py
+                                    └── _events.py
+                                    └── _types.py
+                                └── 📁responses
+                                    └── __init__.py
+                                    └── _events.py
+                                    └── _responses.py
+                                    └── _types.py
+                        └── pagination.py
+                        └── py.typed
+                        └── 📁resources
+                            └── __init__.py
+                            └── 📁audio
+                                └── __init__.py
+                                └── audio.py
+                                └── speech.py
+                                └── transcriptions.py
+                                └── translations.py
+                            └── batches.py
+                            └── 📁beta
+                                └── __init__.py
+                                └── assistants.py
+                                └── beta.py
+                                └── 📁chat
+                                    └── __init__.py
+                                    └── chat.py
+                                    └── completions.py
+                                └── 📁realtime
+                                    └── __init__.py
+                                    └── realtime.py
+                                    └── sessions.py
+                                    └── transcription_sessions.py
+                                └── 📁threads
+                                    └── __init__.py
+                                    └── messages.py
+                                    └── 📁runs
+                                        └── __init__.py
+                                        └── runs.py
+                                        └── steps.py
+                                    └── threads.py
+                            └── 📁chat
+                                └── __init__.py
+                                └── chat.py
+                                └── 📁completions
+                                    └── __init__.py
+                                    └── completions.py
+                                    └── messages.py
+                            └── completions.py
+                            └── 📁containers
+                                └── __init__.py
+                                └── containers.py
+                                └── 📁files
+                                    └── __init__.py
+                                    └── content.py
+                                    └── files.py
+                            └── embeddings.py
+                            └── 📁evals
+                                └── __init__.py
+                                └── evals.py
+                                └── 📁runs
+                                    └── __init__.py
+                                    └── output_items.py
+                                    └── runs.py
+                            └── files.py
+                            └── 📁fine_tuning
+                                └── __init__.py
+                                └── 📁alpha
+                                    └── __init__.py
+                                    └── alpha.py
+                                    └── graders.py
+                                └── 📁checkpoints
+                                    └── __init__.py
+                                    └── checkpoints.py
+                                    └── permissions.py
+                                └── fine_tuning.py
+                                └── 📁jobs
+                                    └── __init__.py
+                                    └── checkpoints.py
+                                    └── jobs.py
+                            └── images.py
+                            └── models.py
+                            └── moderations.py
+                            └── 📁responses
+                                └── __init__.py
+                                └── input_items.py
+                                └── responses.py
+                            └── 📁uploads
+                                └── __init__.py
+                                └── parts.py
+                                └── uploads.py
+                            └── 📁vector_stores
+                                └── __init__.py
+                                └── file_batches.py
+                                └── files.py
+                                └── vector_stores.py
+                        └── 📁types
+                            └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── audio_model.cpython-310.pyc
+                                └── audio_response_format.cpython-310.pyc
+                                └── auto_file_chunking_strategy_param.cpython-310.pyc
+                                └── batch_create_params.cpython-310.pyc
+                                └── batch_error.cpython-310.pyc
+                                └── batch_list_params.cpython-310.pyc
+                                └── batch_request_counts.cpython-310.pyc
+                                └── batch.cpython-310.pyc
+                                └── chat_model.cpython-310.pyc
+                                └── completion_choice.cpython-310.pyc
+                                └── completion_create_params.cpython-310.pyc
+                                └── completion_usage.cpython-310.pyc
+                                └── completion.cpython-310.pyc
+                                └── container_create_params.cpython-310.pyc
+                                └── container_create_response.cpython-310.pyc
+                                └── container_list_params.cpython-310.pyc
+                                └── container_list_response.cpython-310.pyc
+                                └── container_retrieve_response.cpython-310.pyc
+                                └── create_embedding_response.cpython-310.pyc
+                                └── embedding_create_params.cpython-310.pyc
+                                └── embedding_model.cpython-310.pyc
+                                └── embedding.cpython-310.pyc
+                                └── eval_create_params.cpython-310.pyc
+                                └── eval_create_response.cpython-310.pyc
+                                └── eval_custom_data_source_config.cpython-310.pyc
+                                └── eval_delete_response.cpython-310.pyc
+                                └── eval_list_params.cpython-310.pyc
+                                └── eval_list_response.cpython-310.pyc
+                                └── eval_retrieve_response.cpython-310.pyc
+                                └── eval_stored_completions_data_source_config.cpython-310.pyc
+                                └── eval_update_params.cpython-310.pyc
+                                └── eval_update_response.cpython-310.pyc
+                                └── file_chunking_strategy_param.cpython-310.pyc
+                                └── file_chunking_strategy.cpython-310.pyc
+                                └── file_content.cpython-310.pyc
+                                └── file_create_params.cpython-310.pyc
+                                └── file_deleted.cpython-310.pyc
+                                └── file_list_params.cpython-310.pyc
+                                └── file_object.cpython-310.pyc
+                                └── file_purpose.cpython-310.pyc
+                                └── image_create_variation_params.cpython-310.pyc
+                                └── image_edit_params.cpython-310.pyc
+                                └── image_generate_params.cpython-310.pyc
+                                └── image_model.cpython-310.pyc
+                                └── image.cpython-310.pyc
+                                └── images_response.cpython-310.pyc
+                                └── model_deleted.cpython-310.pyc
+                                └── model.cpython-310.pyc
+                                └── moderation_create_params.cpython-310.pyc
+                                └── moderation_create_response.cpython-310.pyc
+                                └── moderation_image_url_input_param.cpython-310.pyc
+                                └── moderation_model.cpython-310.pyc
+                                └── moderation_multi_modal_input_param.cpython-310.pyc
+                                └── moderation_text_input_param.cpython-310.pyc
+                                └── moderation.cpython-310.pyc
+                                └── other_file_chunking_strategy_object.cpython-310.pyc
+                                └── static_file_chunking_strategy_object_param.cpython-310.pyc
+                                └── static_file_chunking_strategy_object.cpython-310.pyc
+                                └── static_file_chunking_strategy_param.cpython-310.pyc
+                                └── static_file_chunking_strategy.cpython-310.pyc
+                                └── upload_complete_params.cpython-310.pyc
+                                └── upload_create_params.cpython-310.pyc
+                                └── upload.cpython-310.pyc
+                                └── vector_store_create_params.cpython-310.pyc
+                                └── vector_store_deleted.cpython-310.pyc
+                                └── vector_store_list_params.cpython-310.pyc
+                                └── vector_store_search_params.cpython-310.pyc
+                                └── vector_store_search_response.cpython-310.pyc
+                                └── vector_store_update_params.cpython-310.pyc
+                                └── vector_store.cpython-310.pyc
+                                └── websocket_connection_options.cpython-310.pyc
+                            └── 📁audio
+                            └── audio_model.py
+                            └── audio_response_format.py
+                                └── __init__.py
+                                └── speech_create_params.py
+                                └── speech_model.py
+                                └── transcription_create_params.py
+                                └── transcription_create_response.py
+                                └── transcription_include.py
+                                └── transcription_segment.py
+                                └── transcription_stream_event.py
+                                └── transcription_text_delta_event.py
+                                └── transcription_text_done_event.py
+                                └── transcription_verbose.py
+                                └── transcription_word.py
+                                └── transcription.py
+                                └── translation_create_params.py
+                                └── translation_create_response.py
+                                └── translation_verbose.py
+                                └── translation.py
+                            └── auto_file_chunking_strategy_param.py
+                            └── batch_create_params.py
+                            └── batch_error.py
+                            └── batch_list_params.py
+                            └── batch_request_counts.py
+                            └── batch.py
+                            └── 📁beta
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── assistant_create_params.cpython-310.pyc
+                                    └── assistant_deleted.cpython-310.pyc
+                                    └── assistant_list_params.cpython-310.pyc
+                                    └── assistant_response_format_option_param.cpython-310.pyc
+                                    └── assistant_response_format_option.cpython-310.pyc
+                                    └── assistant_stream_event.cpython-310.pyc
+                                    └── assistant_tool_choice_function_param.cpython-310.pyc
+                                    └── assistant_tool_choice_function.cpython-310.pyc
+                                    └── assistant_tool_choice_option_param.cpython-310.pyc
+                                    └── assistant_tool_choice_option.cpython-310.pyc
+                                    └── assistant_tool_choice_param.cpython-310.pyc
+                                    └── assistant_tool_choice.cpython-310.pyc
+                                    └── assistant_tool_param.cpython-310.pyc
+                                    └── assistant_tool.cpython-310.pyc
+                                    └── assistant_update_params.cpython-310.pyc
+                                    └── assistant.cpython-310.pyc
+                                    └── code_interpreter_tool_param.cpython-310.pyc
+                                    └── code_interpreter_tool.cpython-310.pyc
+                                    └── file_search_tool_param.cpython-310.pyc
+                                    └── file_search_tool.cpython-310.pyc
+                                    └── function_tool_param.cpython-310.pyc
+                                    └── function_tool.cpython-310.pyc
+                                    └── thread_create_and_run_params.cpython-310.pyc
+                                    └── thread_create_params.cpython-310.pyc
+                                    └── thread_deleted.cpython-310.pyc
+                                    └── thread_update_params.cpython-310.pyc
+                                    └── thread.cpython-310.pyc
+                                └── assistant_create_params.py
+                                └── assistant_deleted.py
+                                └── assistant_list_params.py
+                                └── assistant_response_format_option_param.py
+                                └── assistant_response_format_option.py
+                                └── assistant_stream_event.py
+                                └── assistant_tool_choice_function_param.py
+                                └── assistant_tool_choice_function.py
+                                └── assistant_tool_choice_option_param.py
+                                └── assistant_tool_choice_option.py
+                                └── assistant_tool_choice_param.py
+                                └── assistant_tool_choice.py
+                                └── assistant_tool_param.py
+                                └── assistant_tool.py
+                                └── assistant_update_params.py
+                                └── assistant.py
+                                └── 📁chat
+                                    └── __init__.py
+                                └── code_interpreter_tool_param.py
+                                └── code_interpreter_tool.py
+                                └── file_search_tool_param.py
+                                └── file_search_tool.py
+                                └── function_tool_param.py
+                                └── function_tool.py
+                                └── 📁realtime
+                                    └── __init__.py
+                                    └── conversation_created_event.py
+                                    └── conversation_item_content_param.py
+                                    └── conversation_item_content.py
+                                    └── conversation_item_create_event_param.py
+                                    └── conversation_item_create_event.py
+                                    └── conversation_item_created_event.py
+                                    └── conversation_item_delete_event_param.py
+                                    └── conversation_item_delete_event.py
+                                    └── conversation_item_deleted_event.py
+                                    └── conversation_item_input_audio_transcription_completed_event.py
+                                    └── conversation_item_input_audio_transcription_delta_event.py
+                                    └── conversation_item_input_audio_transcription_failed_event.py
+                                    └── conversation_item_param.py
+                                    └── conversation_item_retrieve_event_param.py
+                                    └── conversation_item_retrieve_event.py
+                                    └── conversation_item_truncate_event_param.py
+                                    └── conversation_item_truncate_event.py
+                                    └── conversation_item_truncated_event.py
+                                    └── conversation_item_with_reference_param.py
+                                    └── conversation_item_with_reference.py
+                                    └── conversation_item.py
+                                    └── error_event.py
+                                    └── input_audio_buffer_append_event_param.py
+                                    └── input_audio_buffer_append_event.py
+                                    └── input_audio_buffer_clear_event_param.py
+                                    └── input_audio_buffer_clear_event.py
+                                    └── input_audio_buffer_cleared_event.py
+                                    └── input_audio_buffer_commit_event_param.py
+                                    └── input_audio_buffer_commit_event.py
+                                    └── input_audio_buffer_committed_event.py
+                                    └── input_audio_buffer_speech_started_event.py
+                                    └── input_audio_buffer_speech_stopped_event.py
+                                    └── rate_limits_updated_event.py
+                                    └── realtime_client_event_param.py
+                                    └── realtime_client_event.py
+                                    └── realtime_connect_params.py
+                                    └── realtime_response_status.py
+                                    └── realtime_response_usage.py
+                                    └── realtime_response.py
+                                    └── realtime_server_event.py
+                                    └── response_audio_delta_event.py
+                                    └── response_audio_done_event.py
+                                    └── response_audio_transcript_delta_event.py
+                                    └── response_audio_transcript_done_event.py
+                                    └── response_cancel_event_param.py
+                                    └── response_cancel_event.py
+                                    └── response_content_part_added_event.py
+                                    └── response_content_part_done_event.py
+                                    └── response_create_event_param.py
+                                    └── response_create_event.py
+                                    └── response_created_event.py
+                                    └── response_done_event.py
+                                    └── response_function_call_arguments_delta_event.py
+                                    └── response_function_call_arguments_done_event.py
+                                    └── response_output_item_added_event.py
+                                    └── response_output_item_done_event.py
+                                    └── response_text_delta_event.py
+                                    └── response_text_done_event.py
+                                    └── session_create_params.py
+                                    └── session_create_response.py
+                                    └── session_created_event.py
+                                    └── session_update_event_param.py
+                                    └── session_update_event.py
+                                    └── session_updated_event.py
+                                    └── session.py
+                                    └── transcription_session_create_params.py
+                                    └── transcription_session_update_param.py
+                                    └── transcription_session_update.py
+                                    └── transcription_session_updated_event.py
+                                    └── transcription_session.py
+                                └── thread_create_and_run_params.py
+                                └── thread_create_params.py
+                                └── thread_deleted.py
+                                └── thread_update_params.py
+                                └── thread.py
+                                └── 📁threads
+                                    └── __init__.py
+                                    └── 📁__pycache__
+                                        └── __init__.cpython-310.pyc
+                                        └── annotation_delta.cpython-310.pyc
+                                        └── annotation.cpython-310.pyc
+                                        └── file_citation_annotation.cpython-310.pyc
+                                        └── file_citation_delta_annotation.cpython-310.pyc
+                                        └── file_path_annotation.cpython-310.pyc
+                                        └── file_path_delta_annotation.cpython-310.pyc
+                                        └── image_file_content_block_param.cpython-310.pyc
+                                        └── image_file_content_block.cpython-310.pyc
+                                        └── image_file_delta_block.cpython-310.pyc
+                                        └── image_file_delta.cpython-310.pyc
+                                        └── image_file_param.cpython-310.pyc
+                                        └── image_file.cpython-310.pyc
+                                        └── image_url_content_block_param.cpython-310.pyc
+                                        └── image_url_content_block.cpython-310.pyc
+                                        └── image_url_delta_block.cpython-310.pyc
+                                        └── image_url_delta.cpython-310.pyc
+                                        └── image_url_param.cpython-310.pyc
+                                        └── image_url.cpython-310.pyc
+                                        └── message_content_delta.cpython-310.pyc
+                                        └── message_content_part_param.cpython-310.pyc
+                                        └── message_content.cpython-310.pyc
+                                        └── message_create_params.cpython-310.pyc
+                                        └── message_deleted.cpython-310.pyc
+                                        └── message_delta_event.cpython-310.pyc
+                                        └── message_delta.cpython-310.pyc
+                                        └── message_list_params.cpython-310.pyc
+                                        └── message_update_params.cpython-310.pyc
+                                        └── message.cpython-310.pyc
+                                        └── refusal_content_block.cpython-310.pyc
+                                        └── refusal_delta_block.cpython-310.pyc
+                                        └── required_action_function_tool_call.cpython-310.pyc
+                                        └── run_create_params.cpython-310.pyc
+                                        └── run_list_params.cpython-310.pyc
+                                        └── run_status.cpython-310.pyc
+                                        └── run_submit_tool_outputs_params.cpython-310.pyc
+                                        └── run_update_params.cpython-310.pyc
+                                        └── run.cpython-310.pyc
+                                        └── text_content_block_param.cpython-310.pyc
+                                        └── text_content_block.cpython-310.pyc
+                                        └── text_delta_block.cpython-310.pyc
+                                        └── text_delta.cpython-310.pyc
+                                        └── text.cpython-310.pyc
+                                    └── annotation_delta.py
+                                    └── annotation.py
+                                    └── file_citation_annotation.py
+                                    └── file_citation_delta_annotation.py
+                                    └── file_path_annotation.py
+                                    └── file_path_delta_annotation.py
+                                    └── image_file_content_block_param.py
+                                    └── image_file_content_block.py
+                                    └── image_file_delta_block.py
+                                    └── image_file_delta.py
+                                    └── image_file_param.py
+                                    └── image_file.py
+                                    └── image_url_content_block_param.py
+                                    └── image_url_content_block.py
+                                    └── image_url_delta_block.py
+                                    └── image_url_delta.py
+                                    └── image_url_param.py
+                                    └── image_url.py
+                                    └── message_content_delta.py
+                                    └── message_content_part_param.py
+                                    └── message_content.py
+                                    └── message_create_params.py
+                                    └── message_deleted.py
+                                    └── message_delta_event.py
+                                    └── message_delta.py
+                                    └── message_list_params.py
+                                    └── message_update_params.py
+                                    └── message.py
+                                    └── refusal_content_block.py
+                                    └── refusal_delta_block.py
+                                    └── required_action_function_tool_call.py
+                                    └── run_create_params.py
+                                    └── run_list_params.py
+                                    └── run_status.py
+                                    └── run_submit_tool_outputs_params.py
+                                    └── run_update_params.py
+                                    └── run.py
+                                    └── 📁runs
+                                        └── __init__.py
+                                        └── 📁__pycache__
+                                            └── __init__.cpython-310.pyc
+                                            └── code_interpreter_logs.cpython-310.pyc
+                                            └── code_interpreter_output_image.cpython-310.pyc
+                                            └── code_interpreter_tool_call_delta.cpython-310.pyc
+                                            └── code_interpreter_tool_call.cpython-310.pyc
+                                            └── file_search_tool_call_delta.cpython-310.pyc
+                                            └── file_search_tool_call.cpython-310.pyc
+                                            └── function_tool_call_delta.cpython-310.pyc
+                                            └── function_tool_call.cpython-310.pyc
+                                            └── message_creation_step_details.cpython-310.pyc
+                                            └── run_step_delta_event.cpython-310.pyc
+                                            └── run_step_delta_message_delta.cpython-310.pyc
+                                            └── run_step_delta.cpython-310.pyc
+                                            └── run_step_include.cpython-310.pyc
+                                            └── run_step.cpython-310.pyc
+                                            └── step_list_params.cpython-310.pyc
+                                            └── step_retrieve_params.cpython-310.pyc
+                                            └── tool_call_delta_object.cpython-310.pyc
+                                            └── tool_call_delta.cpython-310.pyc
+                                            └── tool_call.cpython-310.pyc
+                                            └── tool_calls_step_details.cpython-310.pyc
+                                        └── code_interpreter_logs.py
+                                        └── code_interpreter_output_image.py
+                                        └── code_interpreter_tool_call_delta.py
+                                        └── code_interpreter_tool_call.py
+                                        └── file_search_tool_call_delta.py
+                                        └── file_search_tool_call.py
+                                        └── function_tool_call_delta.py
+                                        └── function_tool_call.py
+                                        └── message_creation_step_details.py
+                                        └── run_step_delta_event.py
+                                        └── run_step_delta_message_delta.py
+                                        └── run_step_delta.py
+                                        └── run_step_include.py
+                                        └── run_step.py
+                                        └── step_list_params.py
+                                        └── step_retrieve_params.py
+                                        └── tool_call_delta_object.py
+                                        └── tool_call_delta.py
+                                        └── tool_call.py
+                                        └── tool_calls_step_details.py
+                                    └── text_content_block_param.py
+                                    └── text_content_block.py
+                                    └── text_delta_block.py
+                                    └── text_delta.py
+                                    └── text.py
+                            └── 📁chat
+                            └── chat_model.py
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── chat_completion_assistant_message_param.cpython-310.pyc
+                                    └── chat_completion_audio_param.cpython-310.pyc
+                                    └── chat_completion_audio.cpython-310.pyc
+                                    └── chat_completion_chunk.cpython-310.pyc
+                                    └── chat_completion_content_part_image_param.cpython-310.pyc
+                                    └── chat_completion_content_part_input_audio_param.cpython-310.pyc
+                                    └── chat_completion_content_part_param.cpython-310.pyc
+                                    └── chat_completion_content_part_refusal_param.cpython-310.pyc
+                                    └── chat_completion_content_part_text_param.cpython-310.pyc
+                                    └── chat_completion_deleted.cpython-310.pyc
+                                    └── chat_completion_developer_message_param.cpython-310.pyc
+                                    └── chat_completion_function_call_option_param.cpython-310.pyc
+                                    └── chat_completion_function_message_param.cpython-310.pyc
+                                    └── chat_completion_message_param.cpython-310.pyc
+                                    └── chat_completion_message_tool_call_param.cpython-310.pyc
+                                    └── chat_completion_message_tool_call.cpython-310.pyc
+                                    └── chat_completion_message.cpython-310.pyc
+                                    └── chat_completion_modality.cpython-310.pyc
+                                    └── chat_completion_named_tool_choice_param.cpython-310.pyc
+                                    └── chat_completion_prediction_content_param.cpython-310.pyc
+                                    └── chat_completion_reasoning_effort.cpython-310.pyc
+                                    └── chat_completion_role.cpython-310.pyc
+                                    └── chat_completion_store_message.cpython-310.pyc
+                                    └── chat_completion_stream_options_param.cpython-310.pyc
+                                    └── chat_completion_system_message_param.cpython-310.pyc
+                                    └── chat_completion_token_logprob.cpython-310.pyc
+                                    └── chat_completion_tool_choice_option_param.cpython-310.pyc
+                                    └── chat_completion_tool_message_param.cpython-310.pyc
+                                    └── chat_completion_tool_param.cpython-310.pyc
+                                    └── chat_completion_user_message_param.cpython-310.pyc
+                                    └── chat_completion.cpython-310.pyc
+                                    └── completion_create_params.cpython-310.pyc
+                                    └── completion_list_params.cpython-310.pyc
+                                    └── completion_update_params.cpython-310.pyc
+                                    └── parsed_chat_completion.cpython-310.pyc
+                                    └── parsed_function_tool_call.cpython-310.pyc
+                                └── chat_completion_assistant_message_param.py
+                                └── chat_completion_audio_param.py
+                                └── chat_completion_audio.py
+                                └── chat_completion_chunk.py
+                                └── chat_completion_content_part_image_param.py
+                                └── chat_completion_content_part_input_audio_param.py
+                                └── chat_completion_content_part_param.py
+                                └── chat_completion_content_part_refusal_param.py
+                                └── chat_completion_content_part_text_param.py
+                                └── chat_completion_deleted.py
+                                └── chat_completion_developer_message_param.py
+                                └── chat_completion_function_call_option_param.py
+                                └── chat_completion_function_message_param.py
+                                └── chat_completion_message_param.py
+                                └── chat_completion_message_tool_call_param.py
+                                └── chat_completion_message_tool_call.py
+                                └── chat_completion_message.py
+                                └── chat_completion_modality.py
+                                └── chat_completion_named_tool_choice_param.py
+                                └── chat_completion_prediction_content_param.py
+                                └── chat_completion_reasoning_effort.py
+                                └── chat_completion_role.py
+                                └── chat_completion_store_message.py
+                                └── chat_completion_stream_options_param.py
+                                └── chat_completion_system_message_param.py
+                                └── chat_completion_token_logprob.py
+                                └── chat_completion_tool_choice_option_param.py
+                                └── chat_completion_tool_message_param.py
+                                └── chat_completion_tool_param.py
+                                └── chat_completion_user_message_param.py
+                                └── chat_completion.py
+                                └── completion_create_params.py
+                                └── completion_list_params.py
+                                └── completion_update_params.py
+                                └── 📁completions
+                                    └── __init__.py
+                                    └── message_list_params.py
+                                └── parsed_chat_completion.py
+                                └── parsed_function_tool_call.py
+                            └── completion_choice.py
+                            └── completion_create_params.py
+                            └── completion_usage.py
+                            └── completion.py
+                            └── container_create_params.py
+                            └── container_create_response.py
+                            └── container_list_params.py
+                            └── container_list_response.py
+                            └── container_retrieve_response.py
+                            └── 📁containers
+                                └── __init__.py
+                                └── file_create_params.py
+                                └── file_create_response.py
+                                └── file_list_params.py
+                                └── file_list_response.py
+                                └── file_retrieve_response.py
+                                └── 📁files
+                                    └── __init__.py
+                            └── create_embedding_response.py
+                            └── embedding_create_params.py
+                            └── embedding_model.py
+                            └── embedding.py
+                            └── eval_create_params.py
+                            └── eval_create_response.py
+                            └── eval_custom_data_source_config.py
+                            └── eval_delete_response.py
+                            └── eval_list_params.py
+                            └── eval_list_response.py
+                            └── eval_retrieve_response.py
+                            └── eval_stored_completions_data_source_config.py
+                            └── eval_update_params.py
+                            └── eval_update_response.py
+                            └── 📁evals
+                                └── __init__.py
+                                └── create_eval_completions_run_data_source_param.py
+                                └── create_eval_completions_run_data_source.py
+                                └── create_eval_jsonl_run_data_source_param.py
+                                └── create_eval_jsonl_run_data_source.py
+                                └── eval_api_error.py
+                                └── run_cancel_response.py
+                                └── run_create_params.py
+                                └── run_create_response.py
+                                └── run_delete_response.py
+                                └── run_list_params.py
+                                └── run_list_response.py
+                                └── run_retrieve_response.py
+                                └── 📁runs
+                                    └── __init__.py
+                                    └── output_item_list_params.py
+                                    └── output_item_list_response.py
+                                    └── output_item_retrieve_response.py
+                            └── file_chunking_strategy_param.py
+                            └── file_chunking_strategy.py
+                            └── file_content.py
+                            └── file_create_params.py
+                            └── file_deleted.py
+                            └── file_list_params.py
+                            └── file_object.py
+                            └── file_purpose.py
+                            └── 📁fine_tuning
+                                └── __init__.py
+                                └── 📁alpha
+                                    └── __init__.py
+                                    └── grader_run_params.py
+                                    └── grader_run_response.py
+                                    └── grader_validate_params.py
+                                    └── grader_validate_response.py
+                                └── 📁checkpoints
+                                    └── __init__.py
+                                    └── permission_create_params.py
+                                    └── permission_create_response.py
+                                    └── permission_delete_response.py
+                                    └── permission_retrieve_params.py
+                                    └── permission_retrieve_response.py
+                                └── dpo_hyperparameters_param.py
+                                └── dpo_hyperparameters.py
+                                └── dpo_method_param.py
+                                └── dpo_method.py
+                                └── fine_tuning_job_event.py
+                                └── fine_tuning_job_integration.py
+                                └── fine_tuning_job_wandb_integration_object.py
+                                └── fine_tuning_job_wandb_integration.py
+                                └── fine_tuning_job.py
+                                └── job_create_params.py
+                                └── job_list_events_params.py
+                                └── job_list_params.py
+                                └── 📁jobs
+                                    └── __init__.py
+                                    └── checkpoint_list_params.py
+                                    └── fine_tuning_job_checkpoint.py
+                                └── reinforcement_hyperparameters_param.py
+                                └── reinforcement_hyperparameters.py
+                                └── reinforcement_method_param.py
+                                └── reinforcement_method.py
+                                └── supervised_hyperparameters_param.py
+                                └── supervised_hyperparameters.py
+                                └── supervised_method_param.py
+                                └── supervised_method.py
+                            └── 📁graders
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── label_model_grader_param.cpython-310.pyc
+                                    └── label_model_grader.cpython-310.pyc
+                                    └── multi_grader_param.cpython-310.pyc
+                                    └── multi_grader.cpython-310.pyc
+                                    └── python_grader_param.cpython-310.pyc
+                                    └── python_grader.cpython-310.pyc
+                                    └── score_model_grader_param.cpython-310.pyc
+                                    └── score_model_grader.cpython-310.pyc
+                                    └── string_check_grader_param.cpython-310.pyc
+                                    └── string_check_grader.cpython-310.pyc
+                                    └── text_similarity_grader_param.cpython-310.pyc
+                                    └── text_similarity_grader.cpython-310.pyc
+                                └── label_model_grader_param.py
+                                └── label_model_grader.py
+                                └── multi_grader_param.py
+                                └── multi_grader.py
+                                └── python_grader_param.py
+                                └── python_grader.py
+                                └── score_model_grader_param.py
+                                └── score_model_grader.py
+                                └── string_check_grader_param.py
+                                └── string_check_grader.py
+                                └── text_similarity_grader_param.py
+                                └── text_similarity_grader.py
+                            └── image_create_variation_params.py
+                            └── image_edit_params.py
+                            └── image_generate_params.py
+                            └── image_model.py
+                            └── image.py
+                            └── images_response.py
+                            └── model_deleted.py
+                            └── model.py
+                            └── moderation_create_params.py
+                            └── moderation_create_response.py
+                            └── moderation_image_url_input_param.py
+                            └── moderation_model.py
+                            └── moderation_multi_modal_input_param.py
+                            └── moderation_text_input_param.py
+                            └── moderation.py
+                            └── other_file_chunking_strategy_object.py
+                            └── 📁responses
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── computer_tool_param.cpython-310.pyc
+                                    └── computer_tool.cpython-310.pyc
+                                    └── easy_input_message_param.cpython-310.pyc
+                                    └── easy_input_message.cpython-310.pyc
+                                    └── file_search_tool_param.cpython-310.pyc
+                                    └── file_search_tool.cpython-310.pyc
+                                    └── function_tool_param.cpython-310.pyc
+                                    └── function_tool.cpython-310.pyc
+                                    └── input_item_list_params.cpython-310.pyc
+                                    └── parsed_response.cpython-310.pyc
+                                    └── response_audio_delta_event.cpython-310.pyc
+                                    └── response_audio_done_event.cpython-310.pyc
+                                    └── response_audio_transcript_delta_event.cpython-310.pyc
+                                    └── response_audio_transcript_done_event.cpython-310.pyc
+                                    └── response_code_interpreter_call_code_delta_event.cpython-310.pyc
+                                    └── response_code_interpreter_call_code_done_event.cpython-310.pyc
+                                    └── response_code_interpreter_call_completed_event.cpython-310.pyc
+                                    └── response_code_interpreter_call_in_progress_event.cpython-310.pyc
+                                    └── response_code_interpreter_call_interpreting_event.cpython-310.pyc
+                                    └── response_code_interpreter_tool_call_param.cpython-310.pyc
+                                    └── response_code_interpreter_tool_call.cpython-310.pyc
+                                    └── response_completed_event.cpython-310.pyc
+                                    └── response_computer_tool_call_output_item.cpython-310.pyc
+                                    └── response_computer_tool_call_output_screenshot_param.cpython-310.pyc
+                                    └── response_computer_tool_call_output_screenshot.cpython-310.pyc
+                                    └── response_computer_tool_call_param.cpython-310.pyc
+                                    └── response_computer_tool_call.cpython-310.pyc
+                                    └── response_content_part_added_event.cpython-310.pyc
+                                    └── response_content_part_done_event.cpython-310.pyc
+                                    └── response_create_params.cpython-310.pyc
+                                    └── response_created_event.cpython-310.pyc
+                                    └── response_error_event.cpython-310.pyc
+                                    └── response_error.cpython-310.pyc
+                                    └── response_failed_event.cpython-310.pyc
+                                    └── response_file_search_call_completed_event.cpython-310.pyc
+                                    └── response_file_search_call_in_progress_event.cpython-310.pyc
+                                    └── response_file_search_call_searching_event.cpython-310.pyc
+                                    └── response_file_search_tool_call_param.cpython-310.pyc
+                                    └── response_file_search_tool_call.cpython-310.pyc
+                                    └── response_format_text_config_param.cpython-310.pyc
+                                    └── response_format_text_config.cpython-310.pyc
+                                    └── response_format_text_json_schema_config_param.cpython-310.pyc
+                                    └── response_format_text_json_schema_config.cpython-310.pyc
+                                    └── response_function_call_arguments_delta_event.cpython-310.pyc
+                                    └── response_function_call_arguments_done_event.cpython-310.pyc
+                                    └── response_function_tool_call_item.cpython-310.pyc
+                                    └── response_function_tool_call_output_item.cpython-310.pyc
+                                    └── response_function_tool_call_param.cpython-310.pyc
+                                    └── response_function_tool_call.cpython-310.pyc
+                                    └── response_function_web_search_param.cpython-310.pyc
+                                    └── response_function_web_search.cpython-310.pyc
+                                    └── response_image_gen_call_completed_event.cpython-310.pyc
+                                    └── response_image_gen_call_generating_event.cpython-310.pyc
+                                    └── response_image_gen_call_in_progress_event.cpython-310.pyc
+                                    └── response_image_gen_call_partial_image_event.cpython-310.pyc
+                                    └── response_in_progress_event.cpython-310.pyc
+                                    └── response_includable.cpython-310.pyc
+                                    └── response_incomplete_event.cpython-310.pyc
+                                    └── response_input_content_param.cpython-310.pyc
+                                    └── response_input_content.cpython-310.pyc
+                                    └── response_input_file_param.cpython-310.pyc
+                                    └── response_input_file.cpython-310.pyc
+                                    └── response_input_image_param.cpython-310.pyc
+                                    └── response_input_image.cpython-310.pyc
+                                    └── response_input_item_param.cpython-310.pyc
+                                    └── response_input_message_content_list_param.cpython-310.pyc
+                                    └── response_input_message_content_list.cpython-310.pyc
+                                    └── response_input_message_item.cpython-310.pyc
+                                    └── response_input_param.cpython-310.pyc
+                                    └── response_input_text_param.cpython-310.pyc
+                                    └── response_input_text.cpython-310.pyc
+                                    └── response_item_list.cpython-310.pyc
+                                    └── response_item.cpython-310.pyc
+                                    └── response_mcp_call_arguments_delta_event.cpython-310.pyc
+                                    └── response_mcp_call_arguments_done_event.cpython-310.pyc
+                                    └── response_mcp_call_completed_event.cpython-310.pyc
+                                    └── response_mcp_call_failed_event.cpython-310.pyc
+                                    └── response_mcp_call_in_progress_event.cpython-310.pyc
+                                    └── response_mcp_list_tools_completed_event.cpython-310.pyc
+                                    └── response_mcp_list_tools_failed_event.cpython-310.pyc
+                                    └── response_mcp_list_tools_in_progress_event.cpython-310.pyc
+                                    └── response_output_item_added_event.cpython-310.pyc
+                                    └── response_output_item_done_event.cpython-310.pyc
+                                    └── response_output_item.cpython-310.pyc
+                                    └── response_output_message_param.cpython-310.pyc
+                                    └── response_output_message.cpython-310.pyc
+                                    └── response_output_refusal_param.cpython-310.pyc
+                                    └── response_output_refusal.cpython-310.pyc
+                                    └── response_output_text_annotation_added_event.cpython-310.pyc
+                                    └── response_output_text_param.cpython-310.pyc
+                                    └── response_output_text.cpython-310.pyc
+                                    └── response_queued_event.cpython-310.pyc
+                                    └── response_reasoning_delta_event.cpython-310.pyc
+                                    └── response_reasoning_done_event.cpython-310.pyc
+                                    └── response_reasoning_item_param.cpython-310.pyc
+                                    └── response_reasoning_item.cpython-310.pyc
+                                    └── response_reasoning_summary_delta_event.cpython-310.pyc
+                                    └── response_reasoning_summary_done_event.cpython-310.pyc
+                                    └── response_reasoning_summary_part_added_event.cpython-310.pyc
+                                    └── response_reasoning_summary_part_done_event.cpython-310.pyc
+                                    └── response_reasoning_summary_text_delta_event.cpython-310.pyc
+                                    └── response_reasoning_summary_text_done_event.cpython-310.pyc
+                                    └── response_refusal_delta_event.cpython-310.pyc
+                                    └── response_refusal_done_event.cpython-310.pyc
+                                    └── response_retrieve_params.cpython-310.pyc
+                                    └── response_status.cpython-310.pyc
+                                    └── response_stream_event.cpython-310.pyc
+                                    └── response_text_config_param.cpython-310.pyc
+                                    └── response_text_config.cpython-310.pyc
+                                    └── response_text_delta_event.cpython-310.pyc
+                                    └── response_text_done_event.cpython-310.pyc
+                                    └── response_usage.cpython-310.pyc
+                                    └── response_web_search_call_completed_event.cpython-310.pyc
+                                    └── response_web_search_call_in_progress_event.cpython-310.pyc
+                                    └── response_web_search_call_searching_event.cpython-310.pyc
+                                    └── response.cpython-310.pyc
+                                    └── tool_choice_function_param.cpython-310.pyc
+                                    └── tool_choice_function.cpython-310.pyc
+                                    └── tool_choice_options.cpython-310.pyc
+                                    └── tool_choice_types_param.cpython-310.pyc
+                                    └── tool_choice_types.cpython-310.pyc
+                                    └── tool_param.cpython-310.pyc
+                                    └── tool.cpython-310.pyc
+                                    └── web_search_tool_param.cpython-310.pyc
+                                    └── web_search_tool.cpython-310.pyc
+                                └── computer_tool_param.py
+                                └── computer_tool.py
+                                └── easy_input_message_param.py
+                                └── easy_input_message.py
+                                └── file_search_tool_param.py
+                                └── file_search_tool.py
+                                └── function_tool_param.py
+                                └── function_tool.py
+                                └── input_item_list_params.py
+                                └── parsed_response.py
+                                └── response_audio_delta_event.py
+                                └── response_audio_done_event.py
+                                └── response_audio_transcript_delta_event.py
+                                └── response_audio_transcript_done_event.py
+                                └── response_code_interpreter_call_code_delta_event.py
+                                └── response_code_interpreter_call_code_done_event.py
+                                └── response_code_interpreter_call_completed_event.py
+                                └── response_code_interpreter_call_in_progress_event.py
+                                └── response_code_interpreter_call_interpreting_event.py
+                                └── response_code_interpreter_tool_call_param.py
+                                └── response_code_interpreter_tool_call.py
+                                └── response_completed_event.py
+                                └── response_computer_tool_call_output_item.py
+                                └── response_computer_tool_call_output_screenshot_param.py
+                                └── response_computer_tool_call_output_screenshot.py
+                                └── response_computer_tool_call_param.py
+                                └── response_computer_tool_call.py
+                                └── response_content_part_added_event.py
+                                └── response_content_part_done_event.py
+                                └── response_create_params.py
+                                └── response_created_event.py
+                                └── response_error_event.py
+                                └── response_error.py
+                                └── response_failed_event.py
+                                └── response_file_search_call_completed_event.py
+                                └── response_file_search_call_in_progress_event.py
+                                └── response_file_search_call_searching_event.py
+                                └── response_file_search_tool_call_param.py
+                                └── response_file_search_tool_call.py
+                                └── response_format_text_config_param.py
+                                └── response_format_text_config.py
+                                └── response_format_text_json_schema_config_param.py
+                                └── response_format_text_json_schema_config.py
+                                └── response_function_call_arguments_delta_event.py
+                                └── response_function_call_arguments_done_event.py
+                                └── response_function_tool_call_item.py
+                                └── response_function_tool_call_output_item.py
+                                └── response_function_tool_call_param.py
+                                └── response_function_tool_call.py
+                                └── response_function_web_search_param.py
+                                └── response_function_web_search.py
+                                └── response_image_gen_call_completed_event.py
+                                └── response_image_gen_call_generating_event.py
+                                └── response_image_gen_call_in_progress_event.py
+                                └── response_image_gen_call_partial_image_event.py
+                                └── response_in_progress_event.py
+                                └── response_includable.py
+                                └── response_incomplete_event.py
+                                └── response_input_content_param.py
+                                └── response_input_content.py
+                                └── response_input_file_param.py
+                                └── response_input_file.py
+                                └── response_input_image_param.py
+                                └── response_input_image.py
+                                └── response_input_item_param.py
+                                └── response_input_message_content_list_param.py
+                                └── response_input_message_content_list.py
+                                └── response_input_message_item.py
+                                └── response_input_param.py
+                                └── response_input_text_param.py
+                                └── response_input_text.py
+                                └── response_item_list.py
+                                └── response_item.py
+                                └── response_mcp_call_arguments_delta_event.py
+                                └── response_mcp_call_arguments_done_event.py
+                                └── response_mcp_call_completed_event.py
+                                └── response_mcp_call_failed_event.py
+                                └── response_mcp_call_in_progress_event.py
+                                └── response_mcp_list_tools_completed_event.py
+                                └── response_mcp_list_tools_failed_event.py
+                                └── response_mcp_list_tools_in_progress_event.py
+                                └── response_output_item_added_event.py
+                                └── response_output_item_done_event.py
+                                └── response_output_item.py
+                                └── response_output_message_param.py
+                                └── response_output_message.py
+                                └── response_output_refusal_param.py
+                                └── response_output_refusal.py
+                                └── response_output_text_annotation_added_event.py
+                                └── response_output_text_param.py
+                                └── response_output_text.py
+                                └── response_queued_event.py
+                                └── response_reasoning_delta_event.py
+                                └── response_reasoning_done_event.py
+                                └── response_reasoning_item_param.py
+                                └── response_reasoning_item.py
+                                └── response_reasoning_summary_delta_event.py
+                                └── response_reasoning_summary_done_event.py
+                                └── response_reasoning_summary_part_added_event.py
+                                └── response_reasoning_summary_part_done_event.py
+                                └── response_reasoning_summary_text_delta_event.py
+                                └── response_reasoning_summary_text_done_event.py
+                                └── response_refusal_delta_event.py
+                                └── response_refusal_done_event.py
+                                └── response_retrieve_params.py
+                                └── response_status.py
+                                └── response_stream_event.py
+                                └── response_text_config_param.py
+                                └── response_text_config.py
+                                └── response_text_delta_event.py
+                                └── response_text_done_event.py
+                                └── response_usage.py
+                                └── response_web_search_call_completed_event.py
+                                └── response_web_search_call_in_progress_event.py
+                                └── response_web_search_call_searching_event.py
+                                └── response.py
+                                └── tool_choice_function_param.py
+                                └── tool_choice_function.py
+                                └── tool_choice_options.py
+                                └── tool_choice_types_param.py
+                                └── tool_choice_types.py
+                                └── tool_param.py
+                                └── tool.py
+                                └── web_search_tool_param.py
+                                └── web_search_tool.py
+                            └── 📁shared
+                            └── 📁shared_params
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── chat_model.cpython-310.pyc
+                                    └── comparison_filter.cpython-310.pyc
+                                    └── compound_filter.cpython-310.pyc
+                                    └── function_definition.cpython-310.pyc
+                                    └── function_parameters.cpython-310.pyc
+                                    └── metadata.cpython-310.pyc
+                                    └── reasoning_effort.cpython-310.pyc
+                                    └── reasoning.cpython-310.pyc
+                                    └── response_format_json_object.cpython-310.pyc
+                                    └── response_format_json_schema.cpython-310.pyc
+                                    └── response_format_text.cpython-310.pyc
+                                    └── responses_model.cpython-310.pyc
+                                └── chat_model.py
+                                └── comparison_filter.py
+                                └── compound_filter.py
+                                └── function_definition.py
+                                └── function_parameters.py
+                                └── metadata.py
+                                └── reasoning_effort.py
+                                └── reasoning.py
+                                └── response_format_json_object.py
+                                └── response_format_json_schema.py
+                                └── response_format_text.py
+                                └── responses_model.py
+                                └── __init__.py
+                                └── 📁__pycache__
+                                    └── __init__.cpython-310.pyc
+                                    └── all_models.cpython-310.pyc
+                                    └── chat_model.cpython-310.pyc
+                                    └── comparison_filter.cpython-310.pyc
+                                    └── compound_filter.cpython-310.pyc
+                                    └── error_object.cpython-310.pyc
+                                    └── function_definition.cpython-310.pyc
+                                    └── function_parameters.cpython-310.pyc
+                                    └── metadata.cpython-310.pyc
+                                    └── reasoning_effort.cpython-310.pyc
+                                    └── reasoning.cpython-310.pyc
+                                    └── response_format_json_object.cpython-310.pyc
+                                    └── response_format_json_schema.cpython-310.pyc
+                                    └── response_format_text.cpython-310.pyc
+                                    └── responses_model.cpython-310.pyc
+                                └── all_models.py
+                                └── chat_model.py
+                                └── comparison_filter.py
+                                └── compound_filter.py
+                                └── error_object.py
+                                └── function_definition.py
+                                └── function_parameters.py
+                                └── metadata.py
+                                └── reasoning_effort.py
+                                └── reasoning.py
+                                └── response_format_json_object.py
+                                └── response_format_json_schema.py
+                                └── response_format_text.py
+                                └── responses_model.py
+                            └── static_file_chunking_strategy_object_param.py
+                            └── static_file_chunking_strategy_object.py
+                            └── static_file_chunking_strategy_param.py
+                            └── static_file_chunking_strategy.py
+                            └── upload_complete_params.py
+                            └── upload_create_params.py
+                            └── upload.py
+                            └── 📁uploads
+                                └── __init__.py
+                                └── part_create_params.py
+                                └── upload_part.py
+                            └── vector_store_create_params.py
+                            └── vector_store_deleted.py
+                            └── vector_store_list_params.py
+                            └── vector_store_search_params.py
+                            └── vector_store_search_response.py
+                            └── vector_store_update_params.py
+                            └── vector_store.py
+                            └── 📁vector_stores
+                                └── __init__.py
+                                └── file_batch_create_params.py
+                                └── file_batch_list_files_params.py
+                                └── file_content_response.py
+                                └── file_create_params.py
+                                └── file_list_params.py
+                                └── file_update_params.py
+                                └── vector_store_file_batch.py
+                                └── vector_store_file_deleted.py
+                                └── vector_store_file.py
+                            └── websocket_connection_options.py
+                        └── version.py
                     └── 📁proto
                     └── 📁proto_plus-1.26.1.dist-info
                         └── INSTALLER
@@ -3307,6 +5179,7 @@
                         └── 📁__pycache__
                             └── __init__.cpython-310.pyc
                             └── _migration.cpython-310.pyc
+                            └── alias_generators.cpython-310.pyc
                             └── aliases.cpython-310.pyc
                             └── annotated_handlers.cpython-310.pyc
                             └── color.cpython-310.pyc
@@ -3321,6 +5194,7 @@
                             └── root_model.cpython-310.pyc
                             └── type_adapter.cpython-310.pyc
                             └── types.cpython-310.pyc
+                            └── validate_call_decorator.cpython-310.pyc
                             └── version.cpython-310.pyc
                             └── warnings.cpython-310.pyc
                         └── 📁_internal
@@ -3347,9 +5221,11 @@
                                 └── _repr.cpython-310.pyc
                                 └── _schema_gather.cpython-310.pyc
                                 └── _schema_generation_shared.cpython-310.pyc
+                                └── _serializers.cpython-310.pyc
                                 └── _signature.cpython-310.pyc
                                 └── _typing_extra.cpython-310.pyc
                                 └── _utils.cpython-310.pyc
+                                └── _validate_call.cpython-310.pyc
                                 └── _validators.cpython-310.pyc
                             └── _config.py
                             └── _core_metadata.py
@@ -3433,6 +5309,30 @@
                         └── utils.py
                         └── 📁v1
                             └── __init__.py
+                            └── 📁__pycache__
+                                └── __init__.cpython-310.pyc
+                                └── annotated_types.cpython-310.pyc
+                                └── class_validators.cpython-310.pyc
+                                └── color.cpython-310.pyc
+                                └── config.cpython-310.pyc
+                                └── dataclasses.cpython-310.pyc
+                                └── datetime_parse.cpython-310.pyc
+                                └── decorator.cpython-310.pyc
+                                └── env_settings.cpython-310.pyc
+                                └── error_wrappers.cpython-310.pyc
+                                └── errors.cpython-310.pyc
+                                └── fields.cpython-310.pyc
+                                └── json.cpython-310.pyc
+                                └── main.cpython-310.pyc
+                                └── networks.cpython-310.pyc
+                                └── parse.cpython-310.pyc
+                                └── schema.cpython-310.pyc
+                                └── tools.cpython-310.pyc
+                                └── types.cpython-310.pyc
+                                └── typing.cpython-310.pyc
+                                └── utils.cpython-310.pyc
+                                └── validators.cpython-310.pyc
+                                └── version.cpython-310.pyc
                             └── _hypothesis_plugin.py
                             └── annotated_types.py
                             └── class_validators.py
@@ -3508,6 +5408,25 @@
                         └── REQUESTED
                         └── top_level.txt
                         └── WHEEL
+                    └── 📁python_multipart
+                    └── 📁python_multipart-0.0.20.dist-info
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE.txt
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── WHEEL
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── decoders.cpython-310.pyc
+                            └── exceptions.cpython-310.pyc
+                            └── multipart.cpython-310.pyc
+                        └── decoders.py
+                        └── exceptions.py
+                        └── multipart.py
+                        └── py.typed
                     └── 📁PyYAML-6.0.2.dist-info
                         └── INSTALLER
                         └── LICENSE
@@ -3525,6 +5444,26 @@
                         └── REQUESTED
                         └── top_level.txt
                         └── WHEEL
+                    └── 📁requests-stubs
+                        └── __init__.pyi
+                        └── __version__.pyi
+                        └── adapters.pyi
+                        └── api.pyi
+                        └── auth.pyi
+                        └── certs.pyi
+                        └── compat.pyi
+                        └── cookies.pyi
+                        └── exceptions.pyi
+                        └── help.pyi
+                        └── hooks.pyi
+                        └── METADATA.toml
+                        └── models.pyi
+                        └── packages.pyi
+                        └── py.typed
+                        └── sessions.pyi
+                        └── status_codes.pyi
+                        └── structures.pyi
+                        └── utils.pyi
                         └── __init__.py
                         └── 📁__pycache__
                             └── __init__.cpython-310.pyc
@@ -3617,6 +5556,25 @@
                             └── test_sniffio.py
                         └── _version.py
                         └── py.typed
+                    └── 📁sse_starlette
+                    └── 📁sse_starlette-2.3.5.dist-info
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── AUTHORS
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── top_level.txt
+                        └── WHEEL
+                        └── __init__.py
+                        └── 📁__pycache__
+                            └── __init__.cpython-310.pyc
+                            └── event.cpython-310.pyc
+                            └── sse.cpython-310.pyc
+                        └── event.py
+                        └── py.typed
+                        └── sse.py
                     └── 📁starlette
                     └── 📁starlette-0.46.2.dist-info
                         └── INSTALLER
@@ -3632,6 +5590,7 @@
                             └── _exception_handler.cpython-310.pyc
                             └── _utils.cpython-310.pyc
                             └── applications.cpython-310.pyc
+                            └── authentication.cpython-310.pyc
                             └── background.cpython-310.pyc
                             └── concurrency.cpython-310.pyc
                             └── convertors.cpython-310.pyc
@@ -3660,6 +5619,7 @@
                             └── __init__.py
                             └── 📁__pycache__
                                 └── __init__.cpython-310.pyc
+                                └── authentication.cpython-310.pyc
                                 └── base.cpython-310.pyc
                                 └── cors.cpython-310.pyc
                                 └── errors.cpython-310.pyc
@@ -3743,6 +5703,15 @@
                         └── tqdm.1
                         └── utils.py
                         └── version.py
+                    └── 📁types_requests-2.32.0.20250515.dist-info
+                        └── INSTALLER
+                        └── 📁licenses
+                            └── LICENSE
+                        └── METADATA
+                        └── RECORD
+                        └── REQUESTED
+                        └── top_level.txt
+                        └── WHEEL
                     └── 📁typing_extensions-4.13.2.dist-info
                         └── INSTALLER
                         └── 📁licenses
@@ -4010,6 +5979,7 @@
                         └── __main__.py
                         └── 📁__pycache__
                             └── __init__.cpython-310.pyc
+                            └── client.cpython-310.pyc
                             └── datastructures.cpython-310.pyc
                             └── exceptions.cpython-310.pyc
                             └── frames.cpython-310.pyc
@@ -4020,6 +5990,7 @@
                             └── server.cpython-310.pyc
                             └── streams.cpython-310.pyc
                             └── typing.cpython-310.pyc
+                            └── uri.cpython-310.pyc
                             └── utils.cpython-310.pyc
                             └── version.cpython-310.pyc
                         └── 📁asyncio
@@ -4027,7 +5998,10 @@
                             └── 📁__pycache__
                                 └── __init__.cpython-310.pyc
                                 └── async_timeout.cpython-310.pyc
+                                └── client.cpython-310.pyc
                                 └── compatibility.cpython-310.pyc
+                                └── connection.cpython-310.pyc
+                                └── messages.cpython-310.pyc
                             └── async_timeout.py
                             └── client.py
                             └── compatibility.py
@@ -4120,10 +6094,14 @@
                 └── activate.nu
                 └── activate.ps1
                 └── deactivate.bat
+                └── distro.exe
                 └── dotenv.exe
                 └── fastapi.exe
+                └── griffe.exe
                 └── httpx.exe
+                └── mcp.exe
                 └── normalizer.exe
+                └── openai.exe
                 └── pydoc.bat
                 └── pyrsa-decrypt.exe
                 └── pyrsa-encrypt.exe
@@ -4170,6 +6148,7 @@
                 └── __init__.cpython-310.pyc
                 └── audit.cpython-310.pyc
                 └── compliance.cpython-310.pyc
+                └── gemini_client.cpython-310.pyc
                 └── gemini_service.cpython-310.pyc
                 └── memory.cpython-310.pyc
                 └── plugin_loader.cpython-310.pyc
@@ -4218,7 +6197,6 @@
             └── plugin_loader.py
             └── simulation_engine.py
             └── websocket_manager.py
-        └── main.py
         └── 📁models
             └── __init__.py
             └── 📁__pycache__
@@ -4237,7 +6215,9 @@
             └── simulation.py
             └── trace.py
         └── 📁plugins
+        └── project_tree.md
         └── pyproject.toml
+        └── python-genai.md
         └── README.md
         └── setup_gemini.py
     └── 📁frontend
@@ -4256,6 +6236,7 @@
                         └── 0.pack.gz
                         └── 1.pack.gz
                         └── 2.pack.gz
+                        └── 3.pack.gz
                         └── index.pack.gz
                         └── index.pack.gz.old
                         └── 0.pack.gz
@@ -4269,7 +6250,12 @@
                         └── 16.pack.gz
                         └── 17.pack.gz
                         └── 18.pack.gz
+                        └── 19.pack.gz
                         └── 2.pack.gz
+                        └── 20.pack.gz
+                        └── 21.pack.gz
+                        └── 22.pack.gz
+                        └── 23.pack.gz
                         └── 3.pack.gz
                         └── 4.pack.gz
                         └── 5.pack.gz
@@ -4295,6 +6281,10 @@
                         └── 2.pack.gz
                         └── 20.pack.gz
                         └── 21.pack.gz
+                        └── 22.pack.gz
+                        └── 23.pack.gz
+                        └── 24.pack.gz
+                        └── 25.pack.gz
                         └── 3.pack.gz
                         └── 4.pack.gz
                         └── 5.pack.gz
@@ -4315,6 +6305,9 @@
                     └── page_client-reference-manifest.js
                     └── page.js
                     └── 📁simulation
+                        └── 📁[sessionId]
+                            └── page_client-reference-manifest.js
+                            └── page.js
                         └── page_client-reference-manifest.js
                         └── page.js
                 └── interception-route-rewrite-manifest.js
@@ -4329,11 +6322,20 @@
                 └── 📁vendor-chunks
                     └── @radix-ui.js
                     └── @swc.js
+                    └── aria-hidden.js
                     └── class-variance-authority.js
                     └── clsx.js
+                    └── get-nonce.js
                     └── lucide-react.js
                     └── next.js
+                    └── react-remove-scroll-bar.js
+                    └── react-remove-scroll.js
+                    └── react-style-singleton.js
+                    └── sonner.js
                     └── tailwind-merge.js
+                    └── tslib.js
+                    └── use-callback-ref.js
+                    └── use-sidecar.js
                     └── zustand.js
                 └── webpack-runtime.js
             └── 📁static
@@ -4346,6 +6348,8 @@
                         └── layout.js
                         └── page.js
                         └── 📁simulation
+                            └── 📁[sessionId]
+                                └── page.js
                             └── page.js
                     └── main-app.js
                     └── polyfills.js
@@ -4365,35 +6369,21 @@
                     └── a34f9d1faa5f3315-s.p.woff2
                     └── df0a9ae256c0569c-s.woff2
                 └── 📁webpack
-                    └── 285221d6efe60c48.webpack.hot-update.json
-                    └── 2a5ff310a521ec14.webpack.hot-update.json
-                    └── 4166a2e98c33a163.webpack.hot-update.json
-                    └── 4aec8b09ff4729c6.webpack.hot-update.json
                     └── 633457081244afec._.hot-update.json
-                    └── 6c1df7cbc28cd4b3.webpack.hot-update.json
-                    └── 98680dbcd861f414.webpack.hot-update.json
-                    └── 📁app
-                        └── layout.285221d6efe60c48.hot-update.js
-                        └── layout.2a5ff310a521ec14.hot-update.js
-                        └── layout.4166a2e98c33a163.hot-update.js
-                        └── layout.4aec8b09ff4729c6.hot-update.js
-                        └── layout.6c1df7cbc28cd4b3.hot-update.js
-                        └── layout.98680dbcd861f414.hot-update.js
-                        └── 📁simulation
-                            └── page.285221d6efe60c48.hot-update.js
-                            └── page.4166a2e98c33a163.hot-update.js
-                    └── webpack.285221d6efe60c48.hot-update.js
-                    └── webpack.2a5ff310a521ec14.hot-update.js
-                    └── webpack.4166a2e98c33a163.hot-update.js
-                    └── webpack.4aec8b09ff4729c6.hot-update.js
-                    └── webpack.6c1df7cbc28cd4b3.hot-update.js
-                    └── webpack.98680dbcd861f414.hot-update.js
+                    └── 77ddd46ac52f7f34.webpack.hot-update.json
+                    └── 981a464cac6dacf8.webpack.hot-update.json
+                    └── 9bbf204ac809ff6e.webpack.hot-update.json
+                    └── webpack.77ddd46ac52f7f34.hot-update.js
+                    └── webpack.981a464cac6dacf8.hot-update.js
+                    └── webpack.9bbf204ac809ff6e.hot-update.js
             └── trace
             └── 📁types
                 └── 📁app
                     └── layout.ts
                     └── page.ts
                     └── 📁simulation
+                        └── 📁[sessionId]
+                            └── page.ts
                         └── page.ts
                 └── cache-life.d.ts
                 └── package.json
@@ -4414,7 +6404,7 @@
         └── 📁src
             └── 📁app
                 └── 📁axis-explorer
-                    └── page,tsx
+                    └── page.tsx
                 └── favicon.ico
                 └── globals.css
                 └── layout.tsx
@@ -4425,9 +6415,13 @@
                         └── page.tsx
                     └── page.tsx
             └── 📁components
+                └── AgentPanel.tsx
                 └── AxisDisplayTable.tsx
+                └── ConfidenceMeter.tsx
                 └── error-boundary.tsx
                 └── LayersProvider.tsx
+                └── LayerTimeline.tsx
+                └── PluginPanel.tsx
                 └── 📁simulation
                     └── confidence-meter.tsx
                     └── layer-panel.tsx
@@ -4435,20 +6429,29 @@
                     └── replay-controls.tsx
                     └── simulation-entry.tsx
                     └── simulation-session.tsx
-                    └── trace-console.tsx
+                └── TraceConsole.tsx
+                └── TraceLog.tsx
                 └── 📁ui
+                    └── badge.tsx
                     └── button.tsx
                     └── card.tsx
                     └── dialog.tsx
+                    └── input.tsx
+                    └── label.tsx
+                    └── missing-components.tsx
+                    └── progress.tsx
+                    └── scroll-area.tsx
                     └── slider.tsx
                     └── sonner.tsx
+                    └── switch.tsx
                     └── tabs.tsx
                     └── textarea.tsx
             └── 📁lib
                 └── ai-client.ts
                 └── api-client.ts
-                └── apis.ts
+                └── api.ts
                 └── utils.ts
+                └── websocket.ts
             └── 📁state
                 └── useSimulationStore.ts
             └── 📁store
@@ -4465,5 +6468,8 @@
         └── layers.md
     └── 📁logs
         └── simulation_engine.log
+    └── coding_agent.py
+    └── gemini_config.py
+    └── programmable_agent.log
     └── start-servers.ps1
 ```

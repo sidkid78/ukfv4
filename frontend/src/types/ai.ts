@@ -5,9 +5,10 @@ import { SimulationLayer, EventType } from './simulation';
 
 // Gemini AI Models
 export type GeminiModel = 
-  | 'gemini-2.0-pro' 
-  | 'gemini-2.0-flash' 
-  | 'gemini-2.0-flash-lite';
+  | "gemini-2.5-pro-preview-03-25"
+  | "gemini-2.5-flash-preview-05-20"
+  | "gemini-2.0-flash"
+  | "gemini-2.5-flash-preview";
 
 // AI Request/Response Types
 export interface AIRequest {

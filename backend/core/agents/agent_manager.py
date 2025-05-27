@@ -3,6 +3,7 @@ Agent Manager for UKG/USKD Simulation System
 Handles agent orchestration, spawning, management, and coordination
 """
 
+import asyncio
 import uuid
 import time
 from datetime import datetime
@@ -10,6 +11,8 @@ from typing import Dict, Any, List, Optional, Tuple
 from abc import ABC, abstractmethod
 import logging
 from core.gemini_service import GeminiService, GeminiModel, GeminiConfig, GeminiRequest, GeminiResponse, gemini_service
+from core.gemini_client import GeminiClient
+from google.genai import types
 logger = logging.getLogger(__name__)
 
 
@@ -25,7 +28,7 @@ class BaseAgent(ABC):
         self.active = True
         self.context = {}
         self.trace_log = []
-        
+        self.gemini_client = GeminiClient()
     @abstractmethod
     def process(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
         """Process input and return agent's response"""
@@ -52,7 +55,7 @@ class ResearchAgent(BaseAgent):
         super().__init__(agent_id, persona, "researcher", axes)
         self.specialization = specialization
         self.confidence_threshold = 0.8
-        
+        self.gemini_client = GeminiClient()
     async def process(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
         """Perform research analysis"""
         query = input_data.get("query", input_data.get("user_query", ""))
@@ -65,7 +68,7 @@ class ResearchAgent(BaseAgent):
             persona=self.persona,
             context=context 
         )
-        gemini_response = await gemini_service.generate_async(gemini_request)
+        gemini_response = await self.gemini_client.generate_async(gemini_request)
 
         
         
@@ -129,6 +132,7 @@ class POVAgent(BaseAgent):
     def __init__(self, agent_id: str, persona: str, axes: List[float], stakeholder_type: str):
         super().__init__(agent_id, persona, "pov_analyst", axes)
         self.stakeholder_type = stakeholder_type
+        self.gemini_client = GeminiClient()
         
     async def process(self, input_data: Dict[str, Any], context: dict) -> dict:
         """Analyze from specific stakeholder perspective"""
@@ -153,7 +157,7 @@ class POVAgent(BaseAgent):
             persona=self.persona,
             context=context 
         )
-        gemini_response = await gemini_service.generate_async(gemini_request)
+        gemini_response = await self.gemini_client.generate_async(gemini_request)
         
         
         
@@ -167,7 +171,8 @@ class POVAgent(BaseAgent):
             "perspective_analysis": gemini_response.content or perspective_analysis,
             "concerns": self._identify_stakeholder_concerns(query),
             "priorities": self._identify_stakeholder_priorities(query),
-            "confidence": gemini_response.confidence
+            "confidence": gemini_response.confidence,
+            "reasoning": gemini_response.reasoning_trace
         }
         
         self.log_trace("pov_analysis_complete", result)
@@ -202,15 +207,16 @@ class AgentTeam:
         self.team_id = team_id
         self.agents = agents
         self.created_at = datetime.now()
-        
-    def process_collaborative(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
+        self.gemini_client = GeminiClient()
+
+    async def process_collaborative(self, input_data: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
         """Process input collaboratively across all team agents"""
         results = []
         
         for agent in self.agents:
             if agent.active:
                 try:
-                    result = agent.process(input_data, context)
+                    result = await agent.process(input_data, context)
                     results.append(result)
                 except Exception as e:
                     logger.warning(f"Agent {agent.agent_id} failed: {e}")
@@ -255,6 +261,7 @@ class AgentManager:
     def __init__(self):
         self.agents: Dict[str, BaseAgent] = {}
         self.teams: Dict[str, AgentTeam] = {}
+        self.gemini_client = GeminiClient()
         self.agent_personas = [
             "domain_expert", "critical_thinker", "creative_reasoner", 
             "safety_analyst", "synthesizer", "qa_expert"
@@ -285,7 +292,8 @@ class AgentManager:
                 agent_id=agent_id,
                 persona=persona,
                 axes=axes.copy(),
-                specialization=specialization
+                specialization=specialization,
+                gemini_client=self.gemini_client
             )
             
             self.agents[agent_id] = agent
@@ -313,7 +321,8 @@ class AgentManager:
                 agent_id=agent_id,
                 persona=persona,
                 axes=axes.copy(),
-                stakeholder_type=stakeholder_type
+                stakeholder_type=stakeholder_type,
+                gemini_client=self.gemini_client
             )
             
             self.agents[agent_id] = agent
@@ -326,14 +335,15 @@ class AgentManager:
     def create_agent_team(
         self, 
         agent_ids: List[str], 
-        team_name: Optional[str] = None
+        team_name: Optional[str] = None,
+        gemini_client: Optional[GeminiClient] = None
     ) -> str:
         """Create a team from existing agents"""
         
         team_id = team_name or f"team_{uuid.uuid4().hex[:8]}"
         agents = [self.agents[aid] for aid in agent_ids if aid in self.agents]
         
-        team = AgentTeam(team_id, agents)
+        team = AgentTeam(team_id, agents, gemini_client)
         self.teams[team_id] = team
         
         logger.info(f"Created agent team: {team_id} with {len(agents)} agents")
@@ -343,7 +353,8 @@ class AgentManager:
         self, 
         team_id: str, 
         input_data: Dict[str, Any], 
-        context: Dict[str, Any]
+        context: Dict[str, Any],
+        gemini_client: Optional[GeminiClient] = None
     ) -> Dict[str, Any]:
         """Run collaborative processing on an agent team"""
         
@@ -351,7 +362,7 @@ class AgentManager:
         if not team:
             raise ValueError(f"Team {team_id} not found")
         
-        return team.process_collaborative(input_data, context)
+        return team.process_collaborative(input_data, context, gemini_client)
     
     def get_agent(self, agent_id: str) -> Optional[BaseAgent]:
         """Get agent by ID"""
@@ -399,3 +410,34 @@ class AgentManager:
             "teams": len(self.teams),
             "persona_distribution": persona_counts
         }
+
+# Example usage
+if __name__ == "__main__":
+    
+    manager = AgentManager()
+    research_agents = manager.spawn_research_agents(
+        3, 
+        [0.5, 0.5, 0.5],
+        {},
+        ["general", "critical", "creative"],
+        manager.gemini_client
+    )
+    pov_agents = manager.spawn_pov_agents(
+        ["users", "developers", "investors"],
+        [0.5, 0.5, 0.5],
+        {},
+        manager.gemini_client
+    )
+    team_id = manager.create_agent_team(research_agents + pov_agents, manager.gemini_client)
+    result = manager.run_agent_team(team_id, {"query": "What are the key challenges for AI safety?"}, {}, manager.gemini_client)
+    print(result)
+
+    # Cleanup
+    manager.cleanup_inactive_agents()   
+
+    # Get statistics
+    stats = manager.get_agent_statistics()
+    print(stats)
+
+
+

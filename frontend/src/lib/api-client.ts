@@ -4,18 +4,14 @@
  */
 
 import { 
-  SimulationQuery, 
-  SimulationRunResponse,
-  LayerStepRequest,
-  LayerStepResponse,
+  SimulationSession,
   Agent,
-  AgentCreateRequest,
   KnowledgeAlgorithm,
   AuditCertEvent,
-  SimulationSession 
-  
+  MemoryCell,
+  MemoryPatch,
+  TraceStep,
 } from '@/types/simulation';
-
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
@@ -23,7 +19,7 @@ class APIError extends Error {
   constructor(
     message: string,
     public status: number,
-    public response?: Record<string, any>
+    public response?: Record<string, unknown>
   ) {
     super(message);
     this.name = 'APIError';
@@ -34,7 +30,7 @@ async function apiRequest<T>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<T> {
-  const url = `${API_BASE}/api${endpoint}`;
+  const url = `${API_BASE}${endpoint}`; // Note: endpoints now include /api prefix
   
   const config: RequestInit = {
     headers: {
@@ -50,7 +46,7 @@ async function apiRequest<T>(
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
       throw new APIError(
-        errorData.message || `HTTP ${response.status}: ${response.statusText}`,
+        errorData.detail || errorData.message || `HTTP ${response.status}: ${response.statusText}`,
         response.status,
         errorData
       );
@@ -67,75 +63,73 @@ async function apiRequest<T>(
 
 // Simulation API
 export const simulationAPI = {
-  async run(query: SimulationQuery): Promise<SimulationRunResponse> {
-    return apiRequest<SimulationRunResponse>('/simulation/run', {
+  async start(payload: { prompt: string; context?: Record<string, any> }) {
+    return apiRequest('/api/simulation/start', {
       method: 'POST',
-      body: JSON.stringify(query),
-    });
-  },
-
-  async step(request: LayerStepRequest): Promise<LayerStepResponse> {
-    return apiRequest<LayerStepResponse>('/simulation/step', {
-      method: 'POST',
-      body: JSON.stringify(request),
+      body: JSON.stringify(payload),
     });
   },
 
   async getSession(sessionId: string): Promise<SimulationSession> {
-    return apiRequest<SimulationSession>(`/simulation/session/${sessionId}`);
+    return apiRequest<SimulationSession>(`/api/simulation/session/${sessionId}`);
   },
 
   async listSessions(): Promise<SimulationSession[]> {
-    return apiRequest<SimulationSession[]>('/simulation/sessions');
+    return apiRequest<SimulationSession[]>('/api/simulation/sessions');
   },
 
-  async replay(sessionId: string, step: number): Promise<any> {
-    return apiRequest(`/simulation/replay`, {
+  async step(sessionId: string) {
+    return apiRequest(`/api/simulation/step/${sessionId}`, {
       method: 'POST',
-      body: JSON.stringify({ run_id: sessionId, step }),
     });
   },
 };
 
-// Agent API
+// Agent API - Fixed to match backend endpoints
 export const agentAPI = {
-  async list(sessionId?: string): Promise<Agent[]> {
-    const endpoint = sessionId ? `/agent/list?session_id=${sessionId}` : '/agent/list';
-    return apiRequest<Agent[]>(endpoint);
+  async list(): Promise<Agent[]> {
+    return apiRequest<Agent[]>('/api/agent/list');
   },
 
-  async spawn(request: AgentCreateRequest): Promise<Agent> {
-    return apiRequest<Agent>('/agent/spawn', {
+  async spawn(request: { name: string; role: string; persona?: string }): Promise<Agent> {
+    return apiRequest<Agent>('/api/agent/spawn', {
       method: 'POST',
       body: JSON.stringify(request),
     });
   },
 
-  async kill(agentId: string): Promise<{ success: boolean }> {
-    return apiRequest(`/agent/${agentId}`, {
+  async kill(agentId: string): Promise<{ status: string; agent_id: string }> {
+    return apiRequest(`/api/agent/${agentId}`, {
       method: 'DELETE',
     });
   },
 
   async getStatus(agentId: string): Promise<Agent> {
-    return apiRequest<Agent>(`/agent/${agentId}`);
+    return apiRequest<Agent>(`/api/agent/status/${agentId}`);
+  },
+
+  async setContext(agentId: string, context: Record<string, any>): Promise<{ ok: boolean }> {
+    return apiRequest(`/api/agent/set_context/${agentId}`, {
+      method: 'POST',
+      body: JSON.stringify(context),
+    });
   },
 };
 
 // Plugin API
 export const pluginAPI = {
   async listKAs(): Promise<KnowledgeAlgorithm[]> {
-    return apiRequest<KnowledgeAlgorithm[]>('/plugin/ka/list');
+    return apiRequest<KnowledgeAlgorithm[]>('/api/plugin/ka/list');
   },
 
   async reloadKAs(): Promise<{ status: string; available: string[] }> {
-    return apiRequest('/plugin/ka/reload', {
+    return apiRequest('/api/plugin/ka/reload', {
       method: 'POST',
     });
   },
 
   async runKA(kaName: string, payload: any): Promise<any> {
-    return apiRequest(`/plugin/ka/run/${kaName}`, {
+    return apiRequest(`/api/plugin/ka/run/${kaName}`, {
       method: 'POST',
       body: JSON.stringify(payload),
     });
@@ -144,22 +138,22 @@ export const pluginAPI = {
 
 // Memory API
 export const memoryAPI = {
-  async getCell(coordinate: number[]): Promise<any> {
-    return apiRequest('/memory/cell', {
+  async getCell(coordinate: number[]): Promise<MemoryCell> {
+    return apiRequest<MemoryCell>('/api/memory/cell', {
       method: 'POST',
       body: JSON.stringify({ coordinate }),
     });
   },
 
-  async patchCell(patch: any): Promise<{ success: boolean }> {
-    return apiRequest('/memory/patch', {
+  async patchCell(patch: MemoryPatch): Promise<MemoryPatch> {
+    return apiRequest<MemoryPatch>('/api/memory/patch', {
       method: 'POST',
       body: JSON.stringify(patch),
     });
   },
 
-  async dumpAll(): Promise<any[]> {
-    return apiRequest('/memory/dump');
+  async dumpAll(): Promise<MemoryCell[]> {
+    return apiRequest<MemoryCell[]>('/api/memory/dump');
   },
 };
 
@@ -182,73 +176,63 @@ export const auditAPI = {
       });
     }
     const query = params.toString();
-    return apiRequest<AuditCertEvent[]>(`/audit/log${query ? `?${query}` : ''}`);
+    return apiRequest<AuditCertEvent[]>(`/api/audit/log${query ? `?${query}` : ''}`);
   },
 
   async getBundle(after?: number): Promise<any> {
     const query = after ? `?after=${after}` : '';
-    return apiRequest(`/audit/bundle${query}`);
+    return apiRequest(`/api/audit/bundle${query}`);
   },
 
   async getEntry(entryId: string): Promise<AuditCertEvent> {
-    return apiRequest<AuditCertEvent>(`/audit/entry/${entryId}`);
+    return apiRequest<AuditCertEvent>(`/api/audit/entry/${entryId}`);
   },
 };
 
-// WebSocket API
-export class SimulationWebSocket {
-  private ws: WebSocket | null = null;
-  private sessionId: string;
-  private onMessage?: (data: any) => void;
-  private onError?: (error: Event) => void;
-  private onClose?: () => void;
+// Trace API
+export const traceAPI = {
+  async getTrace(runId: string): Promise<TraceStep[]> {
+    return apiRequest<TraceStep[]>(`/api/trace/get/${runId}`);
+  },
 
-  constructor(sessionId: string) {
-    this.sessionId = sessionId;
-  }
+  async addTrace(runId: string, trace: TraceStep): Promise<{ ok: boolean }> {
+    return apiRequest(`/api/trace/add/${runId}`, {
+      method: 'POST',
+      body: JSON.stringify(trace),
+    });
+  },
+};
 
-  connect(callbacks: {
-    onMessage?: (data: any) => void;
-    onError?: (error: Event) => void;
-    onClose?: () => void;
-  }) {
-    this.onMessage = callbacks.onMessage;
-    this.onError = callbacks.onError;
-    this.onClose = callbacks.onClose;
+// UI State API
+export const uiAPI = {
+  async getState(): Promise<any> {
+    return apiRequest('/api/ui/state');
+  },
 
-    const wsUrl = `${process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000'}/ws/${this.sessionId}`;
-    this.ws = new WebSocket(wsUrl);
+  async getLayerStatus(): Promise<any> {
+    return apiRequest('/api/ui/layer_status');
+  },
+};
 
-    this.ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        this.onMessage?.(data);
-      } catch (error) {
-        console.error('WebSocket message parsing error:', error);
-      }
-    };
+// Health Check
+export const healthAPI = {
+  async check(): Promise<{ status: string; service: string; plugins_loaded: number }> {
+    return apiRequest('/health');
+  },
 
-    this.ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
-      this.onError?.(error);
-    };
+  async agentHealth(): Promise<{ status: string; total_agents: number; active_agents: number }> {
+    return apiRequest('/api/agent/health');
+  },
+};
 
-    this.ws.onclose = () => {
-      console.log('WebSocket connection closed');
-      this.onClose?.();
-    };
-  }
-
-  send(data: any) {
-    if (this.ws?.readyState === WebSocket.OPEN) {
-      this.ws.send(JSON.stringify(data));
-    }
-  }
-
-  disconnect() {
-    if (this.ws) {
-      this.ws.close();
-      this.ws = null;
-    }
-  }
-}
+// Export all APIs
+export default {
+  simulation: simulationAPI,
+  agent: agentAPI,
+  plugin: pluginAPI,
+  memory: memoryAPI,
+  audit: auditAPI,
+  trace: traceAPI,
+  ui: uiAPI,
+  health: healthAPI,
+};

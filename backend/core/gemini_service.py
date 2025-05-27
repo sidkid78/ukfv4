@@ -6,17 +6,18 @@ Provides AI-powered reasoning, analysis, and knowledge processing capabilities
 import asyncio
 import logging
 import time
-from typing import Dict, Any, List, Optional, AsyncGenerator, Union
+from typing import Dict, Any, List, Optional, AsyncGenerator, Union, Callable
 from datetime import datetime
 from enum import Enum
 import json
+import os
 
 
-import google.generativeai as genai
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
-from google.api_core import exceptions as google_exceptions
+from google import genai
+from google.genai.types import HarmCategory, HarmBlockThreshold
 from pydantic import BaseModel, Field
 from pydantic_settings import BaseSettings
+from google.genai import types
 
 from core.audit import audit_logger, make_patch_certificate
 
@@ -24,6 +25,7 @@ logger = logging.getLogger(__name__)
 
 class GeminiModel(str, Enum):
     """Available Gemini models"""
+    GEMINI_PRO_25 = "gemini-2.5-pro-preview-03-25"
     GEMINI_PRO_25_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
     GEMINI_FLASH = "gemini-2.0-flash"
     GEMINI_PRO_25_FLASH = "gemini-2.5-flash-preview"
@@ -83,93 +85,57 @@ class GeminiResponse(BaseModel):
     timestamp: datetime = Field(default_factory=datetime.now)
     request_id: str
     processing_time: float = 0.0
-
-class GeminiService:
-    """
-    Service for interacting with Google's Gemini AI models
-    Provides async AI reasoning with safety, audit logging, and error handling
-    """
     
+class GeminiService:
     def __init__(self, config: Optional[GeminiConfig] = None):
         self.config = config or GeminiConfig()
-        
-        # Configure Gemini
-        genai.configure(api_key=self.config.gemini_api_key)
-        
-        # Safety settings for AGI-grade safety
-        self.safety_settings = {
-            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-        }
-        
-        # Rate limiting
+        os.environ["GEMINI_API_KEY"] = self.config.gemini_api_key
+        self.client = genai.Client(api_key=self.config.gemini_api_key)
+        self.safety_settings = [
+            types.SafetySetting(
+                category="HARM_CATEGORY_HARASSMENT",
+                threshold="BLOCK_MEDIUM_AND_ABOVE"
+            ),
+            types.SafetySetting(
+                category="HARM_CATEGORY_HATE_SPEECH",
+                threshold="BLOCK_MEDIUM_AND_ABOVE"
+            ),
+            types.SafetySetting(
+                category="HARM_CATEGORY_SEXUALLY_EXPLICIT",
+                threshold="BLOCK_MEDIUM_AND_ABOVE"
+            ),
+            types.SafetySetting(
+                category="HARM_CATEGORY_DANGEROUS_CONTENT",
+                threshold="BLOCK_MEDIUM_AND_ABOVE"
+            ),
+        ]
         self._last_request_time = 0
-        self._min_request_interval = 0.1  # 100ms between requests
-        
+        self._min_request_interval = 0.1
         logger.info(f"Gemini service initialized with model: {self.config.gemini_default_model}")
-    
-    async def generate_async(
-        self, 
-        request: GeminiRequest,
-        session_id: Optional[str] = None,
-        layer: Optional[int] = None
-    ) -> GeminiResponse:
-        """
-        Generate AI response asynchronously with full audit logging
-        
-        Args:
-            request: The Gemini request parameters
-            session_id: Optional simulation session ID for tracking
-            layer: Optional layer number for context
-            
-        Returns:
-            Complete AI response with metadata
-        """
+
+    async def generate_async(self, request: GeminiRequest, session_id: Optional[str] = None, layer: Optional[int] = None) -> GeminiResponse:
         import uuid
         request_id = str(uuid.uuid4())
         start_time = time.time()
-        
-        logger.info(f"Gemini request {request_id}: {request.prompt[:100]}...")
-        
         try:
-            # Rate limiting
             await self._enforce_rate_limit()
-            
-            # Build generation config
-            generation_config = {
-                "temperature": request.temperature or self.config.gemini_temperature,
-                "top_p": self.config.top_p,
-                "top_k": self.config.top_k,
-                "max_output_tokens": request.max_tokens or self.config.gemini_max_tokens,
-            }
-            
-            # Select model
-            model = genai.GenerativeModel(
-                model_name=request.model.value,
-                generation_config=generation_config,
-                safety_settings=self.safety_settings
+            generation_config = types.GenerateContentConfig(
+                temperature=request.temperature or self.config.gemini_temperature,
+                top_p=self.config.top_p,
+                top_k=self.config.top_k,
+                max_output_tokens=request.max_tokens or self.config.gemini_max_tokens,
+                safety_settings=self.safety_settings,
             )
-            
-            # Build prompt with system context
             full_prompt = self._build_prompt(request)
-            
-            # Generate response with retries
-            response = await self._generate_with_retries(
-                model, full_prompt, request_id
+            response = self.client.models.generate_content(
+                model=request.model.value,
+                contents=full_prompt,
+                config=generation_config,
             )
-            
-            processing_time = time.time() - start_time
-            
-            # Extract content and metadata
-            content = response.text if response.text else ""
-            
-            # Calculate confidence based on response quality
+            content = getattr(response, 'text', '') or getattr(response.candidates[0], 'text', '')
             confidence = self._calculate_confidence(response, content)
-            
-            # Create response object
-            gemini_response = GeminiResponse(
+            processing_time = time.time() - start_time
+            return GeminiResponse(
                 content=content,
                 model=request.model.value,
                 usage=self._extract_usage(response),
@@ -177,50 +143,22 @@ class GeminiService:
                 reasoning_trace={
                     "prompt_length": len(full_prompt),
                     "response_length": len(content),
-                    "model_used": request.model.value,
-                    "safety_ratings": getattr(response, 'safety_ratings', []),
-                    "finish_reason": getattr(response, 'finish_reason', None)
+                    "model_used": request.model.value
                 },
                 request_id=request_id,
                 processing_time=processing_time
             )
-            
-            # Audit log the AI interaction
-            await self._log_ai_interaction(
-                request, gemini_response, session_id, layer
-            )
-            
-            logger.info(f"Gemini response {request_id} completed in {processing_time:.2f}s")
-            return gemini_response
-            
         except Exception as e:
-            processing_time = time.time() - start_time
             logger.error(f"Gemini request {request_id} failed: {str(e)}")
-            
-            audit_details = {
-                "request_id": request_id,
-                "error": str(e),
-                "model": request.model.value,
-                "session_id": session_id,
-                "processing_time": processing_time
-            }
-            
-            audit_logger.log(
-                event_type="ai_error",
-                layer=layer or 0,
-                details=audit_details
-            )
-            
-            # Return safe fallback response
             return GeminiResponse(
                 content=f"AI processing failed: {str(e)}",
                 model=request.model.value,
-                confidence=0.1,  # Very low confidence for errors
+                confidence=0.1,
                 request_id=request_id,
-                processing_time=processing_time,
+                processing_time=time.time() - start_time,
                 reasoning_trace={"error": str(e)}
             )
-    
+
     async def generate_stream_async(
         self,
         request: GeminiRequest,
@@ -246,32 +184,27 @@ class GeminiService:
             await self._enforce_rate_limit()
             
             # Build generation config
-            generation_config = {
-                "temperature": request.temperature or self.config.gemini_temperature,
-                "top_p": self.config.top_p,
-                "top_k": self.config.top_k,
-                "max_output_tokens": request.max_tokens or self.config.gemini_max_tokens,
-            }
-            
-            # Select model
-            model = genai.GenerativeModel(
-                model_name=request.model.value,
-                generation_config=generation_config,
-                safety_settings=self.safety_settings
+            generation_config = types.GenerateContentConfig(
+                temperature=request.temperature or self.config.gemini_temperature,
+                top_p=self.config.top_p,
+                top_k=self.config.top_k,
+                max_output_tokens=request.max_tokens or self.config.gemini_max_tokens,
+                safety_settings=self.safety_settings,
             )
             
             # Build prompt
             full_prompt = self._build_prompt(request)
             
             # Generate streaming response
-            response = model.generate_content(
-                full_prompt,
-                stream=True
+            response_stream = self.client.models.generate_content_stream(
+                model=request.model.value,
+                contents=full_prompt,
+                config=generation_config,
             )
             
             full_content = ""
-            async for chunk in response:
-                if chunk.text:
+            for chunk in response_stream:
+                if hasattr(chunk, 'text') and chunk.text:
                     full_content += chunk.text
                     yield chunk.text
             
@@ -292,122 +225,44 @@ class GeminiService:
             yield f"[AI Streaming Error: {str(e)}]"
     
     def _build_prompt(self, request: GeminiRequest) -> str:
-        """Build complete prompt with system context"""
-        prompt_parts = []
-        
-        # System prompt for UKG/USKD context
-        if request.system_prompt:
-            prompt_parts.append(f"SYSTEM: {request.system_prompt}")
-        else:
-            prompt_parts.append(
-                "SYSTEM: You are an AI assistant in the UKG/USKD Multi-Layered Simulation System. "
-                "Provide accurate, helpful, and safe responses. Consider AGI safety principles."
-            )
-        
-        # Persona context
+        parts = [
+            f"SYSTEM: {request.system_prompt}" if request.system_prompt else
+            "SYSTEM: You are an AI assistant in the UKG/USKD Simulation System. Provide helpful, safe responses."
+        ]
         if request.persona:
-            prompt_parts.append(f"PERSONA: {request.persona}")
-        
-        # Additional context
+            parts.append(f"PERSONA: {request.persona}")
         if request.context:
-            context_str = json.dumps(request.context, indent=2)
-            prompt_parts.append(f"CONTEXT: {context_str}")
-        
-        # Main prompt
-        prompt_parts.append(f"USER: {request.prompt}")
-        
-        return "\n\n".join(prompt_parts)
-    
-    async def _generate_with_retries(
-        self, 
-        model, 
-        prompt: str, 
-        request_id: str
-    ) -> Any:
-        """Generate response with retry logic"""
-        last_exception = None
-        
-        for attempt in range(self.config.gemini_max_retries):
-            try:
-                response = model.generate_content(prompt)
-                return response
-                
-            except google_exceptions.ResourceExhausted as e:
-                logger.warning(f"Rate limit hit on attempt {attempt + 1}: {e}")
-                await asyncio.sleep(self.config.gemini_timeout * (2 ** attempt))
-                last_exception = e
-                
-            except google_exceptions.ServiceUnavailable as e:
-                logger.warning(f"Service unavailable on attempt {attempt + 1}: {e}")
-                await asyncio.sleep(self.config.gemini_timeout * (2 ** attempt))
-                last_exception = e
-                
-            except Exception as e:
-                logger.error(f"Unexpected error on attempt {attempt + 1}: {e}")
-                last_exception = e
-                break
-        
-        # All retries failed
-        raise last_exception or Exception("Max retries exceeded")
-    
+            parts.append(f"CONTEXT: {json.dumps(request.context, indent=2)}")
+        parts.append(f"USER: {request.prompt}")
+        return "\n\n".join(parts)
+
     async def _enforce_rate_limit(self):
-        """Enforce rate limiting between requests"""
-        current_time = time.time()
-        time_since_last = current_time - self._last_request_time
-        
-        if time_since_last < self._min_request_interval:
-            sleep_time = self._min_request_interval - time_since_last
-            await asyncio.sleep(sleep_time)
-        
+        now = time.time()
+        if now - self._last_request_time < self._min_request_interval:
+            await asyncio.sleep(self._min_request_interval - (now - self._last_request_time))
         self._last_request_time = time.time()
-    
+
     def _calculate_confidence(self, response: Any, content: str) -> float:
-        """Calculate confidence score based on response quality"""
-        base_confidence = 0.8
-        
-        # Adjust based on content length
+        score = 0.8
         if len(content) < 10:
-            base_confidence -= 0.3
+            score -= 0.3
         elif len(content) > 500:
-            base_confidence += 0.1
-        
-        # Adjust based on safety ratings
-        if hasattr(response, 'safety_ratings'):
-            for rating in response.safety_ratings:
-                if rating.probability.name in ['MEDIUM', 'HIGH']:
-                    base_confidence -= 0.2
-        
-        # Adjust based on finish reason
-        if hasattr(response, 'finish_reason'):
-            if response.finish_reason.name == 'STOP':
-                base_confidence += 0.1
-            elif response.finish_reason.name in ['MAX_TOKENS', 'SAFETY']:
-                base_confidence -= 0.2
-        
-        return max(0.1, min(1.0, base_confidence))
-    
+            score += 0.1
+        return max(0.1, min(1.0, score))
+
     def _extract_usage(self, response: Any) -> Dict[str, Any]:
-        """Extract usage statistics from response"""
         usage = {}
-        
         if hasattr(response, 'usage_metadata'):
-            usage_metadata = response.usage_metadata
+            meta = response.usage_metadata
             usage = {
-                "prompt_tokens": getattr(usage_metadata, 'prompt_token_count', 0),
-                "completion_tokens": getattr(usage_metadata, 'candidates_token_count', 0),
-                "total_tokens": getattr(usage_metadata, 'total_token_count', 0),
+                "prompt_tokens": getattr(meta, 'prompt_token_count', 0),
+                "completion_tokens": getattr(meta, 'candidates_token_count', 0),
+                "total_tokens": getattr(meta, 'total_token_count', 0)
             }
-        
         return usage
+
     
-    async def _log_ai_interaction(
-        self,
-        request: GeminiRequest,
-        response: GeminiResponse,
-        session_id: Optional[str],
-        layer: Optional[int]
-    ):
-        """Log AI interaction for audit purposes"""
+    async def _log_ai_interaction(self, request: GeminiRequest, response: GeminiResponse, session_id: Optional[str], layer: Optional[int]):
         audit_logger.log(
             event_type="ai_interaction",
             layer=layer or 0,

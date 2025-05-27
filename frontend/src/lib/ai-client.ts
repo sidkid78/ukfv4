@@ -86,7 +86,7 @@ import {
         params.append('session_id', sessionId);
       }
       
-      return aiRequest<AIResponse>(`/api/ai/generate${params.toString() ? `?${params.toString()}` : ''}`, {
+      return apiRequest<AIResponse>(`/api/ai/generate${params.toString() ? `?${params.toString()}` : ''}`, {
         method: 'POST',
         body: JSON.stringify(request),
       });

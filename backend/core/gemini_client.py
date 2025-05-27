@@ -10,18 +10,19 @@ from typing import Dict, Any, List, Optional, Union
 from datetime import datetime
 from enum import Enum
 from pydantic import BaseModel
-import google.generativeai as genai
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
+from google import genai
+from google.genai.types import HarmCategory, HarmBlockThreshold
+from google.genai import types
 import json
 
 logger = logging.getLogger(__name__)
 
 class GeminiModel(str, Enum):
     """Available Gemini models"""
-    GEMINI_PRO = "gemini-pro"
-    GEMINI_PRO_VISION = "gemini-pro-vision"
-    GEMINI_2_0_PRO = "gemini-2.0-pro"
-    GEMINI_2_0_FLASH = "gemini-2.0-flash"
+    GEMINI_PRO_25 = "gemini-2.5-pro-preview-03-25"
+    GEMINI_PRO_25_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
+    GEMINI_FLASH = "gemini-2.0-flash"
+    GEMINI_PRO_25_FLASH = "gemini-2.5-flash-preview"
 
 class GeminiRole(str, Enum):
     """Roles for Gemini conversations"""
@@ -32,7 +33,7 @@ class GeminiRole(str, Enum):
 class GeminiRequest(BaseModel):
     """Request structure for Gemini API calls"""
     prompt: str
-    model: GeminiModel = GeminiModel.GEMINI_2_0_PRO
+    model: GeminiModel = GeminiModel.GEMINI_PRO_25
     temperature: float = 0.7
     max_tokens: Optional[int] = None
     system_prompt: Optional[str] = None
@@ -61,12 +62,8 @@ class GeminiClient:
         if not self.api_key:
             raise ValueError("Gemini API key is required. Set GEMINI_API_KEY environment variable.")
         
-        # Configure Gemini
-        genai.configure(api_key=self.api_key)
-        
-        # Initialize models
-        self.models = {}
-        self._initialize_models()
+        # Initialize Gemini client
+        self.client = genai.Client(api_key=self.api_key)
         
         # Safety settings for AGI-safe operation
         self.default_safety_settings = {
@@ -86,17 +83,6 @@ class GeminiClient:
         
         logger.info("Gemini client initialized successfully")
     
-    def _initialize_models(self):
-        """Initialize Gemini model instances"""
-        try:
-            self.models[GeminiModel.GEMINI_PRO] = genai.GenerativeModel('gemini-pro')
-            self.models[GeminiModel.GEMINI_2_0_PRO] = genai.GenerativeModel('gemini-2.0-pro')
-            self.models[GeminiModel.GEMINI_2_0_FLASH] = genai.GenerativeModel('gemini-2.0-flash')
-            logger.info(f"Initialized {len(self.models)} Gemini models")
-        except Exception as e:
-            logger.error(f"Failed to initialize Gemini models: {e}")
-            raise
-    
     async def generate_response(self, request: GeminiRequest) -> GeminiResponse:
         """
         Generate response using Gemini AI
@@ -110,16 +96,13 @@ class GeminiClient:
         start_time = datetime.now()
         
         try:
-            # Get model
-            model = self.models.get(request.model)
-            if not model:
-                raise ValueError(f"Model {request.model} not available")
-            
             # Prepare generation config
-            generation_config = self.default_generation_config.copy()
-            generation_config["temperature"] = request.temperature
-            if request.max_tokens:
-                generation_config["max_output_tokens"] = request.max_tokens
+            generation_config = types.GenerateContentConfig(
+                temperature=request.temperature,
+                top_p=self.default_generation_config["top_p"],
+                top_k=self.default_generation_config["top_k"],
+                max_output_tokens=request.max_tokens or self.default_generation_config["max_output_tokens"],
+            )
             
             # Prepare safety settings
             safety_settings = request.safety_settings or self.default_safety_settings
@@ -134,11 +117,12 @@ class GeminiClient:
                 context_str = self._format_context(request.context)
                 full_prompt = f"Context: {context_str}\n\n{full_prompt}"
             
-            # Generate response
+            # Generate response using the latest SDK pattern
             response = await asyncio.to_thread(
-                model.generate_content,
-                full_prompt,
-                generation_config=generation_config,
+                self.client.models.generate_content,
+                model=request.model.value,
+                contents=full_prompt,
+                config=generation_config,
                 safety_settings=safety_settings
             )
             
@@ -275,7 +259,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_2_0_PRO,
+            model=GeminiModel.GEMINI_PRO_25,
             temperature=0.6,  # Lower temperature for more consistent reasoning
             context={"layer": layer_number, "simulation_context": simulation_context}
         )
@@ -314,7 +298,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_1_5_FLASH,  # Faster for agent responses
+            model=GeminiModel.GEMINI_PRO_25_FLASH_0520,  # Faster for agent responses
             temperature=0.8,  # Higher temperature for diverse agent perspectives
             context={"agent_role": agent_role, "persona": persona}
         )
@@ -359,7 +343,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_2_0_PRO,
+            model=GeminiModel.GEMINI_PRO_25,
             temperature=0.3,  # Low temperature for consistent safety analysis
             context=context
         )
@@ -399,14 +383,20 @@ class GeminiClient:
     
     def get_available_models(self) -> List[str]:
         """Get list of available Gemini models"""
-        return list(self.models.keys())
+        # The new SDK does not keep a models dict; return a static list or query the client if supported
+        return [
+            GeminiModel.GEMINI_PRO_25,
+            GeminiModel.GEMINI_PRO_25_FLASH_0520,
+            GeminiModel.GEMINI_FLASH,
+            GeminiModel.GEMINI_PRO_25_FLASH
+        ]
     
     async def health_check(self) -> Dict[str, Any]:
         """Check if Gemini API is accessible and working"""
         try:
             test_request = GeminiRequest(
                 prompt="Hello, this is a test. Please respond with 'OK' if you're working.",
-                model=GeminiModel.GEMINI_2_0_FLASH,
+                model=GeminiModel.GEMINI_PRO_25_FLASH_0520,
                 temperature=0.1
             )
             
@@ -415,7 +405,7 @@ class GeminiClient:
             return {
                 "status": "healthy" if "ok" in response.text.lower() else "degraded",
                 "response_time": response.generation_time,
-                "models_available": len(self.models),
+                "models_available": len(self.get_available_models()),
                 "last_check": datetime.now().isoformat()
             }
             

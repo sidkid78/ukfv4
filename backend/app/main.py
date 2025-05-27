@@ -8,10 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 import uvicorn
 import logging
+import json
 
 from api import simulation, agent, memory, plugin, audit, ui, axes
 from core.plugin_loader import ka_registry
-from core.websocket_manager import websocket_manager as ws_manager
+from core.websocket_manager import websocket_manager 
 
 
 # Configure logging
@@ -44,7 +45,7 @@ def create_app() -> FastAPI:
     # CORS middleware for frontend integration
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost:3000", "http://frontend:3000"],
+        allow_origins=["*"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
@@ -60,15 +61,15 @@ def create_app() -> FastAPI:
     app.include_router(axes.router, prefix="/api")
 
     # WebSocket endpoint for real-time updates
-    @app.websocket("/ws/{session_id}")
-    async def websocket_endpoint(websocket: WebSocket, session_id: str):
-        await ws_manager.connect(websocket, session_id)
+    @app.websocket("/ws/{session_id}/{client_id}")
+    async def websocket_endpoint(websocket: WebSocket, session_id: str, client_id: str):
+        await websocket_manager.connect(websocket, client_id, session_id)
         try:
             while True:
                 data = await websocket.receive_text()
-                await ws_manager.broadcast_to_session(session_id, data)
+                await websocket_manager.handle_client_message(client_id, json.loads(data))
         except WebSocketDisconnect:
-            ws_manager.disconnect(websocket, session_id)
+            await websocket_manager.disconnect(client_id)
     
     # Health check endpoint
     @app.get("/health")
