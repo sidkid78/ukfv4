@@ -1,0 +1,24 @@
+{
+  "selected_personas": [
+    {
+      "persona": "domain_expert",
+      "role": "Expert analysis and fact-checking"
+    },
+    {
+      "persona": "critical_thinker",
+      "role": "Challenge assumptions and find flaws"
+    },
+    {
+      "persona": "creative_reasoner",
+      "role": "Generate alternative perspectives"
+    },
+    {
+      "persona": "synthesizer",
+      "role": "Combine insights and build consensus"
+    },
+    {
+      "persona": "safety_analyst",
+      "role": "Identify risks and safety concerns"
+    }
+  ]
+}

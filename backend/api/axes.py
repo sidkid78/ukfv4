@@ -1,5 +1,5 @@
-from fastapi import APIRouter, HTTPException, Body
-from typing import List 
+from fastapi import APIRouter, HTTPException, Body, Query
+from typing import List, Dict, Any
 from models.axis import AxisMetadata, AxisCoordinate, CoordParseRequest, NameToCoordRequest, NameToCoordResponse, AXES, AXIS_KEY_MAP, AXIS_KEYS 
 
 router = APIRouter(prefix="/axis", tags=["Axis Metadata"])
@@ -154,6 +154,29 @@ async def translate_names_to_coordinate(data: NameToCoordRequest = Body(...)):
         unified_system_id=axis_coord_obj.generate_unified_system_id(),
         translation_log=log
     )
+
+@router.get("/crosswalk", response_model=Dict[str, Any])
+async def get_axis_crosswalk(axis: str = Query(...), code: str = Query(...)):
+    """Fetch crosswalk mapping for a given axis element."""
+    # ...implement as in axis_system.md...
+
+@router.post("/simulate", response_model=Dict[str, Any])
+async def simulate_axis(input_axis: Dict[str, Any] = Body(...)):
+    """Multidimensional simulation: expands personas, returns mapping, activation, and traversal log."""
+    from core.axis_simulation import simulate_axis_driven_persona
+    return simulate_axis_driven_persona(input_axis)
+
+@router.post("/math/play", response_model=Dict[str, Any])
+async def math_play(input: Dict[str, Any] = Body(...)):
+    """Run mathematical operation on axis/coordinate."""
+    from core.axis_math import run_math_op
+    return run_math_op(input)
+
+@router.get("/math/ops", response_model=Dict[str, str])
+async def math_ops():
+    """List available mathematical operations."""
+    from core.axis_math import list_math_ops
+    return list_math_ops()
 
 # ========== SAMPLE LOOKUP DATA (for /axis/translate demo) ==========
 EXAMPLE_PILLAR_NAMES = {

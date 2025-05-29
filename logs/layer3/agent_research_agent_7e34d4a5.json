@@ -1,0 +1,16 @@
+{
+  "id": "research_agent_7e34d4a5",
+  "persona": "domain_expert",
+  "role": "Expert analysis and fact-checking",
+  "query_focus": "What are the ethical implications of AI in healthcare?",
+  "strategy": {
+    "approach": "focused",
+    "agent_count": 5,
+    "specialization_needed": false,
+    "evidence_threshold": 0.8,
+    "consensus_required": true,
+    "research_depth": "deep"
+  },
+  "spawned_at": "2025-05-29T00:31:55.722565",
+  "active": true
+}

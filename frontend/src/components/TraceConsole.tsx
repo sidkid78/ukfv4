@@ -12,6 +12,7 @@ interface TraceLogProps {
   showFilters?: boolean;
 }
 
+
 export function TraceLog({ 
   trace, 
   autoScroll = true, 
@@ -104,9 +105,9 @@ export function TraceLog({
           </div>
           
           <div className="flex gap-1">
-            {uniqueLayers.map(layer => (
+            {uniqueLayers.map((layer, idx) => (
               <Badge
-                key={layer}
+                key={`${layer}-${idx}`}
                 variant={selectedLayers.includes(layer) ? "default" : "outline"}
                 className="cursor-pointer"
                 onClick={() => {

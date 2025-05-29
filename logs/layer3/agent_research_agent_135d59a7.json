@@ -1,0 +1,16 @@
+{
+  "id": "research_agent_135d59a7",
+  "persona": "safety_analyst",
+  "role": "Identify risks and safety concerns",
+  "query_focus": "What are the ethical implications of AI in healthcare?",
+  "strategy": {
+    "approach": "focused",
+    "agent_count": 5,
+    "specialization_needed": false,
+    "evidence_threshold": 0.8,
+    "consensus_required": true,
+    "research_depth": "deep"
+  },
+  "spawned_at": "2025-05-29T13:53:53.682924",
+  "active": true
+}

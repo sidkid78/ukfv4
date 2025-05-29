@@ -1,15 +1,21 @@
 from pydantic import BaseModel, Field
-from typing import List, Any, Dict, Optional # Added Optional
-import time # For default timestamp
+from typing import List, Any, Dict, Optional
+import time
 
 class TraceLogEntry(BaseModel):
-    # As per Subtask 1 blueprint for models/trace.py
+    # Updated to match the actual trace data format
+    id: Optional[str] = None
+    timestamp: str  # Changed from float to string to match ISO format
     layer: int
     layer_name: str
-    input_snapshot: Dict[str, Any]
-    output_snapshot: Dict[str, Any] # This was Optional in some frontend types, but required here.
-    confidence: float
-    timestamp: float = Field(default_factory=time.time) # Added default factory
-    notes: Optional[str] = "" # Made notes optional as per common usage
-    # simulation_id: Optional[str] = None # Could be added if traces are to be associated with a specific sim ID at model level
-    # event_type: Optional[str] = None # For more detailed tracing if needed 
+    message: str
+    data: Optional[Dict[str, Any]] = None  # Store full event data
+    type: Optional[str] = None  # Event type
+    agent: Optional[str] = None
+    confidence: Optional[float] = None  # Made optional since some events don't have confidence
+    entropy: Optional[float] = None
+    
+    # Legacy fields for backward compatibility
+    input_snapshot: Optional[Dict[str, Any]] = None
+    output_snapshot: Optional[Dict[str, Any]] = None
+    notes: Optional[str] = "" 

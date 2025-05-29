@@ -1,10 +1,12 @@
+// File: C:\Users\sidki\source\repos\ukfv4\frontend\src\components\PluginPanel.tsx
+
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { KnowledgeAlgorithm } from '@/types/simulation';
 import { 
   Plus, 
-  // Trash2, 
+  Trash2, 
   Settings, 
   Play, 
   Pause, 
@@ -27,8 +29,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-// Note: Switch removed as it's not currently used
-// import { formatTimestamp } from '@/lib/utils'; // Not used in current implementation
 
 interface PluginPanelProps {
   plugins: KnowledgeAlgorithm[];

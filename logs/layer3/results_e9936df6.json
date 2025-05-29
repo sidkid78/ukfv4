@@ -1,0 +1,62 @@
+{
+  "results": [
+    {
+      "agent_id": "research_agent_8bff3d78",
+      "persona": "domain_expert",
+      "answer": "Expert analysis of 'What are the ethical implications of AI in healthcare?' (AI temporarily unavailable)",
+      "confidence": 0.6,
+      "reasoning": "Fallback analysis due to AI error: asyncio.run() cannot be called from a running event loop",
+      "research_time": 0.002483,
+      "evidence_strength": "medium",
+      "alternative_considered": true
+    },
+    {
+      "agent_id": "research_agent_dbe96882",
+      "persona": "critical_thinker",
+      "answer": "Critical analysis of 'What are the ethical implications of AI in healthcare?' reveals areas requiring deeper examination (AI temporarily unavailable)",
+      "confidence": 0.65,
+      "reasoning": "Fallback critical analysis: asyncio.run() cannot be called from a running event loop",
+      "research_time": 0.0,
+      "evidence_strength": "medium",
+      "alternative_considered": true
+    },
+    {
+      "agent_id": "research_agent_7819c979",
+      "persona": "creative_reasoner",
+      "answer": "Creative perspective on 'What are the ethical implications of AI in healthcare?': Consider exploring unconventional approaches (AI temporarily unavailable)",
+      "confidence": 0.6,
+      "reasoning": "Fallback creative analysis: asyncio.run() cannot be called from a running event loop",
+      "research_time": 0.0,
+      "evidence_strength": "medium",
+      "alternative_considered": true
+    },
+    {
+      "agent_id": "research_agent_15716c38",
+      "persona": "synthesizer",
+      "answer": "Synthesized understanding of 'What are the ethical implications of AI in healthcare?' integrating available perspectives (AI temporarily unavailable)",
+      "confidence": 0.75,
+      "reasoning": "Fallback synthesis: asyncio.run() cannot be called from a running event loop",
+      "research_time": 0.001001,
+      "evidence_strength": "medium",
+      "alternative_considered": true
+    },
+    {
+      "agent_id": "research_agent_135d59a7",
+      "persona": "safety_analyst",
+      "answer": "Safety analysis of 'What are the ethical implications of AI in healthcare?' identifies potential risks requiring careful consideration (AI temporarily unavailable)",
+      "confidence": 0.7,
+      "reasoning": "Fallback safety analysis: asyncio.run() cannot be called from a running event loop",
+      "research_time": 0.0,
+      "evidence_strength": "medium",
+      "alternative_considered": true
+    }
+  ],
+  "research_metrics": {
+    "quality_score": 0.6599999999999999,
+    "coverage_score": 1.0,
+    "consensus_score": 0.9932,
+    "agent_count": 5,
+    "avg_confidence": 0.6599999999999999,
+    "confidence_variance": 0.0034000000000000002
+  }
+}

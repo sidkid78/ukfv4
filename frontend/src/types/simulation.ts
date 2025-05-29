@@ -76,6 +76,8 @@ export interface TraceStep {
   agent?: string;
   confidence?: ConfidenceScore;
   metadata?: Record<string, unknown>;
+  input_snapshot?: Record<string, unknown>;
+  output_snapshot?: Record<string, unknown>;
 }
 
 // Event types for trace logging
@@ -137,8 +139,8 @@ export interface Agent {
   role: string; // Changed from AgentRole to string to match backend
   persona: string; // Required field in backend
   active: boolean; // Added to match backend
-  context: Record<string, any>; // Changed from unknown to any
-  memory_trace: any[]; // Added to match backend
+  context: Record<string, unknown>; // Changed from unknown to any
+  memory_trace: Record<string, unknown>[]; // Added to match backend
   created_at: string;
   // Optional frontend-only fields
   layer?: SimulationLayer;
@@ -176,6 +178,7 @@ export interface LayerState {
   end_time?: string;
   duration?: number;
 }
+
 
 // Audit and compliance
 export interface AuditCertEvent {

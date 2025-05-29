@@ -1,0 +1,25 @@
+{
+  "process_start": "2025-05-29T13:53:53.675432",
+  "input_data": {
+    "normalized_query": "What are the ethical implications of AI in healthcare?",
+    "query": "What are the ethical implications of AI in healthcare?",
+    "axes": [
+      0.6,
+      0.4,
+      0.3,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "complexity": 0.7,
+    "knowledge_available": false,
+    "persona": "researcher"
+  }
+}

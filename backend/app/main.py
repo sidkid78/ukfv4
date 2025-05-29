@@ -10,7 +10,7 @@ import uvicorn
 import logging
 import json
 
-from api import simulation, agent, memory, plugin, audit, ui, axes
+from api import simulation, agent, memory, plugin, audit, ui, axes, layer, trace
 from core.plugin_loader import ka_registry
 from core.websocket_manager import websocket_manager 
 
@@ -59,6 +59,8 @@ def create_app() -> FastAPI:
     app.include_router(audit.router, prefix="/api")
     app.include_router(ui.router, prefix="/api")
     app.include_router(axes.router, prefix="/api")
+    app.include_router(layer.router, prefix="/api")
+    app.include_router(trace.router, prefix="/api")  # Add trace router
 
     # WebSocket endpoint for real-time updates
     @app.websocket("/ws/{session_id}/{client_id}")

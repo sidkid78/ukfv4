@@ -31,12 +31,15 @@ from dataclasses import dataclass
 from agents import Agent, Runner, function_tool, RunContextWrapper
 import subprocess
 import re
+import sys 
+from colorama import init, Fore, Style
 import concurrent.futures
 from concurrent.futures import ThreadPoolExecutor
 import json
+from colorama import Fore
 from dotenv import load_dotenv
 from pydantic import BaseModel, ConfigDict
-from gemini_config import setup_gemini_client, gemini_config
+from misc.gemini_config import setup_gemini_client, gemini_config
 from agents import FunctionTool
 from pathlib import Path
 
@@ -90,13 +93,7 @@ async def edit_file(wrapper: RunContextWrapper[AgentContext], path: str, content
         return f"Successfully edited/created {path}"
     except Exception as e:
         logger.error(f"Error editing file {path}: {str(e)}")
- # Configure Gemini client at module level
-try:
-    gemini_client = setup_gemini_client()
-    logger.info("Gemini client configured successfully")
-except Exception as e:
-    logger.error(f"Failed to configure Gemini client: {e}")
-    gemini_client = None
+        return f"Error editing file: {str(e)}"
     
 @function_tool
 async def read_file(wrapper: RunContextWrapper[AgentContext], path: str) -> str:
@@ -728,22 +725,54 @@ class ProgrammableAgent:
     
 # Command-line interface
 async def main():
-    parser = argparse.ArgumentParser(description="Programmable Agent CLI")
-    parser.add_argument("prompt", help="The prompt to execute")
-    parser.add_argument("--allow-tools", nargs="+", 
-                       default=["edit", "read", "mkdir", "bash", "ls", "git", "grep", "glob"],
-                       help="Tools to allow")
-    parser.add_argument("--working-dir", default=".", 
-                       help="Working directory")
-    
+    parser = argparse.ArgumentParser(
+        description=f"{Fore.CYAN}Programmable Agent CLI{Style.RESET_ALL}\n"
+                    f"{Fore.YELLOW}Automate code, file, and git operations with AI.{Style.RESET_ALL}",
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=f"""{Fore.GREEN}Examples:{Style.RESET_ALL}
+  python coding_agent.py "Edit README.md with new content" --allow-tools edit read --working-dir .
+  python coding_agent.py "List all Python files" --allow-tools ls --working-dir ./src
+"""
+    )
+    parser.add_argument(
+        "prompt",
+        nargs="?",
+        help=f"{Fore.MAGENTA}The prompt to execute (in quotes).{Style.RESET_ALL}"
+    )
+    parser.add_argument(
+        "--allow-tools", "-t",
+        nargs="+",
+        default=["edit", "read", "mkdir", "bash", "ls", "git", "grep", "glob", "batch", "task", "advanced_batch"],
+        choices=["edit", "read", "mkdir", "bash", "ls", "git", "grep", "glob", "batch", "task", "advanced_batch"],
+        metavar="TOOL",
+        help=f"{Fore.MAGENTA}Tools to allow (space-separated). Default: all tools.{Style.RESET_ALL}"
+    )
+    parser.add_argument(
+        "--working-dir", "-d",
+        default=".",
+        help=f"{Fore.MAGENTA}Working directory. Default: current directory.{Style.RESET_ALL}"
+    )
+    parser.add_argument(
+        "--version", "-v",
+        action="version",
+        version="Programmable Agent 1.0"
+    )
+
     args = parser.parse_args()
-    
+
+    if not args.prompt:
+        parser.print_help()
+        print(f"\n{Fore.RED}Error: You must provide a prompt to execute.{Style.RESET_ALL}")
+        sys.exit(1)
+
+    print(f"{Fore.CYAN}Running Programmable Agent...{Style.RESET_ALL}")
+    print(f"{Fore.YELLOW}Prompt:{Style.RESET_ALL} {args.prompt}")
+    print(f"{Fore.YELLOW}Allowed tools:{Style.RESET_ALL} {', '.join(args.allow_tools)}")
+    print(f"{Fore.YELLOW}Working directory:{Style.RESET_ALL} {args.working_dir}\n")
+
     agent = ProgrammableAgent(allowed_tools=args.allow_tools)
     result = await agent.execute(args.prompt, args.working_dir)
-    print(result)
+    print(f"{Fore.GREEN}Result:{Style.RESET_ALL}\n{result}")
 
 if __name__ == "__main__":
     asyncio.run(main())
-
-# CLI use example
-# python programmable_agent.py "Edit the README.md file with the new content" --allow-tools edit --working-dir .

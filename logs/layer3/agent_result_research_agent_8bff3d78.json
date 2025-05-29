@@ -1,0 +1,10 @@
+{
+  "agent_id": "research_agent_8bff3d78",
+  "persona": "domain_expert",
+  "answer": "Expert analysis of 'What are the ethical implications of AI in healthcare?' (AI temporarily unavailable)",
+  "confidence": 0.6,
+  "reasoning": "Fallback analysis due to AI error: asyncio.run() cannot be called from a running event loop",
+  "research_time": 0.002483,
+  "evidence_strength": "medium",
+  "alternative_considered": true
+}

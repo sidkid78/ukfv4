@@ -1,0 +1,927 @@
+2025-05-28 14:14:39,304 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 14:14:39,307 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 14:14:39,307 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 14:14:39,307 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 14:14:39,307 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 14:14:39,310 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 14:14:39,313 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 14:14:39,313 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 14:14:39,313 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 14:14:39,315 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 14:14:39,317 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 14:23:41,580 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 14:23:41,585 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 14:23:41,591 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 14:23:41,592 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 14:23:41,594 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 14:23:41,595 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 14:23:41,596 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 14:23:41,596 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 14:23:41,597 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 14:23:41,598 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 14:23:41,600 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 14:31:03,388 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 14:31:03,389 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 14:31:03,390 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 14:31:03,396 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 14:31:03,397 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 14:31:03,398 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 14:31:03,399 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 14:31:03,399 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 14:31:03,401 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 14:31:03,402 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 14:31:03,404 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:00:49,656 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:00:49,658 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:00:49,661 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:00:49,671 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:00:49,680 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:00:49,683 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:00:49,684 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:00:49,685 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:00:49,685 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:00:49,688 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:00:49,690 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:03:27,352 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:03:27,353 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:03:27,354 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:03:27,355 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:03:27,362 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:03:27,363 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:03:27,364 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:03:27,365 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:03:27,366 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:03:27,366 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:03:27,367 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:48:42,407 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:48:42,408 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:48:42,409 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:48:42,409 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:48:42,410 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:48:42,411 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:48:42,413 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:48:42,414 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:48:42,415 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:48:42,415 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:48:42,416 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:48:54,674 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:48:54,677 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:48:54,678 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:48:54,679 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:48:54,680 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:48:54,681 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:48:54,681 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:48:54,683 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:48:54,684 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:48:54,686 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:48:54,686 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:49:03,570 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:49:03,571 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:49:03,572 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:49:03,573 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:49:03,573 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:49:03,574 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:49:03,575 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:49:03,577 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:49:03,578 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:49:03,581 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:49:03,582 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:49:11,094 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:49:11,095 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:49:11,096 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:49:11,096 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:49:11,097 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:49:11,098 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:49:11,099 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:49:11,099 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:49:11,100 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:49:11,101 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:49:11,103 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:50:27,833 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:50:27,835 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:50:27,836 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:50:27,837 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:50:27,839 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:50:27,840 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:50:27,841 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:50:27,842 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:50:27,843 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:50:27,843 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:50:27,845 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:53:51,096 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:53:51,097 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:53:51,098 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:53:51,099 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:53:51,099 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:53:51,100 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:53:51,101 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:53:51,102 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:53:51,103 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:53:51,103 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:53:51,105 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:57:24,730 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:57:24,730 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:57:24,730 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:57:24,733 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:57:24,733 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:57:24,733 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:57:24,736 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:57:24,737 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:57:24,738 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:57:24,739 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:57:24,739 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:57:34,240 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:57:34,241 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:57:34,242 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:57:34,242 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:57:34,244 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:57:34,246 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:57:34,246 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:57:34,247 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:57:34,248 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:57:34,249 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:57:34,249 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:59:44,261 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:59:44,263 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:59:44,264 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:59:44,265 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:59:44,266 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:59:44,267 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:59:44,268 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:59:44,269 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:59:44,270 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:59:44,270 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:59:44,271 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 15:59:53,480 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 15:59:53,481 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 15:59:53,482 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 15:59:53,483 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 15:59:53,483 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 15:59:53,485 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 15:59:53,485 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 15:59:53,487 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 15:59:53,488 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 15:59:53,489 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 15:59:53,490 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:02:20,609 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:02:20,610 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:02:20,611 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:02:20,612 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:02:20,612 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:02:20,613 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:02:20,614 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:02:20,615 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:02:20,615 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:02:20,616 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:02:20,618 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:07:25,514 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:07:25,515 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:07:25,516 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:07:25,517 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:07:25,517 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:07:25,518 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:07:25,519 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:07:25,520 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:07:25,520 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:07:25,521 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:07:25,522 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:14:58,584 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:14:58,584 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:14:58,585 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:14:58,586 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:14:58,586 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:14:58,588 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:14:58,588 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:14:58,589 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:14:58,590 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:14:58,591 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:14:58,591 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:33:33,518 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:33:33,519 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:33:33,520 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:33:33,520 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:33:33,522 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:33:33,522 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:33:33,523 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:33:33,525 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:33:33,525 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:33:33,526 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:33:33,527 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:33:39,903 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:33:39,909 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:33:39,910 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:33:39,910 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:33:39,912 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:33:39,914 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:33:39,915 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:33:39,916 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:33:39,916 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:33:39,919 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:33:39,920 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:33:45,062 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:33:45,064 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:33:45,069 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:33:45,071 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:33:45,072 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:33:45,073 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:33:45,074 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:33:45,074 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:33:45,075 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:33:45,076 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:33:45,077 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:33:54,154 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:33:54,155 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:33:54,156 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:33:54,156 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:33:54,159 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:33:54,159 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:33:54,160 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:33:54,162 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:33:54,163 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:33:54,163 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:33:54,164 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:34:07,852 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:34:07,853 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:34:07,854 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:34:07,859 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:34:07,861 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:34:07,862 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:34:07,863 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:34:07,864 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:34:07,865 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:34:07,866 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:34:07,867 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:34:15,767 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:34:15,767 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:34:15,769 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:34:15,770 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:34:15,771 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:34:15,772 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:34:15,773 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:34:15,776 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:34:15,777 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:34:15,778 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:34:15,779 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:34:41,941 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:34:41,943 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:34:41,944 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:34:41,946 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:34:41,947 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:34:41,948 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:34:41,951 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:34:41,953 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:34:41,955 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:34:41,956 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:34:41,958 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 16:57:22,150 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 16:57:22,151 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 16:57:22,152 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 16:57:22,153 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 16:57:22,153 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 16:57:22,155 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 16:57:22,156 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 16:57:22,156 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 16:57:22,157 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 16:57:22,159 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 16:57:22,160 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 17:04:17,431 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 17:04:17,432 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 17:04:17,433 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 17:04:17,434 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 17:04:17,434 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 17:04:17,435 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 17:04:17,436 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 17:04:17,437 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 17:04:17,438 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 17:04:17,438 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 17:04:17,439 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 17:07:05,608 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 17:07:05,609 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 17:07:05,609 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 17:07:05,610 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 17:07:05,612 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 17:07:05,613 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 17:07:05,615 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 17:07:05,616 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 17:07:05,617 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 17:07:05,618 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 17:07:05,619 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 17:10:41,141 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 17:10:41,142 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 17:10:41,142 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 17:10:41,144 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 17:10:41,144 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 17:10:41,145 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 17:10:41,145 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 17:10:41,147 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 17:10:41,148 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 17:10:41,149 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 17:10:41,149 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 17:11:51,962 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 17:11:51,963 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 17:11:51,964 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 17:11:51,964 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 17:11:51,965 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 17:11:51,966 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 17:11:51,966 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 17:11:51,967 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 17:11:51,968 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 17:11:51,968 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 17:11:51,969 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 18:59:48,823 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 18:59:48,823 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 18:59:48,824 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 18:59:48,825 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 18:59:48,827 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 18:59:48,829 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 18:59:48,830 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 18:59:48,831 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 18:59:48,832 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 18:59:48,832 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 18:59:48,833 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 19:00:22,285 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 19:00:22,291 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 19:00:22,292 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 19:00:22,293 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 19:00:22,294 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 19:00:22,296 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 19:00:22,297 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 19:00:22,298 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 19:00:22,300 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 19:00:22,301 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 19:00:22,303 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 19:00:30,243 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 19:00:30,244 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 19:00:30,249 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 19:00:30,250 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 19:00:30,251 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 19:00:30,252 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 19:00:30,253 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 19:00:30,254 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 19:00:30,255 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 19:00:30,256 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 19:00:30,257 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 19:00:46,813 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 19:00:46,814 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 19:00:46,815 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 19:00:46,821 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 19:00:46,822 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 19:00:46,823 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 19:00:46,824 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 19:00:46,826 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 19:00:46,827 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 19:00:46,828 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 19:00:46,829 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 19:01:12,630 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 19:01:12,631 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 19:01:12,631 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 19:01:12,639 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 19:01:12,639 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 19:01:12,639 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 19:01:12,642 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 19:01:12,642 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 19:01:12,644 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 19:01:12,644 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 19:01:12,644 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:06:32,440 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:06:32,441 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:06:32,442 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:06:33,310 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:06:33,310 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:06:33,311 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:06:33,313 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:06:33,313 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:06:33,314 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:06:33,315 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:06:33,317 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:07:00,884 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:07:00,885 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:07:00,886 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:07:01,700 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:07:01,701 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:07:01,702 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:07:01,703 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:07:01,704 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:07:01,705 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:07:01,707 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:07:01,707 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:07:22,560 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:07:22,560 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:07:22,560 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:07:23,462 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:07:23,463 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:07:23,464 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:07:23,465 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:07:23,466 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:07:23,467 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:07:23,467 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:07:23,468 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:07:42,254 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:07:42,254 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:07:42,256 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:07:43,091 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:07:43,092 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:07:43,093 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:07:43,094 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:07:43,094 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:07:43,096 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:07:43,096 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:07:43,097 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:08:05,470 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:08:05,471 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:08:05,472 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:08:06,353 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:08:06,354 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:08:06,355 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:08:06,356 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:08:06,357 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:08:06,358 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:08:06,359 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:08:06,359 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:08:27,182 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:08:27,183 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:08:27,183 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:08:28,037 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:08:28,038 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:08:28,039 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:08:28,041 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:08:28,042 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:08:28,042 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:08:28,043 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:08:28,044 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:08:47,130 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:08:47,131 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:08:47,133 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:08:47,949 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:08:47,951 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:08:47,952 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:08:47,954 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:08:47,954 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:08:47,955 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:08:47,955 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:08:47,957 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 21:31:02,308 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 21:31:02,310 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 21:31:02,314 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 21:31:03,693 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 21:31:03,694 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 21:31:03,694 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 21:31:03,695 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 21:31:03,695 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 21:31:03,697 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 21:31:03,698 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 21:31:03,699 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 23:53:12,178 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-28 23:53:12,179 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-28 23:53:12,179 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-28 23:53:12,180 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-28 23:53:12,182 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-28 23:53:12,182 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-28 23:53:12,184 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-28 23:53:12,185 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-28 23:53:12,185 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-28 23:53:12,186 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-28 23:53:12,187 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-28 23:53:12,187 - core.layers.base - INFO - Initialized Layer3ResearchAgents (Layer 1)
+2025-05-28 23:53:12,220 - core.layers.base - WARNING - Escalation triggered in layer 3: Low confidence (0.726 < 0.850)
+2025-05-29 00:06:16,631 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:06:16,632 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:06:16,634 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:06:17,562 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:06:17,563 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:06:17,564 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:06:17,564 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:06:17,565 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:06:17,567 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:06:17,568 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:06:17,568 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:22:27,604 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:22:27,604 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:22:27,606 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:22:28,367 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:22:28,368 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:22:28,369 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:22:28,370 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:22:28,371 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:22:28,372 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:22:28,374 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:22:28,375 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:22:56,045 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:22:56,046 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:22:56,047 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:22:56,048 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:22:56,050 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:22:56,051 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:22:56,052 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:22:56,053 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:22:56,054 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:22:56,055 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:22:56,056 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:22:56,056 - core.layers.base - INFO - Initialized Layer3ResearchAgents (Layer 1)
+2025-05-29 00:31:32,709 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:31:32,711 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:31:32,712 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:31:33,566 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:31:33,566 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:31:33,567 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:31:33,568 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:31:33,568 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:31:33,569 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:31:33,569 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:31:33,570 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:31:55,690 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:31:55,690 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:31:55,691 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:31:55,692 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:31:55,692 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:31:55,693 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:31:55,693 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:31:55,694 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:31:55,694 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:31:55,694 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:31:55,695 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:31:55,695 - core.layers.base - INFO - Initialized Layer3ResearchAgents (Layer 1)
+2025-05-29 00:31:55,734 - core.layers.base - WARNING - Escalation triggered in layer 3: Low confidence (0.726 < 0.850)
+2025-05-29 00:40:04,003 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:40:04,004 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:40:04,004 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:40:04,833 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:40:04,833 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:40:04,835 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:40:05,259 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:40:05,260 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:40:05,260 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:40:05,262 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:40:05,262 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:40:05,263 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:40:05,263 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:40:05,263 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:40:05,665 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:40:05,666 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:40:05,666 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:40:05,667 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:40:05,667 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:40:05,668 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:40:05,668 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:40:05,668 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:47:17,359 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:47:18,129 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:47:18,129 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:47:18,130 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:47:18,131 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:47:18,131 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:47:18,132 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:47:18,133 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:47:18,133 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:47:18,134 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:47:18,134 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:48:02,850 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:48:03,694 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:48:03,695 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:48:03,696 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:48:03,697 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:48:03,697 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:48:03,698 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:48:03,698 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:48:03,699 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:48:03,699 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:48:03,700 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:48:23,598 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:48:24,403 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:48:24,403 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:48:24,403 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:48:24,405 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:48:24,405 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:48:24,406 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:48:24,407 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:48:24,407 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:48:24,408 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:48:24,409 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:48:32,286 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:48:33,094 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:48:33,097 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:48:33,098 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:48:33,099 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:48:33,099 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:48:33,100 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:48:33,100 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:48:33,101 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:48:33,102 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:48:33,103 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:48:59,411 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:49:00,222 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:49:00,226 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:49:00,228 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:49:00,228 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:49:00,229 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:49:00,229 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:49:00,230 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:49:00,230 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:49:00,231 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:49:00,231 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 00:49:26,274 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 00:49:27,163 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 00:49:27,167 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 00:49:27,168 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 00:49:27,168 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 00:49:27,169 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 00:49:27,169 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 00:49:27,170 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 00:49:27,170 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 00:49:27,171 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 00:49:27,171 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 01:37:06,533 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 01:37:07,919 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 01:37:07,920 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 01:37:07,921 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 01:37:07,921 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 01:37:07,923 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 01:37:07,924 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 01:37:07,926 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 01:37:07,927 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 01:37:07,929 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 01:37:07,932 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 04:00:36,867 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:00:37,977 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:00:37,978 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:00:37,978 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:00:37,979 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:00:37,981 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:00:37,982 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 04:00:37,983 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 04:00:37,984 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 04:00:37,985 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 04:00:37,986 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 04:02:31,856 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:02:32,915 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:02:32,916 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:02:32,917 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:02:32,918 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:02:32,919 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:02:32,919 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 04:02:32,920 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 04:02:32,921 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 04:02:32,921 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 04:02:32,922 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 04:03:45,180 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:03:46,167 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:03:46,167 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:03:46,169 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:03:46,170 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:03:46,170 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:03:46,171 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 04:03:46,173 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 04:03:46,173 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 04:03:46,174 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 04:03:46,175 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 04:03:57,985 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:03:58,830 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:03:58,830 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:03:58,830 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:03:58,830 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:03:58,834 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:06:19,649 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:06:20,581 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:06:20,582 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:06:20,583 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:06:20,585 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:06:20,587 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:19:49,078 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:19:50,268 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:19:50,269 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:19:50,270 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:19:50,271 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:19:50,272 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:23:58,845 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:23:59,994 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:23:59,994 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:23:59,994 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:23:59,999 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:23:59,999 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:52:33,119 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:52:33,880 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:52:33,881 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:52:33,882 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:52:33,882 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:52:33,883 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:53:32,261 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:53:32,984 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:53:32,985 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:53:32,986 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:53:32,986 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:53:32,987 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:55:42,066 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:55:42,950 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:55:42,951 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:55:42,951 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:55:42,952 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:55:42,962 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:57:00,854 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 04:57:01,767 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 04:57:01,768 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 04:57:01,769 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 04:57:01,769 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 04:57:01,770 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 04:57:01,771 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 04:57:01,772 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 04:57:01,772 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 04:57:01,773 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 04:57:01,774 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 12:25:57,135 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:25:58,658 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:25:58,659 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:25:58,661 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:25:58,661 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 12:25:58,669 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 12:25:58,672 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 12:25:58,673 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 12:25:58,674 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 12:25:58,676 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 12:25:58,677 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 12:46:59,154 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:46:59,903 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:46:59,904 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:46:59,905 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:46:59,906 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 12:46:59,907 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 12:46:59,908 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 12:46:59,909 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 12:46:59,910 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 12:46:59,911 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 12:46:59,911 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 12:49:15,132 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:49:16,088 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:49:16,091 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:49:16,091 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:49:16,092 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 12:49:16,093 - core.layers.base - INFO - Registering layer 5 via decorator: Layer5Gatekeeper
+2025-05-29 12:49:16,094 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 12:49:16,094 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 12:49:16,096 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 12:49:16,097 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 12:49:16,097 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 12:53:03,447 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:53:04,626 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:53:04,627 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:53:04,628 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:53:04,629 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 12:53:16,979 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:53:18,332 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:53:18,333 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:53:18,334 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:53:18,334 - core.layers.base - INFO - Registering layer 4 via decorator: Layer4POVEngine
+2025-05-29 12:53:36,221 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:53:37,188 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:53:37,189 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:53:37,190 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:53:53,955 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:53:55,040 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:53:55,041 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:53:55,042 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 12:54:06,979 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 12:54:07,879 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 12:54:07,884 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 12:54:07,885 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:02:13,092 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:02:13,964 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:02:13,965 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:02:13,966 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:04:22,134 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:04:22,908 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:04:22,909 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:04:22,909 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:04:22,932 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:04:22,934 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:04:22,935 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:04:22,935 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:04:22,936 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:44:21,379 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:44:22,217 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:44:22,218 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:44:22,219 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:44:22,242 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:44:22,243 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:44:22,244 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:44:22,245 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:44:22,246 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:46:00,740 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:46:01,576 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:46:01,576 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:46:01,577 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:46:01,597 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:46:01,598 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:46:01,599 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:46:01,600 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:46:01,601 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:46:32,610 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:46:33,453 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:46:33,454 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:46:33,455 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:46:33,474 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:46:33,475 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:46:33,476 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:46:33,477 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:46:33,478 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:46:35,285 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:46:36,280 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:46:36,283 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:46:36,284 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:46:36,300 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:46:36,301 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:46:36,302 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:46:36,303 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:46:36,304 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:49:54,622 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:49:54,623 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:49:54,624 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:49:54,625 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:49:54,641 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:49:54,642 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:49:54,643 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:49:54,644 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:49:54,644 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:49:54,644 - core.layers.base - INFO - Initialized Layer3ResearchAgents (Layer 1)
+2025-05-29 13:49:54,681 - core.layers.base - WARNING - Escalation triggered in layer 3: Low confidence (0.726 < 0.850)
+2025-05-29 13:52:41,141 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:52:42,094 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:52:42,095 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:52:42,095 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:52:42,109 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:52:42,110 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:52:42,111 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:52:42,112 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:52:42,113 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:53:53,652 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:53:53,652 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:53:53,653 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:53:53,655 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:53:53,671 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:53:53,672 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:53:53,672 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:53:53,673 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:53:53,674 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:53:53,674 - core.layers.base - INFO - Initialized Layer3ResearchAgents (Layer 1)
+2025-05-29 13:53:53,690 - core.layers.base - WARNING - Escalation triggered in layer 3: Low confidence (0.726 < 0.850)
+2025-05-29 13:54:06,883 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:54:07,854 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:54:07,856 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:54:07,857 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:54:07,871 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:54:07,873 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:54:07,874 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:54:07,874 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:54:07,875 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:56:21,880 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:56:22,627 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:56:22,628 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:56:22,628 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:56:22,644 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:56:22,645 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:56:22,646 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:56:22,646 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:56:22,647 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 13:56:23,185 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 13:56:24,143 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 13:56:24,146 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 13:56:24,147 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 13:56:24,162 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 13:56:24,163 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 13:56:24,164 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 13:56:24,165 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 13:56:24,166 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 14:11:10,439 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 14:11:11,230 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 14:11:11,231 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 14:11:11,233 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 14:11:11,256 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 14:11:11,257 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 14:11:11,258 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 14:11:11,259 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 14:11:11,260 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 14:13:20,315 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 14:13:21,110 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 14:13:21,111 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 14:13:21,111 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 14:13:21,130 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 14:13:21,131 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 14:13:21,132 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 14:13:21,133 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 14:13:21,134 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 14:15:20,486 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 14:15:21,314 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 14:15:21,315 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 14:15:21,315 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 14:15:21,329 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 14:15:21,330 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 14:15:21,331 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 14:15:21,332 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 14:15:21,332 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment
+2025-05-29 14:52:54,114 - core.layers.base - INFO - LayerRegistry initialized
+2025-05-29 14:52:54,964 - core.layers.base - INFO - Registering layer 1 via decorator: Layer1SimulationEntry
+2025-05-29 14:52:54,965 - core.layers.base - INFO - Registering layer 2 via decorator: Layer2MemoryDatabase
+2025-05-29 14:52:54,966 - core.layers.base - INFO - Registering layer 3 via decorator: Layer3ResearchAgents
+2025-05-29 14:52:54,987 - core.layers.base - INFO - Registering layer 6 via decorator: Layer6AdvancedReasoning
+2025-05-29 14:52:54,988 - core.layers.base - INFO - Registering layer 7 via decorator: Layer7QuantumReasoning
+2025-05-29 14:52:54,989 - core.layers.base - INFO - Registering layer 8 via decorator: Layer8SocietalEthics
+2025-05-29 14:52:54,990 - core.layers.base - INFO - Registering layer 9 via decorator: Layer9MetaAnalysisVerification
+2025-05-29 14:52:54,993 - core.layers.base - INFO - Registering layer 10 via decorator: Layer10EmergenceContainment

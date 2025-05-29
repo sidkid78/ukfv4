@@ -1,0 +1,16 @@
+{
+  "id": "research_agent_1612d5d8",
+  "persona": "synthesizer",
+  "role": "Combine insights and build consensus",
+  "query_focus": "What are the ethical implications of AI in healthcare?",
+  "strategy": {
+    "approach": "focused",
+    "agent_count": 5,
+    "specialization_needed": false,
+    "evidence_threshold": 0.8,
+    "consensus_required": true,
+    "research_depth": "deep"
+  },
+  "spawned_at": "2025-05-29T13:49:54.650496",
+  "active": true
+}

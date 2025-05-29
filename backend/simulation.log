@@ -1,0 +1,92 @@
+2025-05-28 17:12:18,921 - api.simulation - INFO - Starting simulation with session_id: 2993debe-3c1d-4642-aa3c-fe236e060ccb
+2025-05-28 17:12:18,921 - api.simulation - INFO - Session 2993debe-3c1d-4642-aa3c-fe236e060ccb created and stored in run_store
+2025-05-28 17:12:18,921 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-28 17:12:34,306 - api.simulation - INFO - Received Gemini response: 2c96441a-e732-47c5-adba-970b3dbc8319
+2025-05-28 17:12:34,308 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-28 17:12:34,308 - api.simulation - INFO - Storing trace events for session 2993debe-3c1d-4642-aa3c-fe236e060ccb
+2025-05-28 17:12:34,310 - api.simulation - INFO - Stored 5 trace events for session 2993debe-3c1d-4642-aa3c-fe236e060ccb in database
+2025-05-28 17:12:34,310 - api.simulation - INFO - Updated session 2993debe-3c1d-4642-aa3c-fe236e060ccb status to READY
+2025-05-28 19:35:38,130 - api.simulation - INFO - Starting simulation with session_id: 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:35:38,130 - api.simulation - INFO - Session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd created and stored in run_store
+2025-05-28 19:35:38,131 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-28 19:35:39,070 - api.simulation - INFO - Received Gemini response: bc18a05f-db9d-4c6f-bd20-3777b4fc6269
+2025-05-28 19:35:39,071 - api.simulation - INFO - Calculated initial confidence score: 0.8655999999999999
+2025-05-28 19:35:39,071 - api.simulation - INFO - Storing trace events for session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:35:39,071 - api.simulation - INFO - Stored 5 trace events for session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd in database
+2025-05-28 19:35:39,072 - api.simulation - INFO - Updated session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd status to READY
+2025-05-28 19:41:09,750 - api.simulation - INFO - Attempting to retrieve session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:41:09,751 - api.simulation - INFO - Successfully retrieved session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:41:58,477 - api.simulation - INFO - Attempting to retrieve session 2993debe-3c1d-4642-aa3c-fe236e060ccb 
+2025-05-28 19:41:58,477 - api.simulation - WARNING - Session 2993debe-3c1d-4642-aa3c-fe236e060ccb  not found in run_store
+2025-05-28 19:44:33,329 - api.simulation - INFO - Attempting to retrieve session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:44:33,329 - api.simulation - INFO - Successfully retrieved session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:57:04,431 - api.simulation - INFO - Processing step request for session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd
+2025-05-28 19:57:04,431 - api.simulation - ERROR - Error stepping simulation 28b978c0-9f0b-4e52-8e81-4cd4bba7defd: Session 28b978c0-9f0b-4e52-8e81-4cd4bba7defd not found
+2025-05-28 19:57:55,521 - api.simulation - INFO - Processing step request for session bc18a05f-db9d-4c6f-bd20-3777b4fc6269
+2025-05-28 19:57:55,521 - api.simulation - WARNING - Session bc18a05f-db9d-4c6f-bd20-3777b4fc6269 not found during step request
+2025-05-28 19:58:42,573 - api.simulation - INFO - Processing step request for session 2993debe-3c1d-4642-aa3c-fe236e060ccb
+2025-05-28 19:58:42,573 - api.simulation - WARNING - Session 2993debe-3c1d-4642-aa3c-fe236e060ccb not found during step request
+2025-05-28 19:58:58,517 - api.simulation - INFO - Listing all simulation sessions
+2025-05-28 19:59:50,005 - api.simulation - INFO - Health check: {'status': 'healthy', 'sessions_count': 1, 'websocket_connections': 0}
+2025-05-28 20:55:10,856 - api.simulation - INFO - Starting simulation with session_id: 7616fc53-4000-45ab-81d8-0de4290a6253
+2025-05-28 20:55:10,859 - api.simulation - INFO - Session 7616fc53-4000-45ab-81d8-0de4290a6253 created and stored in run_store
+2025-05-28 20:55:10,860 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-28 20:55:24,639 - api.simulation - INFO - Received Gemini response: a329450e-cba4-4538-ae79-15fd19a19d3c
+2025-05-28 20:55:24,640 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-28 20:55:24,640 - api.simulation - INFO - Storing trace events for session 7616fc53-4000-45ab-81d8-0de4290a6253
+2025-05-28 20:55:24,641 - api.simulation - INFO - Stored 5 trace events for session 7616fc53-4000-45ab-81d8-0de4290a6253 in database
+2025-05-28 20:55:24,641 - api.simulation - INFO - Updated session 7616fc53-4000-45ab-81d8-0de4290a6253 status to READY
+2025-05-29 01:06:38,065 - api.simulation - INFO - Starting simulation with session_id: 9c18161b-5a3e-4c4d-8512-401cb235144c
+2025-05-29 01:06:38,069 - api.simulation - INFO - Session 9c18161b-5a3e-4c4d-8512-401cb235144c created and stored in run_store
+2025-05-29 01:06:38,070 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 01:06:49,972 - api.simulation - INFO - Received Gemini response: 9d0a52e7-ae7a-4ddd-82b0-20cf48ee3e6f
+2025-05-29 01:06:49,975 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 01:06:49,975 - api.simulation - INFO - Storing trace events for session 9c18161b-5a3e-4c4d-8512-401cb235144c
+2025-05-29 01:06:49,976 - api.simulation - INFO - Stored 5 trace events for session 9c18161b-5a3e-4c4d-8512-401cb235144c in database
+2025-05-29 01:06:49,976 - api.simulation - INFO - Updated session 9c18161b-5a3e-4c4d-8512-401cb235144c status to READY
+2025-05-29 01:06:54,069 - api.simulation - INFO - Processing step request for session 9c18161b-5a3e-4c4d-8512-401cb235144c
+2025-05-29 01:06:54,071 - api.simulation - ERROR - Error stepping simulation 9c18161b-5a3e-4c4d-8512-401cb235144c: Session 9c18161b-5a3e-4c4d-8512-401cb235144c not found
+2025-05-29 04:57:24,430 - api.simulation - INFO - Starting simulation with session_id: 1b29e5bf-e31d-4e8d-a854-a54383ba6c78
+2025-05-29 04:57:24,430 - api.simulation - INFO - Session 1b29e5bf-e31d-4e8d-a854-a54383ba6c78 created and stored in run_store
+2025-05-29 04:57:24,430 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 04:57:41,103 - api.simulation - INFO - Received Gemini response: 3cfa1af7-ef0b-4a1c-ab52-788601603037
+2025-05-29 04:57:41,103 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 04:57:41,103 - api.simulation - INFO - Storing trace events for session 1b29e5bf-e31d-4e8d-a854-a54383ba6c78
+2025-05-29 04:57:41,103 - api.simulation - INFO - Stored 5 trace events for session 1b29e5bf-e31d-4e8d-a854-a54383ba6c78 in database
+2025-05-29 04:57:41,103 - api.simulation - INFO - Updated session 1b29e5bf-e31d-4e8d-a854-a54383ba6c78 status to READY
+2025-05-29 13:50:38,621 - api.simulation - INFO - Starting simulation with session_id: 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece
+2025-05-29 13:50:38,622 - api.simulation - INFO - Session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece created and stored in run_store
+2025-05-29 13:50:38,622 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 13:50:51,879 - api.simulation - INFO - Received Gemini response: 63ea8149-ca19-46fe-9c15-274ec7e3e8a4
+2025-05-29 13:50:51,882 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 13:50:51,882 - api.simulation - INFO - Storing trace events for session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece
+2025-05-29 13:50:51,882 - api.simulation - INFO - Stored 5 trace events for session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece in database
+2025-05-29 13:50:51,882 - api.simulation - INFO - Updated session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece status to READY
+2025-05-29 13:50:55,984 - api.simulation - INFO - Processing step request for session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece
+2025-05-29 13:50:55,984 - api.simulation - ERROR - Error stepping simulation 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece: Session 85e2ab3f-11d4-4d55-86da-2d24bbeb1ece not found
+2025-05-29 14:58:08,563 - api.simulation - INFO - Starting simulation with session_id: 8cde2307-5821-4265-bd99-3fb3c66920c3
+2025-05-29 14:58:08,563 - api.simulation - INFO - Session 8cde2307-5821-4265-bd99-3fb3c66920c3 created and stored in run_store
+2025-05-29 14:58:08,564 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 14:58:46,635 - api.simulation - INFO - Received Gemini response: d9a638be-5741-4001-b5c4-5c5184ea7aaf
+2025-05-29 14:58:46,640 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 14:58:46,640 - api.simulation - INFO - Storing trace events for session 8cde2307-5821-4265-bd99-3fb3c66920c3
+2025-05-29 14:58:46,640 - api.simulation - INFO - Stored 5 trace events for session 8cde2307-5821-4265-bd99-3fb3c66920c3 in database
+2025-05-29 14:58:46,641 - api.simulation - INFO - Updated session 8cde2307-5821-4265-bd99-3fb3c66920c3 status to READY
+2025-05-29 15:03:24,157 - api.simulation - INFO - Starting simulation with session_id: 0e9a16d3-ded0-448b-9de9-723d324e63b8
+2025-05-29 15:03:24,158 - api.simulation - INFO - Session 0e9a16d3-ded0-448b-9de9-723d324e63b8 created and stored in run_store
+2025-05-29 15:03:24,159 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 15:04:05,499 - api.simulation - INFO - Received Gemini response: 0166cd15-83a0-45fb-9f6d-d6e517c9066b
+2025-05-29 15:04:05,506 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 15:04:05,507 - api.simulation - INFO - Storing trace events for session 0e9a16d3-ded0-448b-9de9-723d324e63b8
+2025-05-29 15:04:05,507 - api.simulation - INFO - Stored 5 trace events for session 0e9a16d3-ded0-448b-9de9-723d324e63b8 in database
+2025-05-29 15:04:05,507 - api.simulation - INFO - Updated session 0e9a16d3-ded0-448b-9de9-723d324e63b8 status to READY
+2025-05-29 15:04:48,734 - api.simulation - INFO - Starting simulation with session_id: c40bde13-9c2e-4031-b7ae-d2c1ed62021b
+2025-05-29 15:04:48,734 - api.simulation - INFO - Session c40bde13-9c2e-4031-b7ae-d2c1ed62021b created and stored in run_store
+2025-05-29 15:04:48,734 - api.simulation - INFO - Sending request to Gemini service: gemini-2.5-flash-preview-05-20
+2025-05-29 15:05:03,751 - api.simulation - INFO - Received Gemini response: a7195145-30f9-461b-8963-fe0b7c6b98ba
+2025-05-29 15:05:03,753 - api.simulation - INFO - Calculated initial confidence score: 0.94
+2025-05-29 15:05:03,753 - api.simulation - INFO - Storing trace events for session c40bde13-9c2e-4031-b7ae-d2c1ed62021b
+2025-05-29 15:05:03,754 - api.simulation - INFO - Stored 5 trace events for session c40bde13-9c2e-4031-b7ae-d2c1ed62021b in database
+2025-05-29 15:05:03,754 - api.simulation - INFO - Updated session c40bde13-9c2e-4031-b7ae-d2c1ed62021b status to READY
+2025-05-29 15:15:45,343 - api.simulation - INFO - Attempting to retrieve session c40bde13-9c2e-4031-b7ae-d2c1ed62021b
+2025-05-29 15:15:45,343 - api.simulation - INFO - Successfully retrieved session c40bde13-9c2e-4031-b7ae-d2c1ed62021b

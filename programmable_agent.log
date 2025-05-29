@@ -1,0 +1,9 @@
+2025-05-27 18:29:34,888 - __main__ - INFO - Gemini client configured successfully
+2025-05-27 18:32:00,607 - __main__ - INFO - Gemini client configured successfully
+2025-05-27 18:32:00,839 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2025-05-27 18:39:25,930 - __main__ - INFO - Gemini client configured successfully
+2025-05-27 18:39:26,154 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2025-05-27 18:45:14,124 - __main__ - INFO - Gemini client configured successfully
+2025-05-27 18:45:14,166 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export
+2025-05-27 18:46:01,784 - __main__ - INFO - Gemini client configured successfully
+2025-05-27 18:46:01,814 - openai.agents - WARNING - OPENAI_API_KEY is not set, skipping trace export

@@ -1,0 +1,8 @@
+{
+  "approach": "focused",
+  "agent_count": 5,
+  "specialization_needed": false,
+  "evidence_threshold": 0.8,
+  "consensus_required": true,
+  "research_depth": "deep"
+}

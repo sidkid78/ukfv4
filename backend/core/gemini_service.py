@@ -25,10 +25,8 @@ logger = logging.getLogger(__name__)
 
 class GeminiModel(str, Enum):
     """Available Gemini models"""
-    GEMINI_PRO_25 = "gemini-2.5-pro-preview-03-25"
-    GEMINI_PRO_25_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
+    GEMINI_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
     GEMINI_FLASH = "gemini-2.0-flash"
-    GEMINI_PRO_25_FLASH = "gemini-2.5-flash-preview"
 
 class GeminiConfig(BaseSettings):
     """Gemini API configuration"""
@@ -318,7 +316,7 @@ class GeminiService:
             system_prompt="Provide comprehensive research with sources and analysis.",
             persona=persona,
             context=context,
-            model=GeminiModel.GEMINI_PRO
+            model=GeminiModel.GEMINI_FLASH_0520
         )
         return await self.generate_async(request, session_id, layer=3)
     

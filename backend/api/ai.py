@@ -238,9 +238,8 @@ async def check_content_safety(
 def _get_model_description(model: GeminiModel) -> str:
     """Get description for a Gemini model"""
     descriptions = {
-        GeminiModel.GEMINI_PRO: "Most capable model for complex reasoning and analysis",
+        GeminiModel.GEMINI_25_FLASH_0520: "Most capable model for complex reasoning and analysis",
         GeminiModel.GEMINI_FLASH: "Fastest model for quick responses and simple tasks",
-        GeminiModel.GEMINI_PRO_VISION: "Multimodal model capable of processing images and text"
     }
     return descriptions.get(model, "Gemini AI model")
 

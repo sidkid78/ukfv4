@@ -10,7 +10,7 @@ from .layer1 import Layer1SimulationEntry
 from .layer2 import Layer2MemoryDatabase 
 from .layer3 import Layer3ResearchAgents
 from .layer4 import Layer4POVEngine
-from .layer5 import Layer5Gatekeeper
+from .layer5 import Layer5GatekeeperTeamManagement   
 from .layer6 import Layer6AdvancedReasoning
 from .layer7 import Layer7QuantumReasoning
 from .layer8 import Layer8SocietalEthics
@@ -22,7 +22,7 @@ LAYER_CLASSES = [
     Layer2MemoryDatabase,
     Layer3ResearchAgents,
     Layer4POVEngine,
-    Layer5Gatekeeper,
+    Layer5GatekeeperTeamManagement,
     Layer6AdvancedReasoning,
     Layer7QuantumReasoning,
     Layer8SocietalEthics,
@@ -42,6 +42,6 @@ def get_layer_instance(layer_id: int):
 
 __all__ = [
     'BaseLayer',
-    'Layer1SimulationEntry', 'Layer2MemoryDatabase', 'Layer3ResearchAgents', 'Layer4POVEngine', 'Layer5Gatekeeper',
+    'Layer1SimulationEntry', 'Layer2MemoryDatabase', 'Layer3ResearchAgents', 'Layer4POVEngine', 'Layer5GatekeeperTeamManagement',
     'Layer6AdvancedReasoning', 'Layer7QuantumReasoning', 'Layer8SocietalEthics', 'Layer9MetaAnalysisVerification', 'Layer10EmergenceContainment'
 ]

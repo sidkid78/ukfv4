@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Agent } from '@/types/simulation';
@@ -32,19 +32,7 @@ export function AgentPanel({ agents: propAgents, sessionId, onAgentsChange }: Ag
   const [newAgentPersona, setNewAgentPersona] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  // Load agents on mount and when sessionId changes
-  useEffect(() => {
-    loadAgents();
-  }, [sessionId]);
-
-  // Update local state when prop changes
-  useEffect(() => {
-    if (propAgents) {
-      setAgents(propAgents);
-    }
-  }, [propAgents]);
-
-  const loadAgents = async () => {
+  const loadAgents = useCallback(async () => {
     try {
       setIsLoading(true);
       const fetchedAgents = await agentAPI.list();
@@ -58,7 +46,18 @@ export function AgentPanel({ agents: propAgents, sessionId, onAgentsChange }: Ag
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [onAgentsChange]);
+
+  useEffect(() => {
+    loadAgents();
+  }, [sessionId, loadAgents]);
+
+  // Update local state when prop changes
+  useEffect(() => {
+    if (propAgents) {
+      setAgents(propAgents);
+    }
+  }, [propAgents]);
 
   const handleSpawnAgent = async () => {
     if (!newAgentName.trim() || !newAgentRole.trim()) {

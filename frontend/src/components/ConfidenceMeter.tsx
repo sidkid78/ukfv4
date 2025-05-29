@@ -19,16 +19,16 @@ export function ConfidenceMeter({
 }: ConfidenceMeterProps) {
   
   const currentLayer = layers[layers.length - 1];
-  const currentConfidence = currentLayer?.confidence?.score || 0;
-  const currentDelta = currentLayer?.confidence?.delta || 0;
-  const entropy = currentLayer?.confidence?.entropy || 0;
+  const currentConfidence = currentLayer?.confidence?.score ?? 0;
+  const currentDelta = currentLayer?.confidence?.delta ?? 0;
+  const entropy = currentLayer?.confidence?.entropy ?? 0;
 
-  // Calculate overall simulation confidence
+  // Calculate overall simulation confidence with null checks
   const overallConfidence = layers.length > 0 
-    ? layers.reduce((acc, layer) => acc + layer.confidence.score, 0) / layers.length
+    ? layers.reduce((acc, layer) => acc + (layer?.confidence?.score ?? 0), 0) / layers.length
     : 0;
 
-  // Confidence thresholds
+  // Rest of the code remains the same...
   const thresholds = {
     critical: 0.5,    // Below this triggers containment
     warning: 0.8,     // Below this shows warning
@@ -164,39 +164,39 @@ export function ConfidenceMeter({
           <CardContent className="pt-6">
             <h3 className="text-sm font-medium text-gray-700 mb-3">Layer History</h3>
             <div className="space-y-2">
-              {layers.map((layer, index) => (
-                <div key={layer.layer} className="flex items-center gap-3 text-sm">
+              {layers.map((layer, idx) => (
+                <div key={layer.layer ?? idx} className="flex items-center gap-3 text-sm">
                   <Badge variant="outline" className="w-12 justify-center">
                     L{layer.layer}
                   </Badge>
                   
                   <div className="flex-1">
                     <Progress 
-                      value={layer.confidence.score * 100} 
+                      value={(layer?.confidence?.score ?? 0) * 100} 
                       className="h-2"
                     />
                   </div>
                   
                   <div className="w-16 text-right font-mono">
-                    {(layer.confidence.score * 100).toFixed(1)}%
+                    {((layer?.confidence?.score ?? 0) * 100).toFixed(1)}%
                   </div>
                   
-                  {layer.confidence.delta !== 0 && (
+                  {layer?.confidence?.delta !== 0 && (
                     <div className={cn(
                       'w-12 text-xs text-right',
-                      layer.confidence.delta > 0 ? 'text-green-500' : 'text-red-500'
+                      (layer?.confidence?.delta ?? 0) > 0 ? 'text-green-500' : 'text-red-500'
                     )}>
-                      {layer.confidence.delta > 0 ? '+' : ''}
-                      {(layer.confidence.delta * 100).toFixed(1)}%
+                      {(layer?.confidence?.delta ?? 0) > 0 ? '+' : ''}
+                      {Math.abs((layer?.confidence?.delta ?? 0) * 100).toFixed(1)}%
                     </div>
                   )}
 
                   {/* Status indicators */}
                   <div className="flex gap-1">
-                    {layer.escalation && (
+                    {layer?.escalation && (
                       <AlertTriangle className="w-3 h-3 text-orange-500" />
                     )}
-                    {layer.confidence.score >= thresholds.good && (
+                    {(layer?.confidence?.score ?? 0) >= thresholds.good && (
                       <CheckCircle className="w-3 h-3 text-green-500" />
                     )}
                   </div>

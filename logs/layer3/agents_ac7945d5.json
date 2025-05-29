@@ -1,0 +1,85 @@
+{
+  "agents": [
+    {
+      "id": "research_agent_32d1dc4a",
+      "persona": "domain_expert",
+      "role": "Expert analysis and fact-checking",
+      "query_focus": "What are the ethical implications of AI in healthcare?",
+      "strategy": {
+        "approach": "focused",
+        "agent_count": 5,
+        "specialization_needed": false,
+        "evidence_threshold": 0.8,
+        "consensus_required": true,
+        "research_depth": "deep"
+      },
+      "spawned_at": "2025-05-29T13:49:54.648151",
+      "active": true
+    },
+    {
+      "id": "research_agent_4444210f",
+      "persona": "critical_thinker",
+      "role": "Challenge assumptions and find flaws",
+      "query_focus": "What are the ethical implications of AI in healthcare?",
+      "strategy": {
+        "approach": "focused",
+        "agent_count": 5,
+        "specialization_needed": false,
+        "evidence_threshold": 0.8,
+        "consensus_required": true,
+        "research_depth": "deep"
+      },
+      "spawned_at": "2025-05-29T13:49:54.649455",
+      "active": true
+    },
+    {
+      "id": "research_agent_24a185e5",
+      "persona": "creative_reasoner",
+      "role": "Generate alternative perspectives",
+      "query_focus": "What are the ethical implications of AI in healthcare?",
+      "strategy": {
+        "approach": "focused",
+        "agent_count": 5,
+        "specialization_needed": false,
+        "evidence_threshold": 0.8,
+        "consensus_required": true,
+        "research_depth": "deep"
+      },
+      "spawned_at": "2025-05-29T13:49:54.649455",
+      "active": true
+    },
+    {
+      "id": "research_agent_1612d5d8",
+      "persona": "synthesizer",
+      "role": "Combine insights and build consensus",
+      "query_focus": "What are the ethical implications of AI in healthcare?",
+      "strategy": {
+        "approach": "focused",
+        "agent_count": 5,
+        "specialization_needed": false,
+        "evidence_threshold": 0.8,
+        "consensus_required": true,
+        "research_depth": "deep"
+      },
+      "spawned_at": "2025-05-29T13:49:54.650496",
+      "active": true
+    },
+    {
+      "id": "research_agent_058bde46",
+      "persona": "safety_analyst",
+      "role": "Identify risks and safety concerns",
+      "query_focus": "What are the ethical implications of AI in healthcare?",
+      "strategy": {
+        "approach": "focused",
+        "agent_count": 5,
+        "specialization_needed": false,
+        "evidence_threshold": 0.8,
+        "consensus_required": true,
+        "research_depth": "deep"
+      },
+      "spawned_at": "2025-05-29T13:49:54.650496",
+      "active": true
+    }
+  ],
+  "spawn_timestamp": "2025-05-29T13:49:54.650496"
+}

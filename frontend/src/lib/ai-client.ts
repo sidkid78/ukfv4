@@ -22,7 +22,7 @@ import {
     constructor(
       message: string,
       public status: number,
-      public response?: Record<string, any>
+      public response?: Record<string, unknown>
     ) {
       super(message);
       this.name = 'APIError';
@@ -150,7 +150,7 @@ import {
     // Layer-specific AI Analysis
     async analyzeQuery(
       query: string, 
-      context?: Record<string, any>, 
+      context?: Record<string, unknown>, 
       sessionId?: string
     ): Promise<{
       query: string;
@@ -174,7 +174,7 @@ import {
     async generateResearch(
       topic: string,
       persona: string = 'domain_expert',
-      context?: Record<string, any>,
+      context?: Record<string, unknown>,
       sessionId?: string
     ): Promise<{
       topic: string;
@@ -221,7 +221,7 @@ import {
     // Safety Analysis
     async checkSafety(
       content: string,
-      context?: Record<string, any>,
+      context?: Record<string, unknown>,
       layer: number = 0
     ): Promise<AISafetyAnalysis> {
       return apiRequest<AISafetyAnalysis>('/api/ai/safety-check', {
@@ -333,7 +333,7 @@ import {
   
     async generateSuggestion(
       userInput: string,
-      context?: Record<string, any>
+      context?: Record<string, unknown>
     ): Promise<AIQuerySuggestion> {
       // This would use AI to generate a suggestion based on user input
       // For now, return a mock suggestion

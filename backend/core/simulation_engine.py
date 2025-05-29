@@ -35,7 +35,7 @@ class SimulationEngine:
         
         # Configuration
         self.max_layers = 10
-        self.global_confidence_threshold = 0.995
+        self.global_confidence_threshold = 0.85  # More realistic threshold
         self.max_simulation_time = 300.0  # 5 minutes max
         self.containment_threshold = 0.5
         

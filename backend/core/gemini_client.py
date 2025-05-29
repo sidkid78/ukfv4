@@ -19,10 +19,8 @@ logger = logging.getLogger(__name__)
 
 class GeminiModel(str, Enum):
     """Available Gemini models"""
-    GEMINI_PRO_25 = "gemini-2.5-pro-preview-03-25"
-    GEMINI_PRO_25_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
+    GEMINI_FLASH_0520 = "gemini-2.5-flash-preview-05-20"
     GEMINI_FLASH = "gemini-2.0-flash"
-    GEMINI_PRO_25_FLASH = "gemini-2.5-flash-preview"
 
 class GeminiRole(str, Enum):
     """Roles for Gemini conversations"""
@@ -33,7 +31,7 @@ class GeminiRole(str, Enum):
 class GeminiRequest(BaseModel):
     """Request structure for Gemini API calls"""
     prompt: str
-    model: GeminiModel = GeminiModel.GEMINI_PRO_25
+    model: GeminiModel = GeminiModel.GEMINI_FLASH_0520
     temperature: float = 0.7
     max_tokens: Optional[int] = None
     system_prompt: Optional[str] = None
@@ -259,7 +257,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_PRO_25,
+            model=GeminiModel.GEMINI_FLASH_0520,
             temperature=0.6,  # Lower temperature for more consistent reasoning
             context={"layer": layer_number, "simulation_context": simulation_context}
         )
@@ -298,7 +296,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_PRO_25_FLASH_0520,  # Faster for agent responses
+            model=GeminiModel.GEMINI_FLASH_0520,  # Faster for agent responses
             temperature=0.8,  # Higher temperature for diverse agent perspectives
             context={"agent_role": agent_role, "persona": persona}
         )
@@ -343,7 +341,7 @@ class GeminiClient:
         request = GeminiRequest(
             prompt=prompt,
             system_prompt=system_prompt,
-            model=GeminiModel.GEMINI_PRO_25,
+            model=GeminiModel.GEMINI_FLASH_0520,
             temperature=0.3,  # Low temperature for consistent safety analysis
             context=context
         )
@@ -385,10 +383,8 @@ class GeminiClient:
         """Get list of available Gemini models"""
         # The new SDK does not keep a models dict; return a static list or query the client if supported
         return [
-            GeminiModel.GEMINI_PRO_25,
-            GeminiModel.GEMINI_PRO_25_FLASH_0520,
+            GeminiModel.GEMINI_FLASH_0520,
             GeminiModel.GEMINI_FLASH,
-            GeminiModel.GEMINI_PRO_25_FLASH
         ]
     
     async def health_check(self) -> Dict[str, Any]:
@@ -396,7 +392,7 @@ class GeminiClient:
         try:
             test_request = GeminiRequest(
                 prompt="Hello, this is a test. Please respond with 'OK' if you're working.",
-                model=GeminiModel.GEMINI_PRO_25_FLASH_0520,
+                model=GeminiModel.GEMINI_FLASH_0520,
                 temperature=0.1
             )
             
