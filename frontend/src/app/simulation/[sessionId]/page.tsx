@@ -22,6 +22,7 @@ import {
   LayerStatus,
   ConfidenceScore 
 } from '@/types/simulation';
+import { ChatWindow } from '@/components/ChatWindow';
 
 interface RawPlugin {
   name?: string;
@@ -60,7 +61,6 @@ export default function SimulationSessionPage() {
   const [agents, setAgents] = useState<Agent[]>([]);
   const [plugins, setPlugins] = useState<KnowledgeAlgorithm[]>([]);
   const [traces, setTraces] = useState<TraceStep[]>([]);
-  const [confidence] = useState<number>(0);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('timeline');
 
@@ -399,7 +399,7 @@ export default function SimulationSessionPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto space-y-6">
-        
+        <ChatWindow />
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>

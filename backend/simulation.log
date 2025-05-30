@@ -90,3 +90,9 @@
 2025-05-29 15:05:03,754 - api.simulation - INFO - Updated session c40bde13-9c2e-4031-b7ae-d2c1ed62021b status to READY
 2025-05-29 15:15:45,343 - api.simulation - INFO - Attempting to retrieve session c40bde13-9c2e-4031-b7ae-d2c1ed62021b
 2025-05-29 15:15:45,343 - api.simulation - INFO - Successfully retrieved session c40bde13-9c2e-4031-b7ae-d2c1ed62021b
+2025-05-29 17:29:24,601 - api.simulation - INFO - Attempting to retrieve session  8cde2307-5821-4265-bd99-3fb3c66920c3
+2025-05-29 17:29:24,603 - api.simulation - WARNING - Session  8cde2307-5821-4265-bd99-3fb3c66920c3 not found in run_store
+2025-05-29 17:29:57,862 - api.simulation - INFO - Attempting to retrieve session d9a638be-5741-4001-b5c4-5c5184ea7aaf
+2025-05-29 17:29:57,862 - api.simulation - WARNING - Session d9a638be-5741-4001-b5c4-5c5184ea7aaf not found in run_store
+2025-05-29 17:30:17,330 - api.simulation - INFO - Listing all simulation sessions
+2025-05-29 19:25:01,438 - api.simulation - INFO - Listing all simulation sessions

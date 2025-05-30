@@ -3,6 +3,7 @@
 ## 🎯 What's Fixed for ConfidenceMeter
 
 ### ✅ **Backend Improvements:**
+
 1. **Real Confidence Calculation**: Added sophisticated confidence scoring based on:
    - AI response quality (length, certainty indicators, structure)
    - Agent activity and consensus
@@ -24,14 +25,18 @@
 ## 🧪 **Testing the ConfidenceMeter**
 
 ### **Step 1: Start Simulation**
+
 1. Navigate to: http://localhost:3000
 2. Start Simulation → Enter a detailed query like:
+
    ```
    "Analyze the ethical implications of artificial intelligence in healthcare decision-making, considering patient autonomy, medical professional responsibility, and societal impact."
    ```
+
 3. Go to session page
 
 ### **Step 2: Check Initial Confidence**
+
 1. Click "Confidence" tab
 2. **Expected Results:**
    - ✅ Shows realistic confidence (likely 60-85%)
@@ -41,6 +46,7 @@
    - ✅ Thresholds section shows status indicators
 
 ### **Step 3: Test Layer Stepping**
+
 1. Click "Step Layer" button to add Layer 2
 2. **Expected Results:**
    - ✅ New layer appears in history
@@ -49,6 +55,7 @@
    - ✅ Progress bars reflect new scores
 
 ### **Step 4: Test with Different Queries**
+
 Try different query types to see confidence variation:
 
 - **High Confidence Query**: "What is 2+2?"
@@ -58,17 +65,20 @@ Try different query types to see confidence variation:
 ## 📊 **What You Should See**
 
 ### **Current Confidence Card:**
+
 - 📈 Large percentage display with color coding
 - 📊 Progress bar with dynamic colors
 - 📈/📉 Trend arrows for confidence changes
 - 🔢 Overall and entropy metrics
 
 ### **Thresholds Card:**
+
 - 🟢 Green dots for achieved thresholds
 - 🔴 Gray dots for unmet thresholds
 - 📊 Percentage thresholds (50%, 80%, 95%, 99.5%)
 
 ### **Layer History Card:**
+
 - 📋 List of all processed layers
 - 📊 Progress bars for each layer
 - 📈 Delta indicators (+/- changes)
@@ -76,21 +86,25 @@ Try different query types to see confidence variation:
 - ✅ Success icons for good confidence
 
 ### **Safety Warnings:**
+
 - 🚨 Red warning card if confidence < 50%
 - ⚠️ Containment protocol warnings
 
 ## 🔧 **Troubleshooting**
 
 ### **If confidence shows 0%:**
+
 - Check browser DevTools → Console for errors
 - Verify backend confidence_calculator import works
 - Check simulation.py confidence calculation code
 
 ### **If no delta changes:**
+
 - Ensure multiple layers exist (step simulation)
 - Check that previous_confidence calculation works
 
 ### **If entropy is always 0:**
+
 - Verify entropy calculation in confidence_calculator
 - Check that forks/escalations are properly detected
 

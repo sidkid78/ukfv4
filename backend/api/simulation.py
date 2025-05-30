@@ -8,12 +8,12 @@ import json
 import os
 
 from core.simulation_engine import simulation_engine
-from core.gemini_service import gemini_service, GeminiRequest, GeminiResponse
+from core.gemini_service import gemini_service, GeminiRequest, GeminiResponse, GeminiModel
 from core.confidence_calculator import confidence_calculator
 from core.trace_generator import trace_generator
-from api.trace import trace_log_db  # Import trace storage
+from api.trace import trace_log_db
 
-# Configure logging to file
+# Configure logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('simulation.log')
@@ -21,12 +21,20 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
-# Simple request model for starting simulations
+# Chat request/response models
+class ChatMessageRequest(BaseModel):
+    message: str
+    session_id: str
+
+class ChatMessageResponse(BaseModel):
+    response: str
+    timestamp: str
+
+# Existing models
 class StartSimulationRequest(BaseModel):
     prompt: str
     context: Optional[Dict[str, Any]] = None
 
-# Simplified response models
 class SimulationSessionResponse(BaseModel):
     id: str
     run_id: str
@@ -75,6 +83,63 @@ def store_trace_events(session_id: str, trace_events: List[Dict[str, Any]]):
     
     logger.info(f"Stored {len(trace_events)} trace events for session {session_id} in database")
     return True
+
+# Chat endpoint
+@router.post("/chat", response_model=ChatMessageResponse)
+async def chat_message(request: ChatMessageRequest):
+    """Handle chat messages within a simulation session."""
+    try:
+        session_id = request.session_id
+        session_data = run_store.get(session_id)
+        
+        if not session_data:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Simulation session {session_id} not found"
+            )
+        
+        # Create chat trace event
+        chat_trace = trace_generator.create_chat_event(
+            session_id=session_id,
+            user_message=request.message,       
+            ai_response=session_data.get("final_output", ""),
+            model=session_data.get("model", "unknown")
+        )
+        
+        # Store chat in session history
+        session_data["state"]["chat_history"].append(chat_trace)
+        
+        # Update session status
+        session_data["status"] = "READY"
+        run_store[session_id] = session_data
+
+        gemini_response = await gemini_service.generate_async(
+            request=GeminiRequest(
+                prompt=request.message,
+                context=session_data.get("input_query", {}),
+                model=GeminiModel.GEMINI_FLASH_0520
+            ),
+            session_id=session_id,
+            layer=1
+        )
+        
+        # Notify via WebSocket if connected
+        await manager.send_message(session_id, {
+            "type": "status_update",
+            "status": "READY",
+            "session": session_data
+        })
+        
+        return ChatMessageResponse(
+            response=gemini_response.content,
+            timestamp=datetime.now(timezone.utc).isoformat()
+        )
+        
+    except Exception as e:
+        logger.error(f"Error in chat_message: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 
 # WebSocket connection manager
 class ConnectionManager:
